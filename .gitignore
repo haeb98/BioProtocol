@@ -1,0 +1,99 @@
+# -----------------------------
+# OS / Editor clutter
+# -----------------------------
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.vscode/
+.idea/
+.ipynb_checkpoints/
+
+# -----------------------------
+# Python build / cache / tooling
+# -----------------------------
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+dist/
+build/
+*.egg-info/
+
+# -----------------------------
+# Virtual envs & local configs
+# -----------------------------
+.venv/
+env/
+venv/
+*.env
+.env.*
+.envrc
+# API keys / creds (safety)
+*key*.json
+*secret*.json
+*credential*.json
+*token*.json
+
+# -----------------------------
+# HuggingFace / transformers / ST caches
+# -----------------------------
+/.cache/
+/.huggingface/
+/transformers_cache/
+/sentence_transformers/
+~/.cache/
+~/.huggingface/
+
+# -----------------------------
+# Project-specific: data & corpora
+# (원본 대용량/저작권 민감 데이터는 제외, 스키마/샘플만 버전관리 권장)
+# -----------------------------
+data/raw/
+data/processed/
+data/gold/gold_article_pdf/
+data/tmp/
+data/cache/
+data/**/indexes*/
+data/**/embeddings*/
+data/**/*.faiss
+data/**/*.index
+data/**/*.hnsw
+data/**/*.vec
+data/**/*.npy
+data/**/*.npz
+data/**/*.pt
+data/**/*.sqlite
+# PMC JATS 원문처럼 대용량/라이선스 민감 파일
+data/gold/pmc_jats/
+# 필요시 gold 매니페스트만 유지하고 원문은 제외
+# !data/gold/gold_pairs_pmc_bioprotocol_balanced.jsonl
+
+# -----------------------------
+# RAG / Retriever 중간산출물
+# -----------------------------
+rag/**/cache*/
+rag/**/tmp*/
+rag/**/logs*/
+retriever*/**/cache*/
+retriever*/**/tmp*/
+**/_retrieval_cache*/
+**/*_cache.json
+**/*_hits.json
+
+# -----------------------------
+# Logs & temp
+# -----------------------------
+logs/**
+!logs/README.md
+*.log
+*.tmp
+tmp/**
+
+
+
+

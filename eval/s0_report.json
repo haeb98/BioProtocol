@@ -1,0 +1,10 @@
+{
+  "Recall@1": 0.0,
+  "Recall@3": 0.0,
+  "Recall@5": 0.0,
+  "Recall@8": 0.0,
+  "Recall@10": 0.0,
+  "MRR@50": 0.0,
+  "nDCG@50": 0.0,
+  "num_samples": 20
+}

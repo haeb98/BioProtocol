@@ -1,0 +1,20 @@
+{
+  "pid": "Bio-protocol-3448",
+  "used_self": true,
+  "evidence_count": 10,
+  "evidence_ids": [
+    "self:1",
+    "self:2",
+    "self:3",
+    "self:4",
+    "self:5",
+    "self:6",
+    "self:7",
+    "self:8",
+    "self:9",
+    "self:10"
+  ],
+  "attempt": "relax",
+  "raw_len_1": 5836,
+  "raw_len_2": 1934
+}

@@ -1,0 +1,22 @@
+{
+  "n": 55,
+  "EMB_MODEL": "BAAI/bge-base-en-v1.5",
+  "STEP_SIM": 0.7,
+  "PARAM_TOL": 0.1,
+  "TOP_KEYWORDS": 10,
+  "avg": {
+    "keyword_P": 0.0007,
+    "keyword_R": 0.0145,
+    "keyword_F1": 0.0013,
+    "step_P": 0.0649,
+    "step_R": 0.0033,
+    "step_F1": 0.0056,
+    "token_P": 0.5734,
+    "token_R": 0.0129,
+    "token_F1": 0.0196,
+    "param_P": 0.0378,
+    "param_R": 0.0264,
+    "param_F1": 0.0254,
+    "order": 0.9762
+  }
+}

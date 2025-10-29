@@ -1,0 +1,151 @@
+source,domain,id
+bio_protocol,Biochemical & Molecular Functional Analysis,Bio-protocol-1106
+bio_protocol,Biochemical & Molecular Functional Analysis,Bio-protocol-3348
+bio_protocol,Biochemical & Molecular Functional Analysis,Bio-protocol-437
+bio_protocol,Biochemical & Molecular Functional Analysis,Bio-protocol-1417
+bio_protocol,Biochemical & Molecular Functional Analysis,Bio-protocol-503
+bio_protocol,Biochemical & Molecular Functional Analysis,Bio-protocol-1799
+bio_protocol,Biochemical & Molecular Functional Analysis,Bio-protocol-1551
+bio_protocol,Biochemical & Molecular Functional Analysis,Bio-protocol-3515
+bio_protocol,Biochemical & Molecular Functional Analysis,Bio-protocol-1515
+bio_protocol,Biochemical & Molecular Functional Analysis,Bio-protocol-2955
+bio_protocol,Bioimaging Technologies,Bio-protocol-317
+bio_protocol,Bioimaging Technologies,Bio-protocol-3597
+bio_protocol,Bioimaging Technologies,Bio-protocol-1129
+bio_protocol,Bioimaging Technologies,Bio-protocol-3877
+bio_protocol,Bioimaging Technologies,Bio-protocol-2043
+bio_protocol,Bioimaging Technologies,Bio-protocol-2449
+bio_protocol,Bioimaging Technologies,Bio-protocol-2993
+bio_protocol,Bioimaging Technologies,Bio-protocol-211
+bio_protocol,Bioimaging Technologies,Bio-protocol-419
+bio_protocol,Bioimaging Technologies,Bio-protocol-794
+bio_protocol,Bioinformatics Methods,Bio-protocol-548
+bio_protocol,Bioinformatics Methods,Bio-protocol-2326
+bio_protocol,Bioinformatics Methods,Bio-protocol-1531
+bio_protocol,Bioinformatics Methods,Bio-protocol-284
+bio_protocol,Bioinformatics Methods,Bio-protocol-676
+bio_protocol,Bioinformatics Methods,Bio-protocol-1042
+bio_protocol,Bioinformatics Methods,Bio-protocol-1098
+bio_protocol,Bioinformatics Methods,Bio-protocol-345
+bio_protocol,Bioinformatics Methods,Bio-protocol-1316
+bio_protocol,Bioinformatics Methods,Bio-protocol-238
+bio_protocol,Cell Biology & Culture,Bio-protocol-3986
+bio_protocol,Cell Biology & Culture,Bio-protocol-1156
+bio_protocol,Cell Biology & Culture,Bio-protocol-3747
+bio_protocol,Cell Biology & Culture,Bio-protocol-1195
+bio_protocol,Cell Biology & Culture,Bio-protocol-1798
+bio_protocol,Cell Biology & Culture,Bio-protocol-854
+bio_protocol,Cell Biology & Culture,Bio-protocol-213
+bio_protocol,Cell Biology & Culture,Bio-protocol-3508
+bio_protocol,Cell Biology & Culture,Bio-protocol-4119
+bio_protocol,Cell Biology & Culture,Bio-protocol-3738
+bio_protocol,Genomics Technologies,Bio-protocol-3721
+bio_protocol,Genomics Technologies,Bio-protocol-1970
+bio_protocol,Genomics Technologies,Bio-protocol-1853
+bio_protocol,Genomics Technologies,Bio-protocol-188
+bio_protocol,Genomics Technologies,Bio-protocol-1374
+bio_protocol,Genomics Technologies,Bio-protocol-1210
+bio_protocol,Genomics Technologies,Bio-protocol-1952
+bio_protocol,Genomics Technologies,Bio-protocol-299
+bio_protocol,Genomics Technologies,Bio-protocol-146
+bio_protocol,Genomics Technologies,Bio-protocol-2384
+bio_protocol,Histology Techniques,Bio-protocol-143
+bio_protocol,Histology Techniques,Bio-protocol-4296
+bio_protocol,Histology Techniques,Bio-protocol-363
+bio_protocol,Histology Techniques,Bio-protocol-1846
+bio_protocol,Histology Techniques,Bio-protocol-2872
+bio_protocol,Histology Techniques,Bio-protocol-2737
+bio_protocol,Histology Techniques,Bio-protocol-4199
+bio_protocol,Histology Techniques,Bio-protocol-901
+bio_protocol,Histology Techniques,Bio-protocol-2852
+bio_protocol,Histology Techniques,Bio-protocol-355
+bio_protocol,Immunological Techniques,Bio-protocol-1947
+bio_protocol,Immunological Techniques,Bio-protocol-3302
+bio_protocol,Immunological Techniques,Bio-protocol-2195
+bio_protocol,Immunological Techniques,Bio-protocol-700
+bio_protocol,Immunological Techniques,Bio-protocol-3891
+bio_protocol,Immunological Techniques,Bio-protocol-2081
+bio_protocol,Immunological Techniques,Bio-protocol-1879
+bio_protocol,Immunological Techniques,Bio-protocol-1433
+bio_protocol,Immunological Techniques,Bio-protocol-884
+bio_protocol,Immunological Techniques,Bio-protocol-3320
+bio_protocol,Microbiology & Virology,Bio-protocol-1658
+bio_protocol,Microbiology & Virology,Bio-protocol-651
+bio_protocol,Microbiology & Virology,Bio-protocol-1134
+bio_protocol,Microbiology & Virology,Bio-protocol-3755
+bio_protocol,Microbiology & Virology,Bio-protocol-334
+bio_protocol,Microbiology & Virology,Bio-protocol-1296
+bio_protocol,Microbiology & Virology,Bio-protocol-3238
+bio_protocol,Microbiology & Virology,Bio-protocol-1278
+bio_protocol,Microbiology & Virology,Bio-protocol-199
+bio_protocol,Microbiology & Virology,Bio-protocol-1533
+bio_protocol,Model Organism-Specific Techniques,Bio-protocol-2767
+bio_protocol,Model Organism-Specific Techniques,Bio-protocol-602
+bio_protocol,Model Organism-Specific Techniques,Bio-protocol-938
+bio_protocol,Model Organism-Specific Techniques,Bio-protocol-525
+bio_protocol,Model Organism-Specific Techniques,Bio-protocol-3022
+bio_protocol,Model Organism-Specific Techniques,Bio-protocol-1999
+bio_protocol,Model Organism-Specific Techniques,Bio-protocol-1096
+bio_protocol,Model Organism-Specific Techniques,Bio-protocol-1510
+bio_protocol,Model Organism-Specific Techniques,Bio-protocol-457
+bio_protocol,Model Organism-Specific Techniques,Bio-protocol-462
+bio_protocol,Molecular Biology Techniques,Bio-protocol-1405
+bio_protocol,Molecular Biology Techniques,Bio-protocol-274
+bio_protocol,Molecular Biology Techniques,Bio-protocol-857
+bio_protocol,Molecular Biology Techniques,Bio-protocol-1145
+bio_protocol,Molecular Biology Techniques,Bio-protocol-278
+bio_protocol,Molecular Biology Techniques,Bio-protocol-2873
+bio_protocol,Molecular Biology Techniques,Bio-protocol-1884
+bio_protocol,Molecular Biology Techniques,Bio-protocol-1471
+bio_protocol,Molecular Biology Techniques,Bio-protocol-2457
+bio_protocol,Molecular Biology Techniques,Bio-protocol-3759
+bio_protocol,Neuroscience Methods,Bio-protocol-3310
+bio_protocol,Neuroscience Methods,Bio-protocol-1966
+bio_protocol,Neuroscience Methods,Bio-protocol-1008
+bio_protocol,Neuroscience Methods,Bio-protocol-1695
+bio_protocol,Neuroscience Methods,Bio-protocol-2708
+bio_protocol,Neuroscience Methods,Bio-protocol-2656
+bio_protocol,Neuroscience Methods,Bio-protocol-701
+bio_protocol,Neuroscience Methods,Bio-protocol-3180
+bio_protocol,Neuroscience Methods,Bio-protocol-2610
+bio_protocol,Neuroscience Methods,Bio-protocol-2675
+bio_protocol,Pharmacology & Drug Development,Bio-protocol-3040
+bio_protocol,Pharmacology & Drug Development,Bio-protocol-3657
+bio_protocol,Pharmacology & Drug Development,Bio-protocol-4244
+bio_protocol,Pharmacology & Drug Development,Bio-protocol-552
+bio_protocol,Pharmacology & Drug Development,Bio-protocol-3850
+bio_protocol,Pharmacology & Drug Development,Bio-protocol-575
+bio_protocol,Pharmacology & Drug Development,Bio-protocol-2714
+bio_protocol,Pharmacology & Drug Development,Bio-protocol-3184
+bio_protocol,Pharmacology & Drug Development,Bio-protocol-821
+bio_protocol,Pharmacology & Drug Development,Bio-protocol-1172
+bio_protocol,Plant Science & Technology,Bio-protocol-3156
+bio_protocol,Plant Science & Technology,Bio-protocol-3087
+bio_protocol,Plant Science & Technology,Bio-protocol-2450
+bio_protocol,Plant Science & Technology,Bio-protocol-4097
+bio_protocol,Plant Science & Technology,Bio-protocol-4331
+bio_protocol,Plant Science & Technology,Bio-protocol-2268
+bio_protocol,Plant Science & Technology,Bio-protocol-3815
+bio_protocol,Plant Science & Technology,Bio-protocol-3743
+bio_protocol,Plant Science & Technology,Bio-protocol-3667
+bio_protocol,Plant Science & Technology,Bio-protocol-3422
+bio_protocol,Structural Biology Techniques,Bio-protocol-37
+bio_protocol,Structural Biology Techniques,Bio-protocol-1127
+bio_protocol,Structural Biology Techniques,Bio-protocol-2250
+bio_protocol,Structural Biology Techniques,Bio-protocol-368
+bio_protocol,Structural Biology Techniques,Bio-protocol-3015
+bio_protocol,Structural Biology Techniques,Bio-protocol-2594
+bio_protocol,Structural Biology Techniques,Bio-protocol-1002
+bio_protocol,Structural Biology Techniques,Bio-protocol-482
+bio_protocol,Structural Biology Techniques,Bio-protocol-1485
+bio_protocol,Structural Biology Techniques,Bio-protocol-875
+bio_protocol,Synthetic Biology & Bioengineering,Bio-protocol-2375
+bio_protocol,Synthetic Biology & Bioengineering,Bio-protocol-1000
+bio_protocol,Synthetic Biology & Bioengineering,Bio-protocol-2516
+bio_protocol,Synthetic Biology & Bioengineering,Bio-protocol-624
+bio_protocol,Synthetic Biology & Bioengineering,Bio-protocol-3610
+bio_protocol,Synthetic Biology & Bioengineering,Bio-protocol-1590
+bio_protocol,Synthetic Biology & Bioengineering,Bio-protocol-2018
+bio_protocol,Synthetic Biology & Bioengineering,Bio-protocol-1443
+bio_protocol,Synthetic Biology & Bioengineering,Bio-protocol-3012
+bio_protocol,Synthetic Biology & Bioengineering,Bio-protocol-192

@@ -1,0 +1,22 @@
+{
+  "n": 55,
+  "EMB_MODEL": "sentence-transformers/all-MiniLM-L6-v2",
+  "STEP_SIM": 0.7,
+  "PARAM_TOL": 0.1,
+  "TOP_KEYWORDS": 10,
+  "avg": {
+    "keyword_P": 0.0241,
+    "keyword_R": 0.1564,
+    "keyword_F1": 0.0411,
+    "step_P": 0.0635,
+    "step_R": 0.006,
+    "step_F1": 0.0106,
+    "token_P": 0.4844,
+    "token_R": 0.0691,
+    "token_F1": 0.1179,
+    "param_P": 0.5853,
+    "param_R": 0.0604,
+    "param_F1": 0.1014,
+    "order": 0.9438
+  }
+}

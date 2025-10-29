@@ -1,0 +1,152 @@
+id,title,biopro_doi,original_article_url,status,notes
+Bio-protocol-2955,Isolation of Ribosomal Particles from the Unicellular Cyanobacterium Synechocystis sp. PCC 6803,https://doi.org/10.21769/BioProtoc.2176,,error,list index out of range
+Bio-protocol-503,Optimized Expression and Isolation of Recombinant Active Secreted Proteases Using Pichia pastoris,https://doi.org/10.21769/BioProtoc.4628,,error,list index out of range
+Bio-protocol-1799,A Radioactive in vitro ERK3 Kinase Assay,https://doi.org/10.21769/BioProtoc.3332,,error,list index out of range
+Bio-protocol-2449,Micro-computed Tomography to Visualize Vascular Networks in Maize Stems,https://doi.org/10.21769/BioProtoc.2682,,error,list index out of range
+Bio-protocol-317,Quantitative Analysis of Clot Deposition on Extracorporeal Life Support Membrane Oxygenators Using Digital and Scanning Electron Microscopy Imaging Techniques,https://doi.org/10.21769/BioProtoc.4814,,error,list index out of range
+Bio-protocol-3515,Bacterial Porphyrin Extraction and Quantification by LC/MS/MS Analysis,https://doi.org/10.21769/BioProtoc.1616,,error,list index out of range
+Bio-protocol-2043,"Electron Microscopic Detection of Proteins and Protein Complexes in Mammalian Cells Using APEX-tagged, Conditionally Stable Nanobodies",https://doi.org/10.21769/BioProtoc.3088,,error,list index out of range
+Bio-protocol-1551,Quantitative Determination of  c a^2+ -binding to  c a^2+ -sensor Proteins by Isothermal Titration Calorimetry,https://doi.org/10.21769/BioProtoc.3580,,error,list index out of range
+Bio-protocol-3877,Hypoxia Studies with Pimonidazole in vivo,https://doi.org/10.21769/BioProtoc.1254,,error,list index out of range
+Bio-protocol-211,Optical Modulation of the Blood–Brain Barrier for Glioblastoma Treatment,https://doi.org/10.21769/BioProtoc.4920,https://doi.org/10.1038/s41467-023-40579-1,ok,ok
+Bio-protocol-1417,Microtubule Seeded-assembly in the Presence of Poorly Nucleating Nucleotide Analogues,https://doi.org/10.21769/BioProtoc.3714,https://doi.org/10.7554/eLife.50155,ok,ok
+Bio-protocol-1515,Purification of Protein-complexes from the Cyanobacterium Synechocystis sp. PCC 6803 Using FLAG-affinity Chromatography,https://doi.org/10.21769/BioProtoc.3616,,error,list index out of range
+Bio-protocol-1129,Click Chemistry for Imaging in-situ Protein Palmitoylation during the Asexual Stages of,https://doi.org/10.21769/BioProtoc.4002,https://doi.org/10.1021/acsinfecdis.9b00321,ok,ok
+Bio-protocol-2993,In situ Hybridization (ISH) and Quantum Dots (QD) of miRNAs,https://doi.org/10.21769/BioProtoc.2138,,error,list index out of range
+Bio-protocol-2326,A Bioinformatics Pipeline for Whole Exome Sequencing: Overview of the Processing and Steps from Raw Data to Downstream Analysis,https://doi.org/10.21769/BioProtoc.2805,,not_found,no_original_link_found
+Bio-protocol-676,"Differential Expression Analysis: Simple Pair, Interaction, Time-series",https://doi.org/10.21769/BioProtoc.4455,,not_found,no_original_link_found
+Bio-protocol-3597,Atomic Force Microscopy (AFM) Analysis of Cell Wall Structural Glycoproteins in vitro,https://doi.org/10.21769/BioProtoc.1534,,error,list index out of range
+Bio-protocol-1106,A Fluorescence Dequenching-based Liposome Leakage Assay to Measure Membrane Permeabilization by Pore-forming Proteins,https://doi.org/10.21769/BioProtoc.4025,,error,list index out of range
+Bio-protocol-3348,Procedure for Rhamnolipids Quantification Using Methylene-blue,https://doi.org/10.21769/BioProtoc.1783,,error,list index out of range
+Bio-protocol-345,Likelihood-based Modeling of Brassiceae Ancient Whole-genome Triplication with POInT,https://doi.org/10.21769/BioProtoc.4786,https://doi.org/10.6084/m9.figshare.12277832,ok,ok
+Bio-protocol-437,Synthesis and Purification of Lipidconjugated Fluorescent pH Sensors,https://doi.org/10.21769/BioProtoc.4694,https://doi.org/10.1016/S0076-6879(03)67005-9,ok,ok
+Bio-protocol-794,Laser Microirradiation and Real-time Recruitment  Assays  Using  an  Engineered Biosensor,https://doi.org/10.21769/BioProtoc.4337,,error,list index out of range
+Bio-protocol-548,A Cartographic Tool to Predict Disease Risk-associated Pseudo-Dynamic Networks from Tissue-specific Gene Expression,https://doi.org/10.21769/BioProtoc.4583,https://doi.org/10.3389/fsysb.2021.764161,ok,ok
+Bio-protocol-419,Iterative Indirect Immunofluorescence Imaging (4i) on Adherent Cells and Tissue Sections,https://doi.org/10.21769/BioProtoc.4712,https://doi.org/10.1126/science.abf4062,ok,ok
+Bio-protocol-1531,Sequence Alignment Using Machine Learning for Accurate Template-based Protein Structure,https://doi.org/10.21769/BioProtoc.3600,,error,list index out of range
+Bio-protocol-284,A Protocol to Retrieve and Curate Spatial and Climatic Data from Online Biodiversity Databases Using R,https://doi.org/10.21769/BioProtoc.4847,https://doi.org/10.1111/2041-210X.13629,ok,ok
+Bio-protocol-1098,Detecting Differentially Methylated Promoters in Genes Related to Disease Phenotypes Using R,https://doi.org/10.21769/BioProtoc.4033,,error,list index out of range
+Bio-protocol-1798,Fibroblast Gap-closure Assay-Microscopy-based in vitro Assay Measuring,https://doi.org/10.21769/BioProtoc.3333,,error,list index out of range
+Bio-protocol-3986,Competitive Bone-marrow Transplantations,https://doi.org/10.21769/BioProtoc.1145,,error,list index out of range
+Bio-protocol-1195,Retention Using Selective Hooks (RUSH) Cargo Sorting Assay for Protein Vesicle Tracking in,https://doi.org/10.21769/BioProtoc.3936,,error,list index out of range
+Bio-protocol-1316,Reference-free Association Mapping from Sequencing Reads Using k-mers,https://doi.org/10.21769/BioProtoc.3815,,error,list index out of range
+Bio-protocol-1156,Analysis of TORC1-body Formation in Budding Yeast,https://doi.org/10.21769/BioProtoc.3975,,error,list index out of range
+Bio-protocol-1042,Modeling the Nonlinear Dynamics of Intracellular Signaling Networks,https://doi.org/10.21769/BioProtoc.4089,https://doi.org/10.7554/eLife.58165,ok,ok
+Bio-protocol-238,Phylogenetic Inference of Homologous/Orthologous Genes Among Distantly Related Plants,https://doi.org/10.21769/BioProtoc.4893,,error,list index out of range
+Bio-protocol-1970,Protein- and Sequencing-based Massively Parallel Single-cell Approaches to Gene Expression Profiling,https://doi.org/10.21769/BioProtoc.3161,,not_found,no_original_link_found
+Bio-protocol-3747,Monocyte-MSC Co-cultures,https://doi.org/10.21769/BioProtoc.1384,,error,list index out of range
+Bio-protocol-213,Live Imaging and Analysis of Meiotic Cytokinesis in Drosophila Testes,https://doi.org/10.21769/BioProtoc.4918,https://doi.org/10.3390/cells11040695,ok,ok
+Bio-protocol-3721,RNA Editing Detection by Direct Sequencing,https://doi.org/10.21769/BioProtoc.1410,,error,list index out of range
+Bio-protocol-3508,Isolation and Culture of Human Endometrial Epithelial Cells and Stromal Fibroblasts,https://doi.org/10.21769/BioProtoc.1623,,error,list index out of range
+Bio-protocol-854,Isolation of Mitochondria from Ustilago maydis Protoplasts,https://doi.org/10.21769/BioProtoc.4277,,error,list index out of range
+Bio-protocol-4119,"Autophagy Assays (LC3B immunofluorescence, LC3B western blot, acridine orange assay)",https://doi.org/10.21769/BioProtoc.1012,,error,list index out of range
+Bio-protocol-3738,Hanging Drop Aggregation Assay of Breast Cancer Cells,https://doi.org/10.21769/BioProtoc.1393,,error,list index out of range
+Bio-protocol-1853,Immunoprecipitation and Sequencing of Acetylated RNA,https://doi.org/10.21769/BioProtoc.3278,,error,list index out of range
+Bio-protocol-4296,"Maize Kernels – Fixation in FAA, Embedding, Sectioning and Feulgen Staining",https://doi.org/10.21769/BioProtoc.835,,error,list index out of range
+Bio-protocol-299,Testing for Allele-specific Expression from Human Brain Samples,https://doi.org/10.21769/BioProtoc.4832,https://doi.org/10.1126/science.abk0637,ok,ok
+Bio-protocol-1210,EmPC-seq: Accurate RNA-sequencing and Bioinformatics Platform to Map RNA Polymerases and Remove Background Error,https://doi.org/10.21769/BioProtoc.3921,,error,list index out of range
+Bio-protocol-4199,Colon Tissue Immunoelectron Microscopy,https://doi.org/10.21769/BioProtoc.932,,error,list index out of range
+Bio-protocol-146,Updated Pseudo-seq Protocol for Transcriptome-Wide Detection of Pseudouridines,https://doi.org/10.21769/BioProtoc.4985,,error,list index out of range
+Bio-protocol-901,CD45 Immunohistochemistry in Mouse Kidney,https://doi.org/10.21769/BioProtoc.4230,,error,list index out of range
+Bio-protocol-1952,QsRNA-seq: A protocol for Generating Libraries for High-throughput Sequencing of Small RNAs,https://doi.org/10.21769/BioProtoc.3179,https://doi.org/10.1186/s13059-018-1495-0,ok,ok
+Bio-protocol-2872,Immunostaining of Formaldehyde-fixed Metaphase Chromosome from,https://doi.org/10.21769/BioProtoc.2259,,error,list index out of range
+Bio-protocol-1374,Whole-genome Identification of Transcriptional Start Sites by Differential RNA-seq in Bacteria,https://doi.org/10.21769/BioProtoc.3757,,error,list index out of range
+Bio-protocol-1846,Morphological Evaluation of Wound Healing Events in the Excisional Wound Healing Model in Rats,https://doi.org/10.21769/BioProtoc.3285,,error,list index out of range
+Bio-protocol-2195,A Lentiviral Pseudotype ELLA for the Measurement of Antibodies Against Influenza Neuraminidase,https://doi.org/10.21769/BioProtoc.2936,,not_found,no_original_link_found
+Bio-protocol-143,A Standardized Protocol for Extraction and Homogenization of Ocular Tissues,https://doi.org/10.21769/BioProtoc.4988,,error,list index out of range
+Bio-protocol-188,Analysis of DNA 5-methylcytosine Using Nanopore Sequencing,https://doi.org/10.21769/BioProtoc.4943,,not_found,"http_error:Server error '500 RuntimeError' for url 'https://bio-protocol.org/en/bpdetail?id=4943&type=0'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/500"
+Bio-protocol-2384,Coupling Exonuclease Digestion with Selective Chemical Labeling for Base-resolution Mapping of 5-Hydroxymethylcytosine in Genomic DNA,https://doi.org/10.21769/BioProtoc.2747,https://doi.org/10.1186/s13059-016-0919-y,ok,ok
+Bio-protocol-363,Improved Methods for Acetocarmine and Haematoxylin Staining to Visualize Chromosomes in the Filamentous Green Alga Zygnema (Charophyta),https://doi.org/10.21769/BioProtoc.4768,https://doi.org/10.1002/fedr.19780890110,ok,ok
+Bio-protocol-3302,Micro Neutralization (MN) Assay of Influenza Viruses with Monoclonal Antibodies,https://doi.org/10.21769/BioProtoc.1829,,error,list index out of range
+Bio-protocol-2737,Analyzing the Properties of Murine Intestinal Mucins by Electrophoresis and Histology,https://doi.org/10.21769/BioProtoc.2394,,error,list index out of range
+Bio-protocol-1947,Quantification of Serum Ovalbumin-specific Immunoglobulin E Titre via in vivo Passive Cutaneous Anaphylaxis Assay,https://doi.org/10.21769/BioProtoc.3184,,error,list index out of range
+Bio-protocol-2081,HIVGKO: A Tool to Assess HIV-1 Latency Reversal Agents in Human Primary CD4+ T Cells,https://doi.org/10.21769/BioProtoc.3050,,error,list index out of range
+Bio-protocol-3891,Isolation and FACS Analysis on Mononuclear Cells from CNS Tissue,https://doi.org/10.21769/BioProtoc.1240,,error,list index out of range
+Bio-protocol-1433,A Rigorous Quantitative Approach to Analyzing Phagocytosis Assays,https://doi.org/10.21769/BioProtoc.3698,,error,list index out of range
+Bio-protocol-2852,Muscle Histology Characterization Using H&E Staining and Muscle Fiber Type Classification Using Immunofluorescence Staining,https://doi.org/10.21769/BioProtoc.2279,,error,list index out of range
+Bio-protocol-700,Protocol to Isolate Germinal Centers by Laser Microdissection,https://doi.org/10.21769/BioProtoc.4431,https://doi.org/10.7554/eLife.70053,ok,ok
+Bio-protocol-3320,Proximity Ligation Assay (PLA) Protocol Using Duolink® for T cells,https://doi.org/10.21769/BioProtoc.1811,,error,list index out of range
+Bio-protocol-884,Bacterial Infection with Listeria monocytogenes in Mice and Subsequent Analysis of Antigen-Specific CD8 T Cell Responses,https://doi.org/10.21769/BioProtoc.4247,,error,list index out of range
+Bio-protocol-1296,Ribosome Purification from an α-proteobacterium and rRNA Analysis by Northern Blot,https://doi.org/10.21769/BioProtoc.3835,,error,list index out of range
+Bio-protocol-1879,Detection of Antigen-specific T cells in Spleens of Vaccinated Mice Applying 3H-Thymidine Incorporation Assay and Luminex Multiple Cytokine Analysis Technology,https://doi.org/10.21769/BioProtoc.3252,,error,list index out of range
+Bio-protocol-355,LiverQuant: An Improved Method for Quantitative Analysis of Liver Pathology,https://doi.org/10.21769/BioProtoc.4776,,error,list index out of range
+Bio-protocol-1658,Isolation and Characterization of Live Yeast Cells from Ancient Clay Vessels,https://doi.org/10.21769/BioProtoc.3473,,error,list index out of range
+Bio-protocol-334,Functional Assay for Measuring Bacterial Degradation of Gemcitabine Chemotherapy,https://doi.org/10.21769/BioProtoc.4797,https://doi.org/10.7554/eLife.83140,ok,ok
+Bio-protocol-1134,Screening for Lysogen Activity in Therapeutically Relevant Bacteriophages,https://doi.org/10.21769/BioProtoc.3997,,error,list index out of range
+Bio-protocol-3238,Antifungal and Zearalenone Inhibitory Activity of Ocimum sanctum L. Essential Oil on Fusarium graminearum Determined by UHPLC and RT-qPCR,https://doi.org/10.21769/BioProtoc.1893,,error,list index out of range
+Bio-protocol-199,Use of the Fluorescent Dye Thioflavin T to Track Amyloid Structures in the Pathogenic Yeast Candida albicans,https://doi.org/10.21769/BioProtoc.4932,https://doi.org/10.1038/s41522-023-00371-x,ok,ok
+Bio-protocol-602,First-line Evaluation of Sperm Parameters in Mice (Mus musculus),https://doi.org/10.21769/BioProtoc.4529,https://doi.org/10.7554/eLife.75373,ok,ok
+Bio-protocol-651,Cryptococcus neoformans Virulence Assay Using a Galleria mellonella Larvae Model System,https://doi.org/10.21769/BioProtoc.4480,,error,list index out of range
+Bio-protocol-1533,Viral Double-Stranded RNA Detection by DNase I and Nuclease S1 digestions in Leishmania,https://doi.org/10.21769/BioProtoc.3598,,error,list index out of range
+Bio-protocol-3755,Construction of FWPV Chimaeric MVA,https://doi.org/10.21769/BioProtoc.1376,,error,list index out of range
+Bio-protocol-1278,Preparation of Bacterial Outer Membrane Vesicles for Characterisation of Periplasmic Proteins,https://doi.org/10.21769/BioProtoc.3853,,error,list index out of range
+Bio-protocol-1999,Heterochronic Phenotype Analysis of Hypodermal Seam Cells in Caenorhabditis elegans,https://doi.org/10.21769/BioProtoc.3132,,error,list index out of range
+Bio-protocol-1510,"Generation, Analyzing and in-vivo Drug Treatment of Drosophila Models with IBMPFD",https://doi.org/10.21769/BioProtoc.3621,,error,list index out of range
+Bio-protocol-1405,Isolation and Quantification of Extracellular DNA from Biofluids,https://doi.org/10.21769/BioProtoc.3726,,error,list index out of range
+Bio-protocol-1471,Genomic Edition of Ashbya gossypii Using One-vector CRISPR/Cas9,https://doi.org/10.21769/BioProtoc.3660,,error,list index out of range
+Bio-protocol-2767,Tumorigenicity Assay in Nude Mice,https://doi.org/10.21769/BioProtoc.2364,,error,list index out of range
+Bio-protocol-3022,Transplantation of Mesenchymal Cells Including the Blastema in Regenerating Zebrafish Fin,https://doi.org/10.21769/BioProtoc.2109,,error,list index out of range
+Bio-protocol-938,Collection of in vivo Capacitated Sperm from Different Locations Along the Reproductive Tract of Time-Mated Female Mice by Microdissection,https://doi.org/10.21769/BioProtoc.4193,,error,list index out of range
+Bio-protocol-457,Direct Adeno-associated Viruses Injection of Murine Adipose Tissue,https://doi.org/10.21769/BioProtoc.4674,,error,list index out of range
+Bio-protocol-525,"Protocol for the Splinted, Human-like Excisional Wound Model in Mice",https://doi.org/10.21769/BioProtoc.4606,https://doi.org/10.1126/sciadv.abi4528,ok,ok
+Bio-protocol-1096,"Analysis of Caenorhabditis elegans Sperm Number, Size, Activation, and Mitochondrial",https://doi.org/10.21769/BioProtoc.4035,,error,list index out of range
+Bio-protocol-3310,Sensitive Assessment of Hippocampal Learning Using Temporally Dissociated Passive Avoidance Task,https://doi.org/10.21769/BioProtoc.1821,,error,list index out of range
+Bio-protocol-1008,Clearing of the Mouse Brain for Optical Imaging Using CUBIC,https://doi.org/10.21769/BioProtoc.4123,,not_found,no_original_link_found
+Bio-protocol-1145,A Sensitive and Specific PCR-based Assay to Quantify Hepatitis B Virus Covalently Closed Circular (ccc) DNA while Preserving Cellular DNA,https://doi.org/10.21769/BioProtoc.3986,,error,list index out of range
+Bio-protocol-462,Murine  Double  Hit  Model  for  Neonatal Cardiopulmonary Diseases: Bronchopulmonary Dysplasia (BPD) and Pulmonary Hypertension Associated with BPD,https://doi.org/10.21769/BioProtoc.4669,https://doi.org/10.1126/scitranslmed.aaz8454,ok,ok
+Bio-protocol-857,An Aptamer-based mRNA Affinity Purification Procedure (RaPID) for the Identification of Associated RNAs (RaPID-seq) and Proteins (RaPID-MS) in Yeast,https://doi.org/10.21769/BioProtoc.4274,,error,list index out of range
+Bio-protocol-278,Efficient Large DNA Fragment Knock-in by Long dsDNA with 3′-Overhangs Mediated CRISPR Knock-in (LOCK) in Mammalian Cells,https://doi.org/10.21769/BioProtoc.4853,,error,list index out of range
+Bio-protocol-274,Preparation of Cardiac Extracts from Embryonal Hearts to Capture RNA– protein Interactions by CLIP,https://doi.org/10.21769/BioProtoc.4857,https://doi.org/10.7554/eLife.81360,ok,ok
+Bio-protocol-1966,Isolation of Neural Stem Cells from the Embryonic Mouse Hippocampus for in vitro Growth or Engraftment into a Host Tissue,https://doi.org/10.21769/BioProtoc.3165,,error,list index out of range
+Bio-protocol-2873,Mating Based Split-ubiquitin Assay for Detection of Protein Interactions,https://doi.org/10.21769/BioProtoc.2258,,error,list index out of range
+Bio-protocol-1884,Improved Mammalian Mitochondrial RNA Isolation,https://doi.org/10.21769/BioProtoc.3247,,error,list index out of range
+Bio-protocol-2457,Targeted Genome Editing of Virulent Phages Using CRISPR-Cas9,https://doi.org/10.21769/BioProtoc.2674,,error,list index out of range
+Bio-protocol-3040,Generation of Tumour-stroma Minispheroids for Drug Efficacy Testing,https://doi.org/10.21769/BioProtoc.2091,,error,list index out of range
+Bio-protocol-3759,Quantification of Extracellular Ammonium Concentrations and Transporter Activity in Yeast Using AmTrac Fluorescent Sensors,https://doi.org/10.21769/BioProtoc.1372,,error,list index out of range
+Bio-protocol-2675,Context-driven Salt Seeking Test (Rats),https://doi.org/10.21769/BioProtoc.2456,,error,list index out of range
+Bio-protocol-701,Simple Methods  for  Permanent or Transient Denervation in Mouse Sciatic Nerve Injury Models,https://doi.org/10.21769/BioProtoc.4430,https://doi.org/10.7554/eLife.70490,ok,ok
+Bio-protocol-1695,Gallyas Silver Impregnation of Myelinated Nerve Fibers,https://doi.org/10.21769/BioProtoc.3436,,error,list index out of range
+Bio-protocol-2656,Trace Fear Conditioning: Procedure for Assessing Complex Hippocampal Function in Mice,https://doi.org/10.21769/BioProtoc.2475,,error,list index out of range
+Bio-protocol-3850,"Accelerated Storage Stability Testing of a Potential Anti-Anthrax Therapeutic, EnvD",https://doi.org/10.21769/BioProtoc.1281,,error,list index out of range
+Bio-protocol-3180,Organotypic Spinal Cord Slice Cultures and a Method to Detect Cell Proliferation in These Slices,https://doi.org/10.21769/BioProtoc.1951,,error,list index out of range
+Bio-protocol-3657,Genome-Wide siRNA Screen for Anti-Cancer Drug Resistance in Adherent Cell Lines,https://doi.org/10.21769/BioProtoc.1474,,error,list index out of range
+Bio-protocol-2708,Preparation of Crude Synaptosomal Fractions from,https://doi.org/10.21769/BioProtoc.2423,,error,list index out of range
+Bio-protocol-3184,Evaluation of Angiogenesis Inhibitors Using the HUVEC Fibrin Bead Sprouting Assay,https://doi.org/10.21769/BioProtoc.1947,,error,list index out of range
+Bio-protocol-552,Safety Profiling of Tumor-targeted T Cell–Bispecific Antibodies with Alveolus Lung- and Colon-on-Chip,https://doi.org/10.21769/BioProtoc.4579,https://doi.org/10.7554/eLife.67106,ok,ok
+Bio-protocol-2610,An ex vivo Perifusion Method for Quantitative Determination of Neuropeptide Release from Mouse Hypothalamic Explants,https://doi.org/10.21769/BioProtoc.2521,,error,list index out of range
+Bio-protocol-4244,^3H -Penciclovir (3H-PCV) Uptake Assay,https://doi.org/10.21769/BioProtoc.887,,error,list index out of range
+Bio-protocol-2714,"Mass Spectrometry-based in vitro Assay to Identify Drugs that Influence Cystine Solubility Neelanjan Bose1, 2, *, Tiffany Zee1, 2, Pankaj Kapahi1, 2 and Marshall L. Stoller1, *",https://doi.org/10.21769/BioProtoc.2417,,error,list index out of range
+Bio-protocol-1172,Preparation and Characterization of Poly(2-oxazoline) Micelles for the Solubilization and Delivery of Water Insoluble Drugs,https://doi.org/10.21769/BioProtoc.3959,,error,list index out of range
+Bio-protocol-575,"Proteome Integral Solubility Alteration (PISA) Assay in Mammalian Cells for Deep, High-Confidence, and High-Throughput Target Deconvolution",https://doi.org/10.21769/BioProtoc.4556,https://doi.org/10.1021/acs.analchem.2c00391,ok,ok
+Bio-protocol-821,Developing Clinically Relevant Acquired Chemoresistance  Models  in Epithelial Ovarian Cancer Cell Lines,https://doi.org/10.21769/BioProtoc.4310,,error,list index out of range
+Bio-protocol-3087,Measurement of ATP Hydrolytic Activity of Plasma Membrane mathbbH^+. -ATPase from Arabidopsis thaliana Leaves,https://doi.org/10.21769/BioProtoc.2044,,error,list index out of range
+Bio-protocol-3667,Chlorophyll Fluorescence Measurements in Arabidopsis Plants Using a Pulse-amplitude-modulated (PAM) Fluorometer,https://doi.org/10.21769/BioProtoc.1464,,error,list index out of range
+Bio-protocol-3156,Determination of Molecular Structures of Condensed Tannins from Plant Tissues Using HPLC-UV Combined with Thiolysis and MALDI-TOF Mass Spectrometry,https://doi.org/10.21769/BioProtoc.1975,,error,list index out of range
+Bio-protocol-2450,Electron Tomography to Study the Three-dimensional Structure of Plasmodesmata in Plant Tissues–from High Pressure Freezing Preparation to Ultrathin Section Collection,https://doi.org/10.21769/BioProtoc.2681,,error,list index out of range
+Bio-protocol-4331,Growth Assay and Detection of TRP and Indole Derivatives in Piriformospora indica Culture Supernatant by LC-MS/MS,https://doi.org/10.21769/BioProtoc.800,,error,list index out of range
+Bio-protocol-2268,Protocol for RYMV Inoculation and Resistance Evaluation in Rice Seedlings,https://doi.org/10.21769/BioProtoc.2863,,error,list index out of range
+Bio-protocol-4097,Monoclonal Antibody Purification (Nicotiana benthamiana Plants),https://doi.org/10.21769/BioProtoc.1034,,error,list index out of range
+Bio-protocol-3815,Purification of Starch Granules from Arabidopsis Leaves and Determination of GranuleBound Starch Synthase Activity,https://doi.org/10.21769/BioProtoc.1316,,error,list index out of range
+Bio-protocol-37,Host Receptor Pili for Cryo-EM SingleParticle Reconstruction,https://doi.org/10.21769/BioProtoc.5094,https://doi.org/10.1038/s41467-024-47119-5,ok,ok
+Bio-protocol-3422,Cytohistochemical Determination of Calcium Deposition in Plant Cells,https://doi.org/10.21769/BioProtoc.1709,,error,list index out of range
+Bio-protocol-2594,"Purifying Properly Folded Cysteine-rich, Zinc Finger Containing Recombinant Proteins for Structural Drug Targeting Studies: the CH1 Domain of p300 as a Case Example",https://doi.org/10.21769/BioProtoc.2537,,not_found,no_original_link_found
+Bio-protocol-3743,"Water Deficit Treatment and Measurement in Apple Trees Carole L. Bassett*, Timothy S. Artlip* and Michael E. Wisniewski",https://doi.org/10.21769/BioProtoc.1388,,error,list index out of range
+Bio-protocol-3015,"Production, Purification and Crystallization of a Prokaryotic SLC26 Homolog for Structural Studies",https://doi.org/10.21769/BioProtoc.2116,,error,list index out of range
+Bio-protocol-1002,Synchronized Real-time Measurement of Sec-mediated Protein Translocation,https://doi.org/10.21769/BioProtoc.4129,,error,list index out of range
+Bio-protocol-2250,Preparation of Cell-free Synthesized Proteins Selectively Double Labeled for Single-molecule FRET Studies,https://doi.org/10.21769/BioProtoc.2881,,error,list index out of range
+Bio-protocol-368,Large-scale Purification of Type III Toxin-antitoxin Ribonucleoprotein Complex and its Components from Escherichia coli for Biophysical Studies,https://doi.org/10.21769/BioProtoc.4763,,error,list index out of range
+Bio-protocol-1127,Spin Labeling of RNA Using “Click” Chemistry for Coarse-grained Structure Determination via Pulsed Electron-electron Double Resonance Spectroscopy,https://doi.org/10.21769/BioProtoc.4004,,error,list index out of range
+Bio-protocol-1000,A Novel Method to Make Polyacrylamide Gels with Mechanical Properties Resembling those of Biological Tissues,https://doi.org/10.21769/BioProtoc.4131,,error,list index out of range
+Bio-protocol-482,Reconstitution of Membrane-tethered Postsynaptic Density Condensates Using Supported Lipid Bilayer,https://doi.org/10.21769/BioProtoc.4649,,error,list index out of range
+Bio-protocol-2375,Synthetic Genetic Interaction (CRISPR-SGI) Profiling in Caenorhabditis elegans,https://doi.org/10.21769/BioProtoc.2756,,error,list index out of range
+Bio-protocol-875,Label-free Quantification of Direct Protein-protein Interactions with Backscattering,https://doi.org/10.21769/BioProtoc.4256,,error,list index out of range
+Bio-protocol-1485,Preparation of Yeast tRNA Sample for NMR Spectroscopy,https://doi.org/10.21769/BioProtoc.3646,,error,list index out of range
+Bio-protocol-2018,Preparation of Silk Fibroin Nanoparticles and Enzyme-Entrapped Silk Fibroin Nanoparticles,https://doi.org/10.21769/BioProtoc.3113,https://doi.org/10.1007/s11051-006-9162-x,ok,ok
+Bio-protocol-2516,Design and Direct Assembly of Synthesized Uracil-containing Non-clonal DNA Fragments into Vectors by USERTM Cloning,https://doi.org/10.21769/BioProtoc.2615,,error,list index out of range
+Bio-protocol-1443,A SsrA/NIa-based Strategy for Post-Translational Regulation,https://doi.org/10.21769/BioProtoc.3688,,error,list index out of range
+Bio-protocol-3610,Complex in vivo Ligation Using Homologous Recombination and High-efficiency Plasmid Rescue from Saccharomyces cerevisiae,https://doi.org/10.21769/BioProtoc.1521,,error,list index out of range
+Bio-protocol-624,Incorporation of a Chemically Diverse Set of Non-Standard Amino Acids into a Gram-Positive Organism,https://doi.org/10.21769/BioProtoc.4507,,error,list index out of range
+Bio-protocol-3012,Synthetic Lethality Screens Using RNAi in Combination with CRISPR-based Knockout in Drosophila Cells,https://doi.org/10.21769/BioProtoc.2119,,error,list index out of range
+Bio-protocol-192,Unlocking Bio-Instructive Polymers: A Novel Multi-Well Screening Platform Based on Secretome Sampling,https://doi.org/10.21769/BioProtoc.4939,https://doi.org/10.1002/btm2.10063,ok,ok
+Bio-protocol-1590,"Production, Purification and Characterization of Recombinant Biotinylated Phytochrome B for",https://doi.org/10.21769/BioProtoc.3541,,error,list index out of range

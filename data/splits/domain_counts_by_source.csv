@@ -1,0 +1,65 @@
+source,domain,count
+bio_protocol,Plant Science & Technology,635
+bio_protocol,Cell Biology & Culture,556
+bio_protocol,Biochemical & Molecular Functional Analysis,495
+bio_protocol,Microbiology & Virology,465
+bio_protocol,Neuroscience Methods,457
+bio_protocol,Immunological Techniques,326
+bio_protocol,Molecular Biology Techniques,312
+bio_protocol,Bioimaging Technologies,284
+bio_protocol,Model Organism-Specific Techniques,246
+bio_protocol,Genomics Technologies,111
+bio_protocol,Structural Biology Techniques,79
+bio_protocol,Pharmacology & Drug Development,67
+bio_protocol,Bioinformatics Methods,49
+bio_protocol,Histology Techniques,31
+bio_protocol,Synthetic Biology & Bioengineering,31
+bio_protocol,Toxicology & Safety Testing,11
+bio_protocol,Unclassified: Climate Change Simulation Techniques,1
+bio_protocol,Unclassified: Single-Molecule Proteomics,1
+protocol_io,Molecular Biology Techniques,1540
+protocol_io,Genomics Technologies,1263
+protocol_io,Microbiology & Virology,1113
+protocol_io,Neuroscience Methods,1050
+protocol_io,Cell Biology & Culture,893
+protocol_io,Biochemical & Molecular Functional Analysis,778
+protocol_io,Bioimaging Technologies,600
+protocol_io,Immunological Techniques,593
+protocol_io,Bioinformatics Methods,391
+protocol_io,Plant Science & Technology,348
+protocol_io,Model Organism-Specific Techniques,278
+protocol_io,Pharmacology & Drug Development,263
+protocol_io,Histology Techniques,195
+protocol_io,Structural Biology Techniques,124
+protocol_io,Synthetic Biology & Bioengineering,61
+protocol_io,Toxicology & Safety Testing,51
+protocol_io,"Clinical, Surgical & Rehabilitation Techniques",23
+protocol_io,"Environmental, Ecological & Earth Science Methods",8
+protocol_io,"Biomechanics, Physiology & Sports Science",7
+protocol_io,Computational & Bioinformatics Methods,4
+protocol_io,Invertebrate & Entomological Techniques,2
+protocol_exchange,Cell Biology & Culture,173
+protocol_exchange,Bioimaging Technologies,117
+protocol_exchange,Genomics Technologies,108
+protocol_exchange,Molecular Biology Techniques,100
+protocol_exchange,Biochemical & Molecular Functional Analysis,82
+protocol_exchange,Immunological Techniques,62
+protocol_exchange,Microbiology & Virology,57
+protocol_exchange,Neuroscience Methods,52
+protocol_exchange,Bioinformatics Methods,44
+protocol_exchange,Model Organism-Specific Techniques,36
+protocol_exchange,Plant Science & Technology,26
+protocol_exchange,Pharmacology & Drug Development,20
+protocol_exchange,Structural Biology Techniques,17
+protocol_exchange,Synthetic Biology & Bioengineering,11
+protocol_exchange,Histology Techniques,10
+protocol_exchange,Toxicology & Safety Testing,9
+protocol_exchange,Unclassified: Carbon Capture Materials,1
+protocol_exchange,Unclassified: Forensic Anthropology,1
+protocol_exchange,Unclassified: Gas Sampling Techniques,1
+protocol_exchange,Unclassified: Hand Performance & Strength Evaluation,1
+protocol_exchange,Unclassified: Healthcare Monitoring Technologies,1
+protocol_exchange,Unclassified: Occupational Health Assessment,1
+protocol_exchange,Unclassified: Organic Synthesis Techniques,1
+protocol_exchange,Unclassified: Virtual Reality Rehabilitation,1
+protocol_exchange,Unclassified: Virtual Reality in Rehabilitation,1
