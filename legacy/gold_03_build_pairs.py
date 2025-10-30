@@ -1,9 +1,10 @@
 # 입력: data/gold/gold_articles.jsonl, data/raw/bio_protocol.json
 # 출력: data/gold/gold_pairs.jsonl
-import orjson
 import pathlib
 
-ROOT = pathlib.Path(".")
+import orjson
+
+ROOT = pathlib.Path("../scripts")
 ART = ROOT / "data/gold/gold_articles.jsonl"
 BIO = ROOT / "data/raw/bio_protocol.json"
 OUT = ROOT / "data/gold/gold_pairs.jsonl"

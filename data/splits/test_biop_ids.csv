@@ -1,0 +1,61 @@
+protocol_id,domain,title,original_article_url
+Bio-protocol-1267,Plant Science & Technology,Analysis of Isotopically-labeled Monogalactosyldiacylglycerol Molecular Species from 14CAcetate-Labeled Tobacco Leaves,http://www.ncbi.nlm.nih.gov/pubmed/24509429
+Bio-protocol-1118,Plant Science & Technology,Histological Methods to Detect Early-stage Plant Defense Responses during Artificial Inoculation of Lolium perenne with Epichloefestucae,http://www.ncbi.nlm.nih.gov/pubmed/23689713
+Bio-protocol-1303,Plant Science & Technology,Agrobacterium-mediated Transformation of Sweet Basil (Ocimum basilicum),http://www.ncbi.nlm.nih.gov/pubmed/23708666
+Bio-protocol-3637,Plant Science & Technology,Cell Wall Biomass Preparation and Fourier Transform Mid-infrared (FTIR) Spectroscopy to Study Cell Wall Composition,http://www.ncbi.nlm.nih.gov/pubmed/30072880
+Bio-protocol-1928,Plant Science & Technology,Quantification of the Humidity Effect on HR by Ion Leakage Assay,http://www.ncbi.nlm.nih.gov/pubmed/25212770
+Bio-protocol-1935,Microbiology & Virology,Biofilm Assays on Fibrinogen-coated Silicone Catheters and 96-well Polystyrene Plates,http://www.ncbi.nlm.nih.gov/pubmed/26454832
+Bio-protocol-1278,Microbiology & Virology,Preparation of Bacterial Outer Membrane Vesicles for Characterisation of Periplasmic Proteins,http://www.ncbi.nlm.nih.gov/pubmed/24684269
+Bio-protocol-1525,Microbiology & Virology,Split Nano Luciferase-based Assay to Measure Assembly of Japanese Encephalitis Virus,http://www.ncbi.nlm.nih.gov/pubmed/24740933
+Bio-protocol-2262,Microbiology & Virology,Detection of Catalase Activity by Polyacrylamide Gel Electrophoresis (PAGE) in Cell Extracts from Pseudomonas aeruginosa,http://www.ncbi.nlm.nih.gov/pubmed/27545882
+Bio-protocol-1747,Microbiology & Virology,Measurement of Acid Ecto-phosphatase Activity in Live Leishmania donovani Parasites,http://www.ncbi.nlm.nih.gov/pubmed/26097472
+Bio-protocol-1500,Biochemical & Molecular Functional Analysis,Mouse Adipose Tissue Protein Extraction,http://www.ncbi.nlm.nih.gov/pubmed/25257164
+Bio-protocol-2827,Biochemical & Molecular Functional Analysis,Fluorometric Estimation of Glutathione in Cultured Microglial Cell Lysate,http://www.ncbi.nlm.nih.gov/pubmed/28913845
+Bio-protocol-3350,Biochemical & Molecular Functional Analysis,Extraction and Quantification of Tryptophan and Kynurenine from Cultured Cells and Media Using a High Performance Liquid Chromatography (HPLC) System Equipped with an Ultra-sensitive Diode Array Detector,http://www.ncbi.nlm.nih.gov/pubmed/30581017
+Bio-protocol-1175,Biochemical & Molecular Functional Analysis,Quantitative Measurement of Mucolytic Enzymes in Fecal Samples,http://www.ncbi.nlm.nih.gov/pubmed/23464633
+Bio-protocol-3885,Biochemical & Molecular Functional Analysis,"Chromogenic Substrate Assay for Determining the Activity of Plasma Kallikrein Praveen Papareddy, Martina Kalle, Artur Schmidtchen",http://pubmed.ncbi.nlm.nih.gov/31513816/
+Bio-protocol-1436,Immunological Techniques,"Flow Cytometry of CD14, VDR, Cyp27 and Cyp24 and TLR4 in U937 Cells",http://www.ncbi.nlm.nih.gov/pubmed/25122090
+Bio-protocol-1899,Immunological Techniques,"TZA, a Sensitive Reporter Cell-based Assay to Accurately and Rapidly Quantify Inducible, Replication-competent Latent HIV-1 from Resting CD4+ T Cells",http://www.ncbi.nlm.nih.gov/pubmed/26329536
+Bio-protocol-3849,Immunological Techniques,Isolation and in vitro Activation of Mouse Peyer’s Patch Cells from Small Intestine Tissue Claudia Pastori and Lucia Lopalco,http://www.ncbi.nlm.nih.gov/pubmed/32053791
+Bio-protocol-824,Immunological Techniques,Investigation of Microvesicle Uptake by Mouse Lung-marginated  Monocytes in vitro,http://www.ncbi.nlm.nih.gov/pubmed/22788997
+Bio-protocol-3152,Immunological Techniques,Assessment of TCR-induced Sumoylation of PKC-θ,http://www.ncbi.nlm.nih.gov/pubmed/28045055
+Bio-protocol-1027,Cell Biology & Culture,Isolation and in vitro Culture of Mouse Oocytes,http://www.ncbi.nlm.nih.gov/pubmed/23201122
+Bio-protocol-1133,Cell Biology & Culture,Optimized Recombinant Production of Secreted Proteins Using Human Embryonic Kidney (HEK293) Cells Grown in Suspension,http://www.ncbi.nlm.nih.gov/pubmed/23382243
+Bio-protocol-1151,Cell Biology & Culture,Ex vivo Assessment of Mitochondrial Function in Human Peripheral Blood Mononuclear Cells,http://www.ncbi.nlm.nih.gov/pubmed/22344032
+Bio-protocol-3507,Cell Biology & Culture,Clonal Culture of Mouse Liver Progenitor Cells,http://www.ncbi.nlm.nih.gov/pubmed/30712511
+Bio-protocol-3043,Cell Biology & Culture,Ex vivo Culture of Adult Mouse Antral Glands,http://www.ncbi.nlm.nih.gov/pubmed/29398363
+Bio-protocol-1853,Genomics Technologies,Immunoprecipitation and Sequencing of Acetylated RNA,http://www.ncbi.nlm.nih.gov/pubmed/25545748
+Bio-protocol-837,Genomics Technologies,ATAC Sequencing Protocol For Cryopreserved Mammalian Cells,http://www.ncbi.nlm.nih.gov/pubmed/22964582
+Bio-protocol-1568,Genomics Technologies,Single-cell qPCR Assay with Massively Parallel Microfluidic System,http://www.ncbi.nlm.nih.gov/pubmed/25085420
+Bio-protocol-3141,Genomics Technologies,Identification of Methylated Deoxyadenosines in Genomic DNA by dA^6m DNA Immunoprecipitation,https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3839733/
+Bio-protocol-1088,Genomics Technologies,Simplified Epigenome Profiling Using Antibody-tethered Tagmentation,http://www.ncbi.nlm.nih.gov/pubmed/23824807
+Bio-protocol-2986,Bioimaging Technologies,Automatic Quantification of the Number of Intracellular,http://www.ncbi.nlm.nih.gov/pubmed/28686317
+Bio-protocol-2105,Bioimaging Technologies,Live Confocal Imaging of Brachypodium Spikelet Meristems,http://www.ncbi.nlm.nih.gov/pubmed/27138568
+Bio-protocol-3434,Bioimaging Technologies,Super-resolution Imaging of Live BY2 Cells Using 3D-structured Illumination,http://www.ncbi.nlm.nih.gov/pubmed/31028389
+Bio-protocol-2406,Bioimaging Technologies,Preparation of Precisely Oriented Cryosections of Undistorted Drosophila Wing Imaginal Discs for High Resolution Confocal Imaging,http://www.ncbi.nlm.nih.gov/pubmed/27558743
+Bio-protocol-1386,Bioimaging Technologies,Optogenetic Tuning of Protein-protein Binding in Bilayers Using LOVTRAP,http://www.ncbi.nlm.nih.gov/pubmed/24372390
+Bio-protocol-1297,Molecular Biology Techniques,Charging State Analysis of Transfer RNA from an α-proteobacterium,http://www.ncbi.nlm.nih.gov/pubmed/24417419
+Bio-protocol-4307,Molecular Biology Techniques,DNase I Footprinting to Identify Protein Binding Sites,http://pubmed.ncbi.nlm.nih.gov/32002170/
+Bio-protocol-4257,Molecular Biology Techniques,Ultra-low Background DNA Cloning System,http://pubmed.ncbi.nlm.nih.gov/33711082/
+Bio-protocol-2006,Molecular Biology Techniques,Analysis of DNA Exchange Using Thymidine Analogs (ADExTA) in Trypanosoma cruzi,http://www.ncbi.nlm.nih.gov/pubmed/25331432
+Bio-protocol-1995,Molecular Biology Techniques,In vitro Generation of CRISPR-Cas9 Complexes with Covalently Bound Repair Templates for Genome Editing in Mammalian Cells,http://www.ncbi.nlm.nih.gov/pubmed/26833627
+Bio-protocol-2913,Neuroscience Methods,Assessment of Murine Retinal Function by Electroretinography,http://www.ncbi.nlm.nih.gov/pubmed/28886012
+Bio-protocol-1744,Neuroscience Methods,Antisense Oligodeoxynucleotide Perfusion Blocks Gene Expression of Synaptic Plasticity-related Proteins without Inducing Compensation in Hippocampal Slices,http://www.ncbi.nlm.nih.gov/pubmed/19735549
+Bio-protocol-1385,Neuroscience Methods,Integration of Human Induced Pluripotent Stem Cell (hiPSC)-Derived Neurons into Rat Brain,http://www.ncbi.nlm.nih.gov/pubmed/24829345
+Bio-protocol-3343,Neuroscience Methods,Primary Neuron-glia Culture from Rat Cortex as a Model to Study Neuroinflammation in CNS Injuries or Diseases,http://www.ncbi.nlm.nih.gov/pubmed/?term=31093828
+Bio-protocol-2503,Neuroscience Methods,Formalin Murine Model of Pain,https://www.ncbi.nlm.nih.gov/pubmed/27483347
+Bio-protocol-4244,Pharmacology & Drug Development,^3H -Penciclovir (3H-PCV) Uptake Assay,https://pubmed.ncbi.nlm.nih.gov/33431431/
+Bio-protocol-4183,Pharmacology & Drug Development,Xenograft Tumor Growth Assay,http://pubmed.ncbi.nlm.nih.gov/33472069/
+Bio-protocol-3754,Pharmacology & Drug Development,Determination of Mitochondrial DNA Upon Drug Treatment,http://www.ncbi.nlm.nih.gov/pubmed/28698551
+Bio-protocol-1172,Pharmacology & Drug Development,Preparation and Characterization of Poly(2-oxazoline) Micelles for the Solubilization and Delivery of Water Insoluble Drugs,http://www.ncbi.nlm.nih.gov/pubmed/23932570
+Bio-protocol-4270,Pharmacology & Drug Development,Drug Sensitivity Assay of Xanthomonas. citri subsp. citri Using REMA Plate Method,http://pubmed.ncbi.nlm.nih.gov/33144673/
+Bio-protocol-933,Model Organism-Specific Techniques,A Rapid Induction Overexpression System for the Fission Yeast Schizosaccharomyces pombe,http://www.ncbi.nlm.nih.gov/pubmed/23475183
+Bio-protocol-4129,Model Organism-Specific Techniques,Virulence Studies of Clostridium difficile,http://www.ncbi.nlm.nih.gov/pubmed/32732903
+Bio-protocol-1742,Model Organism-Specific Techniques,"Analyzing the Functionality of Non-native Hsp70 Proteins in Saccharomyces cerevisiae Laura E. Knighton, Lizbeth P. Saa, Adam M. Reitzel and Andrew W. Truman*",https://pubmed.ncbi.nlm.nih.gov/25670816/
+Bio-protocol-1974,Model Organism-Specific Techniques,Flip-flop Mediated Conditional Gene Inactivation in Drosophila,http://www.ncbi.nlm.nih.gov/pubmed/26494174
+Bio-protocol-1696,Model Organism-Specific Techniques,Determination of Chromatin Accessibility in Drosophila Midgut,http://www.ncbi.nlm.nih.gov/pubmed/16365873
+Bio-protocol-1870,Structural Biology Techniques,A Detailed Protocol for Large-scale Recombinant Expression and Validation of Human FGFR2 with Its Transmembrane and Extracellular Domains in Escherichia coli,http://www.ncbi.nlm.nih.gov/pubmed/26443633
+Bio-protocol-1212,Structural Biology Techniques,"Expression and Purification of Yeast-derived GPCR, Gα and Gβγ Subunits for Structural and",http://www.ncbi.nlm.nih.gov/pubmed/24335304
+Bio-protocol-4024,Structural Biology Techniques,Purification and Crystallization of Chloromuconolactone Dehalogenase ClcF from Rhodococcus opacus 1CP,https://www.ncbi.nlm.nih.gov/pubmed/32600387
+Bio-protocol-3080,Structural Biology Techniques,Protocol for Molecular Dynamics Simulations of Proteins,http://www.ncbi.nlm.nih.gov/pubmed/26282538
+Bio-protocol-951,Structural Biology Techniques,A High-throughput Pipeline to Determine DNA and Nucleosome Conformations,http://www.ncbi.nlm.nih.gov/pubmed/23237060

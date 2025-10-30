@@ -8,16 +8,16 @@
 #   data/gold/test_original_urls.txt (원문 URL 라인 리스트)
 
 import csv
-import orjson
 import os
 import pathlib
 import re
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 import httpx
+import orjson
 from tqdm import tqdm
 
-ROOT = pathlib.Path(".")
+ROOT = pathlib.Path("../scripts")
 BIO = ROOT / "data/raw/bio_protocol.json"
 TEST_IDS = ROOT / "data/splits/test_ids.txt"
 OUT_DIR = ROOT / "data/gold"

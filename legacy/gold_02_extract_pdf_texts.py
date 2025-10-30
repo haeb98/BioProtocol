@@ -1,12 +1,12 @@
 # 입력: data/gold/gold_article_pdf/Bio-article-*.pdf
 # 출력: data/gold/gold_articles.jsonl (article_id, protocol_id, text, meta)
-import fitz
-import orjson
 import pathlib
 
+import fitz
+import orjson
 from tqdm import tqdm
 
-ROOT = pathlib.Path(".")
+ROOT = pathlib.Path("../scripts")
 IN = ROOT / "data/gold/gold_article_pdf"
 OUT = ROOT / "data/gold/gold_articles.jsonl"
 OUT.parent.mkdir(parents=True, exist_ok=True)

@@ -8,12 +8,13 @@
 #   data/splits/domain_summary.json
 
 import csv
-import ijson
-import orjson
 import pathlib
 from collections import Counter, defaultdict
 
-ROOT = pathlib.Path(".")
+import ijson
+import orjson
+
+ROOT = pathlib.Path("../scripts")
 RAW = ROOT / "data" / "raw"
 OUTDIR = ROOT / "data" / "splits"
 OUTDIR.mkdir(parents=True, exist_ok=True)

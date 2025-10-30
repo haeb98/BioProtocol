@@ -1,10 +1,10 @@
 # scripts/check_goldpair_sanity.py
-import orjson
 import pathlib
 
+import orjson
 from sentence_transformers import SentenceTransformer, util
 
-ROOT = pathlib.Path(".")
+ROOT = pathlib.Path("../scripts")
 PAIRS = ROOT / "data/gold/gold_pairs_pmc_bioprotocol_balanced.jsonl"
 m = SentenceTransformer("sentence-transformers/all-MiniLM-L6-v2")
 

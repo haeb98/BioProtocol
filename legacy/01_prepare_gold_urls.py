@@ -4,7 +4,7 @@ import json
 import pathlib
 import re
 
-ROOT = pathlib.Path(".")
+ROOT = pathlib.Path("../scripts")
 IN = ROOT / "data/gold/bio_protocol.json"
 OUT_URLS = ROOT / "data/gold/bio_protocol_urls.txt"
 OUT_IDX = ROOT / "data/gold/bio_protocol_index.csv"

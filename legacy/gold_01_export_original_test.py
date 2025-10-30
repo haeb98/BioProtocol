@@ -3,10 +3,11 @@
 #   data/gold/test_original_urls.csv  (id, title, doi_url)
 #   data/gold/test_original_urls.txt  (원문 URL만 라인별)
 import csv
-import orjson
 import pathlib
 
-ROOT = pathlib.Path(".")
+import orjson
+
+ROOT = pathlib.Path("../scripts")
 TEST_IDS = (ROOT / "data/splits/test_ids.txt").read_text().splitlines()
 BIO = ROOT / "data/raw/bio_protocol.json"
 OUT_CSV = ROOT / "data/gold/test_original_urls.csv"

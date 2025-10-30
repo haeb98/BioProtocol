@@ -10,7 +10,7 @@ from bs4 import BeautifulSoup
 from tenacity import retry, stop_after_attempt, wait_exponential
 from tqdm import tqdm
 
-ROOT = pathlib.Path(".")
+ROOT = pathlib.Path("../scripts")
 IN_TXT = ROOT / "data/gold/bio_protocol_urls.txt"
 OUT_CSV = ROOT / "data/gold/bio_protocol_original_articles.csv"
 OUT_URLS = ROOT / "data/gold/original_articles_urls.txt"

@@ -16,7 +16,7 @@ import ijson
 import orjson
 from tqdm import tqdm
 
-ROOT = pathlib.Path(".")
+ROOT = pathlib.Path("../scripts")
 RAW = ROOT / "data" / "raw"
 SPLITS = ROOT / "data" / "splits"
 

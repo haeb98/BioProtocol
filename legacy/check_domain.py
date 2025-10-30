@@ -1,9 +1,10 @@
 # scripts/gold_00_summarize_methods_domains.py
-import orjson
 import pathlib
 from collections import Counter
 
-ROOT = pathlib.Path(".")
+import orjson
+
+ROOT = pathlib.Path("../scripts")
 BIO = ROOT / "data/raw/bio_protocol.json"
 ART = ROOT / "data/gold/gold_articles_methods_pmc.jsonl"
 
