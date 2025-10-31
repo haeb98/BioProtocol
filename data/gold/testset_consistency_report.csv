@@ -1,0 +1,61 @@
+protocol_id,pmcid,domain,doi_match,title_sim,keyword_sim,action_overlap,material_overlap,param_coverage,section_list,sections_total_chars,sections_total_tokens,suspect_mismatch,notes
+Bio-protocol-1027,,Cell Biology & Culture,0,0,0,0,0,0,,0,0,1,no_article_sections
+Bio-protocol-1088,,Genomics Technologies,0,0,0,0,0,0,,0,0,1,no_article_sections
+Bio-protocol-1118,,Plant Science & Technology,0,0,0,0,0,0,,0,0,1,no_article_sections
+Bio-protocol-1133,,Cell Biology & Culture,0,0,0,0,0,0,,0,0,1,no_article_sections
+Bio-protocol-1151,,Cell Biology & Culture,0,0,0,0,0,0,,0,0,1,no_article_sections
+Bio-protocol-1172,,Pharmacology & Drug Development,0,0,0,0,0,0,,0,0,1,no_article_sections
+Bio-protocol-1175,,Biochemical & Molecular Functional Analysis,0,0,0,0,0,0,,0,0,1,no_article_sections
+Bio-protocol-1212,,Structural Biology Techniques,0,0,0,0,0,0,,0,0,1,no_article_sections
+Bio-protocol-1267,,Plant Science & Technology,0,0,0,0,0,0,,0,0,1,no_article_sections
+Bio-protocol-1278,PMC4235344,Microbiology & Virology,0,0.032,0.008,0.0,0.5,0.118,Experimental procedures|Results,33706,5149,0,
+Bio-protocol-1297,,Molecular Biology Techniques,0,0,0,0,0,0,,0,0,1,no_article_sections
+Bio-protocol-1303,PMC3898310,Plant Science & Technology,0,0.043,0.0,0.0,0.167,0.18,Materials and methods|Results,19405,2818,0,
+Bio-protocol-1385,,Neuroscience Methods,0,0,0,0,0,0,,0,0,1,no_article_sections
+Bio-protocol-1386,,Bioimaging Technologies,0,0,0,0,0,0,,0,0,1,no_article_sections
+Bio-protocol-1436,PMC4133157,Immunological Techniques,0,0.032,0.002,0.0,0.417,0.119,Materials and Methods|Results,34341,4842,0,
+Bio-protocol-1500,,Biochemical & Molecular Functional Analysis,0,0,0,0,0,0,,0,0,1,no_article_sections
+Bio-protocol-1525,,Microbiology & Virology,0,0,0,0,0,0,,0,0,1,no_article_sections
+Bio-protocol-1568,PMC4117943,Genomics Technologies,0,0.0,0.003,0.067,0.111,0.085,Materials and methods|Results,25794,3862,1,
+Bio-protocol-1696,,Model Organism-Specific Techniques,0,0,0,0,0,0,,0,0,1,no_article_sections
+Bio-protocol-1742,,Model Organism-Specific Techniques,0,0,0,0,0,0,,0,0,1,no_article_sections
+Bio-protocol-1744,PMC2790841,Neuroscience Methods,0,0.069,0.036,0.0,0.2,0.121,Materials and methods|Methods|Results,16927,2480,0,
+Bio-protocol-1747,PMC4456614,Microbiology & Virology,0,0.0,0.004,0.077,0.2,0.328,Materials and Methods|Results,16843,2620,0,
+Bio-protocol-1853,,Genomics Technologies,0,0,0,0,0,0,,0,0,1,no_article_sections
+Bio-protocol-1870,,Structural Biology Techniques,0,0,0,0,0,0,,0,0,1,no_article_sections
+Bio-protocol-1899,,Immunological Techniques,0,0,0,0,0,0,,0,0,1,no_article_sections
+Bio-protocol-1928,,Plant Science & Technology,0,0,0,0,0,0,,0,0,1,no_article_sections
+Bio-protocol-1935,PMC4623088,Microbiology & Virology,0,0.043,0.026,0.0,0.333,0.051,Abstract|Materials and methods|Results|Staining protocol,14665,2179,0,
+Bio-protocol-1974,,Model Organism-Specific Techniques,0,0,0,0,0,0,,0,0,1,no_article_sections
+Bio-protocol-1995,,Molecular Biology Techniques,0,0,0,0,0,0,,0,0,1,no_article_sections
+Bio-protocol-2006,,Molecular Biology Techniques,0,0,0,0,0,0,,0,0,1,no_article_sections
+Bio-protocol-2105,PMC4864890,Bioimaging Technologies,0,0.0,0.002,0.143,0.25,0.25,Materials and Methods|Results,20547,2900,0,
+Bio-protocol-2262,,Microbiology & Virology,0,0,0,0,0,0,,0,0,1,no_article_sections
+Bio-protocol-2406,PMC4997328,Bioimaging Technologies,0,0.0,0.038,0.182,0.222,0.053,Methods|Results,20541,2993,0,
+Bio-protocol-2503,PMC5087831,Neuroscience Methods,0,0.048,0.042,0.6,0.143,0.472,Genotyping procedure|Loss of osteocalcin results in differences in glucose and insulin tolerance|MATERIALS AND METHODS|RESULTS,21507,3152,0,
+Bio-protocol-2827,,Biochemical & Molecular Functional Analysis,0,0,0,0,0,0,,0,0,1,no_article_sections
+Bio-protocol-2913,PMC5607217,Neuroscience Methods,0,0.04,0.039,0.167,0.333,0.75,Materials and methods|Results,17468,2687,0,
+Bio-protocol-2986,,Bioimaging Technologies,0,0,0,0,0,0,,0,0,1,no_article_sections
+Bio-protocol-3043,,Cell Biology & Culture,0,0,0,0,0,0,,0,0,1,no_article_sections
+Bio-protocol-3080,PMC4539932,Structural Biology Techniques,0,0.0,0.001,0.0,0.0,0.0,Methods|Results,20191,2951,1,
+Bio-protocol-3141,,Genomics Technologies,0,0,0,0,0,0,,0,0,1,no_article_sections
+Bio-protocol-3152,PMC5206632,Immunological Techniques,0,0.053,0.0,0.154,0.429,0.14,Methods|Results,18311,2745,0,
+Bio-protocol-3343,,Neuroscience Methods,0,0,0,0,0,0,,0,0,1,no_article_sections
+Bio-protocol-3350,PMC6335594,Biochemical & Molecular Functional Analysis,0,0.0,0.0,0.2,0.071,0.286,Experimental Procedures|Results,23610,3698,0,
+Bio-protocol-3434,PMC6535813,Bioimaging Technologies,0,0.0,0.0,0.0,0.0,0.0,Materials and Methods|Results,29292,4196,1,
+Bio-protocol-3507,PMC6360649,Cell Biology & Culture,0,0.0,0.0,0.091,0.0,0.0,Methods|Results,24466,3515,1,
+Bio-protocol-3637,PMC6060231,Plant Science & Technology,0,0.0,0.0,0.083,0.429,0.068,Methods|Results,15411,2389,0,
+Bio-protocol-3754,PMC5506065,Pharmacology & Drug Development,0,0.043,0.0,0.0,0.333,0.0,Methods|Results,26262,3933,0,
+Bio-protocol-3849,,Immunological Techniques,0,0,0,0,0,0,,0,0,1,no_article_sections
+Bio-protocol-3885,,Biochemical & Molecular Functional Analysis,0,0,0,0,0,0,,0,0,1,no_article_sections
+Bio-protocol-4024,PMC7322875,Structural Biology Techniques,0,0.042,0.0,0.077,0.143,0.123,Methods|Results,29461,4282,1,
+Bio-protocol-4129,PMC7393111,Model Organism-Specific Techniques,0,0.0,0.0,0.0,0.286,0.0,Methods|Results,31972,4806,0,
+Bio-protocol-4183,PMC7816122,Pharmacology & Drug Development,0,0.0,0.0,0.143,0.273,0.0,Experimental model and subject details|Results|STAR★Methods,40593,5901,0,
+Bio-protocol-4244,PMC7903996,Pharmacology & Drug Development,0,0.0,0.0,0.0,0.125,0.118,MATERIALS AND METHODS|RESULTS,11961,1794,1,
+Bio-protocol-4257,PMC7990224,Molecular Biology Techniques,0,0.059,0.0,0.0,0.083,0.25,Materials and methods|Results,31835,4749,0,
+Bio-protocol-4270,PMC7641209,Pharmacology & Drug Development,0,0.05,0.0,0.1,0.222,0.0,Methods|Results,32619,5021,0,
+Bio-protocol-4307,PMC6968433,Molecular Biology Techniques,0,0.045,0.0,0.053,0.333,0.31,Materials and methods|Results,22919,3311,0,
+Bio-protocol-824,,Immunological Techniques,0,0,0,0,0,0,,0,0,1,no_article_sections
+Bio-protocol-837,,Genomics Technologies,0,0,0,0,0,0,,0,0,1,no_article_sections
+Bio-protocol-933,,Model Organism-Specific Techniques,0,0,0,0,0,0,,0,0,1,no_article_sections
+Bio-protocol-951,,Structural Biology Techniques,0,0,0,0,0,0,,0,0,1,no_article_sections

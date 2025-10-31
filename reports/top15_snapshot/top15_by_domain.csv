@@ -1,0 +1,9 @@
+domain,n,action_overlap_mean,param_coverage_mean,material_overlap_mean
+Biochemical & Molecular Functional Analysis,1,0.1,0.286,0.071
+Bioimaging Technologies,2,0.162,0.151,0.25
+Immunological Techniques,2,0.077,0.13,0.423
+Microbiology & Virology,3,0.026,0.162,0.344
+Molecular Biology Techniques,2,0.026,0.28,0.208
+Neuroscience Methods,2,0.4,0.611,0.238
+Pharmacology & Drug Development,1,0.143,0.0,0.273
+Plant Science & Technology,2,0.042,0.124,0.298

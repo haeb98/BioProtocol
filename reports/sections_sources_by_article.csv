@@ -1,0 +1,26 @@
+protocol_id,pmcid,domain,section_count,sources_list
+Bio-protocol-1744,PMC2790841,Neuroscience Methods,3,regular|regular|regular
+Bio-protocol-1303,PMC3898310,Plant Science & Technology,2,regular|regular
+Bio-protocol-1568,PMC4117943,Genomics Technologies,2,regular|regular
+Bio-protocol-1436,PMC4133157,Immunological Techniques,2,regular|regular
+Bio-protocol-1278,PMC4235344,Microbiology & Virology,2,regular|regular
+Bio-protocol-1747,PMC4456614,Microbiology & Virology,2,regular|regular
+Bio-protocol-3080,PMC4539932,Structural Biology Techniques,2,regular|regular
+Bio-protocol-1935,PMC4623088,Microbiology & Virology,4,regular|regular|regular|regular
+Bio-protocol-2105,PMC4864890,Bioimaging Technologies,2,regular|regular
+Bio-protocol-2406,PMC4997328,Bioimaging Technologies,2,regular|regular
+Bio-protocol-2503,PMC5087831,Neuroscience Methods,4,regular|regular|regular|regular
+Bio-protocol-3152,PMC5206632,Immunological Techniques,2,regular|regular
+Bio-protocol-3754,PMC5506065,Pharmacology & Drug Development,2,regular|regular
+Bio-protocol-2913,PMC5607217,Neuroscience Methods,2,regular|regular
+Bio-protocol-3637,PMC6060231,Plant Science & Technology,2,regular|regular
+Bio-protocol-3350,PMC6335594,Biochemical & Molecular Functional Analysis,2,regular|regular
+Bio-protocol-3507,PMC6360649,Cell Biology & Culture,2,regular|regular
+Bio-protocol-3434,PMC6535813,Bioimaging Technologies,2,regular|regular
+Bio-protocol-4307,PMC6968433,Molecular Biology Techniques,2,regular|regular
+Bio-protocol-4024,PMC7322875,Structural Biology Techniques,2,regular|regular
+Bio-protocol-4129,PMC7393111,Model Organism-Specific Techniques,2,regular|regular
+Bio-protocol-4270,PMC7641209,Pharmacology & Drug Development,2,regular|regular
+Bio-protocol-4183,PMC7816122,Pharmacology & Drug Development,3,regular|regular|regular
+Bio-protocol-4244,PMC7903996,Pharmacology & Drug Development,2,regular|regular
+Bio-protocol-4257,PMC7990224,Molecular Biology Techniques,2,regular|regular

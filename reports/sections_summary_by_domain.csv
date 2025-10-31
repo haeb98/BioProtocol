@@ -1,0 +1,13 @@
+domain,articles,sections,tokens_total,chars_total,sections_per_article,tokens_per_article,chars_per_article,src_regular,src_merged,src_heuristic
+Pharmacology & Drug Development,4,9,16649,111425,2.25,4162.25,27856.25,9,0,0
+Bioimaging Technologies,3,6,10089,70374,2.0,3363.0,23458.0,6,0,0
+Microbiology & Virology,3,8,9948,65204,2.67,3316.0,21734.67,8,0,0
+Neuroscience Methods,3,9,8319,55890,3.0,2773.0,18630.0,9,0,0
+Immunological Techniques,2,4,7587,52648,2.0,3793.5,26324.0,4,0,0
+Molecular Biology Techniques,2,4,8060,54750,2.0,4030.0,27375.0,4,0,0
+Plant Science & Technology,2,4,5207,34812,2.0,2603.5,17406.0,4,0,0
+Structural Biology Techniques,2,4,7233,49648,2.0,3616.5,24824.0,4,0,0
+Biochemical & Molecular Functional Analysis,1,2,3698,23608,2.0,3698.0,23608.0,2,0,0
+Cell Biology & Culture,1,2,3515,24464,2.0,3515.0,24464.0,2,0,0
+Genomics Technologies,1,2,3862,25792,2.0,3862.0,25792.0,2,0,0
+Model Organism-Specific Techniques,1,2,4806,31970,2.0,4806.0,31970.0,2,0,0

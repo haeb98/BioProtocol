@@ -1,0 +1,69 @@
+{
+  "n_selected": 15,
+  "domain_distribution": {
+    "Neuroscience Methods": 2,
+    "Molecular Biology Techniques": 2,
+    "Microbiology & Virology": 3,
+    "Bioimaging Technologies": 2,
+    "Immunological Techniques": 2,
+    "Biochemical & Molecular Functional Analysis": 1,
+    "Plant Science & Technology": 2,
+    "Pharmacology & Drug Development": 1
+  },
+  "metrics_summary": {
+    "action_overlap": {
+      "n": 15,
+      "mean": 0.116,
+      "median": 0.083,
+      "p25": 0.0,
+      "p75": 0.143,
+      "min": 0.0,
+      "max": 0.6
+    },
+    "material_overlap": {
+      "n": 15,
+      "mean": 0.281,
+      "median": 0.273,
+      "p25": 0.167,
+      "p75": 0.333,
+      "min": 0.071,
+      "max": 0.5
+    },
+    "param_coverage": {
+      "n": 15,
+      "mean": 0.224,
+      "median": 0.18,
+      "p25": 0.068,
+      "p75": 0.286,
+      "min": 0.0,
+      "max": 0.75
+    },
+    "title_sim": {
+      "n": 15,
+      "mean": 0.026,
+      "median": 0.032,
+      "p25": 0.0,
+      "p75": 0.043,
+      "min": 0.0,
+      "max": 0.059
+    },
+    "keyword_sim": {
+      "n": 15,
+      "mean": 0.012,
+      "median": 0.001,
+      "p25": 0.0,
+      "p75": 0.013,
+      "min": 0.0,
+      "max": 0.051
+    },
+    "sections_total_chars": {
+      "n": 15,
+      "mean": 11177.333,
+      "median": 9293.0,
+      "p25": 8681.0,
+      "p75": 11429.0,
+      "min": 5134.0,
+      "max": 20399.0
+    }
+  }
+}
