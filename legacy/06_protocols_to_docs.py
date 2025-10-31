@@ -12,11 +12,12 @@
   - 프로토콜 1건 = 1문서 원칙
   - 메모리 절약을 위해 ijson 스트리밍
 """
-import ijson
-import orjson
 import pathlib
 
-ROOT = pathlib.Path(".")
+import ijson
+import orjson
+
+ROOT = pathlib.Path("../scripts")
 RAW = ROOT / "data" / "raw"
 SPL = ROOT / "data" / "splits"
 OUT = ROOT / "data" / "processed"
@@ -24,7 +25,7 @@ OUT.mkdir(parents=True, exist_ok=True)
 
 IN_FILES = [
     RAW / "bio_protocol.json",
-    RAW / "protocol_io.json", RAW / "protocol-io.json",
+    RAW / "protocols_io.json", RAW / "protocol-io.json",
     RAW / "protocol_exchange.json", RAW / "protocol-exchange.json"
 ]
 

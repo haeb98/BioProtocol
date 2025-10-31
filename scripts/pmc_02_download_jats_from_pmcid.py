@@ -1,87 +1,242 @@
-# scripts/pmc_02_download_jats_from_pmcid.py
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+pmc_02_download_jats_from_pmcid.py
+
+Purpose
+- Download PMC JATS XML per PMCID from the mapping CSV (pmc_01 output).
+- Accept rows by status (OK, low_conf, ...) OR accept any PMCID regardless of status.
+- Try OAI-PMH GetRecord first; if it fails (400/403/404 or sanity fail), fall back to Entrez EFetch (db=pmc).
+- Resume-friendly (skip existing unless --overwrite).
+- Robust network handling (retry/backoff) + audit logs.
+
+Inputs (CSV columns from pmc_01):
+  protocol_id, biop_domain, biop_title, original_article_url,
+  pmid, pmcid, source, status, reason,
+  title_sim, oa_check, confidence,
+  biop_url, biop_keywords, biop_hier_len, biop_abstract
+
+Outputs
+- data/gold/pmc_jats/PMCxxxxxx.xml
+- runs/YYYY-MM-DD/pmc_02_success.jsonl
+- runs/YYYY-MM-DD/pmc_02_failures.jsonl
+- runs/YYYY-MM-DD/pmc_02_skipped.jsonl
+
+Notes
+- OAI-PMH: https://www.ncbi.nlm.nih.gov/pmc/oai/oai.cgi
+- EFetch  : https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=PMCxxxxxx
+- Set NCBI_API_KEY in env for better rate-limits.
+"""
+
+import argparse
 import csv
+import datetime as dt
+import json
 import os
 import pathlib
-import requests
-import shutil
-import tempfile
+import re
+import sys
 import time
+from typing import Dict, List, Tuple
 
+import requests
 from requests.adapters import HTTPAdapter
-from tqdm import tqdm
 from urllib3.util.retry import Retry
 
 ROOT = pathlib.Path(".")
-MAP = ROOT / "data/gold/pmc_map_from_urls.csv"  # 이전 단계 출력
-OUTD = ROOT / "data/gold/pmc_jats"
-OUTD.mkdir(parents=True, exist_ok=True)
+DEF_MAP = ROOT / "data/gold/pmc_map_from_urls.csv"
+DEF_OUTD = ROOT / "data/gold/pmc_jats"
 
-# E-utilities EFetch: PMCID → JATS XML
-EFETCH = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi"
-
-# 설정(환경변수로 조절 가능)
-HTTP_TIMEOUT = float(os.environ.get("HTTP_TIMEOUT", "60"))
-SLEEP = float(os.environ.get("EFETCH_SLEEP", "0.34"))  # E-utilities rate
-RESUME = os.environ.get("RESUME", "1") == "1"  # 기본 재개
-API_KEY = os.environ.get("NCBI_API_KEY", "")  # 있으면 쿼터↑
+OAI_URL = "https://www.ncbi.nlm.nih.gov/pmc/oai/oai.cgi"
+EFETCH_URL = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi"
+NCBI_API_KEY = os.environ.get("NCBI_API_KEY", "")
 
 
 def make_session():
-    sess = requests.Session()
+    s = requests.Session()
     retry = Retry(
-        total=6, read=6, connect=6, backoff_factor=1.0,
-        status_forcelist=[429, 500, 502, 503, 504],
-        allowed_methods=["GET"]
+        total=5, connect=5, read=5, backoff_factor=0.5,
+        status_forcelist=(429, 500, 502, 503, 504),
+        allowed_methods=frozenset(["GET", "POST"]),
     )
-    adapter = HTTPAdapter(max_retries=retry, pool_connections=10, pool_maxsize=10)
-    sess.mount("https://", adapter);
-    sess.mount("http://", adapter)
-    return sess
+    s.headers.update({"User-Agent": "BioProtocol/1.0 (contact: you@example.org)"})
+    s.mount("https://", HTTPAdapter(max_retries=retry))
+    s.mount("http://", HTTPAdapter(max_retries=retry))
+    return s
+
+
+SESSION = make_session()
+
+
+def safe_get(url, params=None, timeout=60):
+    params = dict(params or {})
+    if "ncbi.nlm.nih.gov" in url and NCBI_API_KEY:
+        params["api_key"] = NCBI_API_KEY
+    r = SESSION.get(url, params=params, timeout=timeout)
+    r.raise_for_status()
+    time.sleep(0.34)
+    return r
+
+
+def today_run_dir() -> pathlib.Path:
+    d = ROOT / "runs" / dt.date.today().isoformat()
+    d.mkdir(parents=True, exist_ok=True)
+    return d
+
+
+def write_jsonl(path: pathlib.Path, rows: List[Dict]):
+    with open(path, "w", encoding="utf-8") as f:
+        for r in rows:
+            f.write(json.dumps(r, ensure_ascii=False) + "\n")
+
+
+def to_pmc_number(pmcid: str) -> str:
+    return (pmcid or "").upper().replace("PMC", "")
+
+
+def quick_jats_sanity(xml_text: str) -> bool:
+    return bool(re.search(r"<article[\s>]", xml_text, flags=re.I)) and ("</article>" in xml_text)
+
+
+def load_map_csv(path: pathlib.Path) -> List[Dict]:
+    if not path.exists():
+        print(f"[ERR] not found: {path}", file=sys.stderr);
+        sys.exit(1)
+    return list(csv.DictReader(open(path, "r", encoding="utf-8")))
+
+
+def select_targets(rows: List[Dict], accept_status: List[str], accept_any_pmcid: bool) -> List[Dict]:
+    out = []
+    for r in rows:
+        pmcid = (r.get("pmcid") or "").strip()
+        status = (r.get("status") or "").strip()
+        if not pmcid:
+            continue
+        if accept_any_pmcid or (status in accept_status):
+            out.append(r)
+    return out
+
+
+def try_oai_getrecord(pmcid: str, timeout=90) -> Tuple[bytes, str]:
+    """Return (xml_bytes, reason). reason='' if ok."""
+    pmc_num = to_pmc_number(pmcid)
+    params = {
+        "verb": "GetRecord",
+        "identifier": f"oai:pubmedcentral.nih.gov:{pmc_num}",
+        "metadataPrefix": "pmc",
+    }
+    try:
+        r = safe_get(OAI_URL, params=params, timeout=timeout)
+        xml_bytes = r.content
+        text = r.text
+        if quick_jats_sanity(text):
+            return xml_bytes, ""
+        else:
+            # sometimes OAI returns wrapper; keep but mark suspect
+            return xml_bytes, "oai_suspect_jats"
+    except requests.HTTPError as e:
+        code = e.response.status_code if e.response is not None else "HTTPError"
+        return b"", f"oai_http_{code}"
+    except Exception as e:
+        return b"", f"oai_exc_{e.__class__.__name__}"
+
+
+def try_efetch_pmc(pmcid: str, timeout=90) -> Tuple[bytes, str]:
+    """Return (xml_bytes, reason). reason='' if ok."""
+    params = {"db": "pmc", "id": pmcid}
+    try:
+        r = safe_get(EFETCH_URL, params=params, timeout=timeout)
+        xml_bytes = r.content
+        text = r.text
+        if quick_jats_sanity(text):
+            return xml_bytes, ""
+        else:
+            return xml_bytes, "efetch_suspect_jats"
+    except requests.HTTPError as e:
+        code = e.response.status_code if e.response is not None else "HTTPError"
+        return b"", f"efetch_http_{code}"
+    except Exception as e:
+        return b"", f"efetch_exc_{e.__class__.__name__}"
+
+
+def download_one(rec: Dict, outd: pathlib.Path, overwrite: bool) -> Dict:
+    pid = (rec.get("protocol_id") or "").strip()
+    pmcid = (rec.get("pmcid") or "").strip().upper()
+    if not pmcid.startswith("PMC"):
+        pmcid = "PMC" + to_pmc_number(pmcid)
+
+    outd.mkdir(parents=True, exist_ok=True)
+    out_path = outd / f"{pmcid}.xml"
+
+    if out_path.exists() and not overwrite:
+        return {"protocol_id": pid, "pmcid": pmcid, "out_path": str(out_path), "ok": None, "reason": "exists_skipped"}
+
+    # 1) OAI first
+    xml, r1 = try_oai_getrecord(pmcid)
+    if xml and not r1.startswith("oai_http_"):
+        # save even if suspect
+        out_path.write_bytes(xml)
+        return {"protocol_id": pid, "pmcid": pmcid, "out_path": str(out_path), "ok": True, "reason": r1 or ""}
+
+    # 2) Fall back to EFetch
+    xml2, r2 = try_efetch_pmc(pmcid)
+    if xml2:
+        out_path.write_bytes(xml2)
+        return {"protocol_id": pid, "pmcid": pmcid, "out_path": str(out_path), "ok": True, "reason": r2 or "efetch_ok"}
+
+    # both failed
+    reason = r1 if r1 else r2
+    return {"protocol_id": pid, "pmcid": pmcid, "out_path": "", "ok": False, "reason": reason or "unknown"}
 
 
 def main():
-    rows = list(csv.DictReader(open(MAP, "r", encoding="utf-8")))
-    targets = [r for r in rows if r.get("pmcid")]
-    if not targets:
-        raise SystemExit("No PMCID rows in pmc_map_from_urls.csv")
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--map", type=str, default=str(DEF_MAP), help="CSV from pmc_01 step")
+    ap.add_argument("--outd", type=str, default=str(DEF_OUTD), help="Output dir for JATS XML")
+    ap.add_argument("--accept-status", type=str, default="OK,low_conf",
+                    help="Comma-separated statuses to accept (e.g., OK,low_conf)")
+    ap.add_argument("--accept-any-pmcid", action="store_true", default=False,
+                    help="Ignore status; download for any row with a PMCID")
+    ap.add_argument("--overwrite", action="store_true", default=False,
+                    help="Re-download and overwrite existing XML files")
+    args = ap.parse_args()
 
-    sess = make_session()
-    ok = 0;
-    sk = 0;
-    er = 0
-    for r in tqdm(targets, desc="efetch-jats"):
-        pmcid = r["pmcid"]  # e.g., PMC1234567
-        outp = OUTD / f"{pmcid}.xml"
-        if RESUME and outp.exists():
-            sk += 1
-            continue
-        # EFetch: db=pmc, id=PMCxxxxxx, rettype=xml (default)
-        params = {"db": "pmc", "id": pmcid}
-        if API_KEY: params["api_key"] = API_KEY
-        try:
-            res = sess.get(EFETCH, params=params, timeout=HTTP_TIMEOUT)
-            res.raise_for_status()
-            # 간혹 HTML 에러 페이지가 올 수 있으니 XML 태그 존재성만 얕게 체크
-            content = res.content
-            if b"<pmc-articleset" not in content and b"<article" not in content:
-                # 드물게 gzip 전송, 혹은 임시 오류가 있을 수 있음 → 한 번 더 딜레이 후 재요청
-                time.sleep(2.0)
-                res2 = sess.get(EFETCH, params=params, timeout=HTTP_TIMEOUT)
-                res2.raise_for_status()
-                content = res2.content
-            # 원자적으로 저장
-            tmpfd, tmppath = tempfile.mkstemp(prefix="pmc_", suffix=".xml", dir=str(OUTD))
-            os.close(tmpfd)
-            with open(tmppath, "wb") as f:
-                f.write(content)
-            shutil.move(tmppath, outp)
-            ok += 1
-        except requests.RequestException as e:
-            er += 1
-            # 에러 케이스는 로그만 남기고 계속 진행
-            print(f"[WARN] efetch fail {pmcid}: {e}")
-        time.sleep(SLEEP)
-    print(f"[OK] saved XMLs -> {OUTD} | ok={ok}, skipped={sk}, errors={er}")
+    map_path = pathlib.Path(args.map)
+    outd = pathlib.Path(args.outd)
+    accept_status = [s.strip() for s in (args.accept_status or "").split(",") if s.strip()]
+    rundir = today_run_dir()
+
+    rows = load_map_csv(map_path)
+    targets = select_targets(rows, accept_status, args.accept_any_pmcid)
+
+    successes, failures, skipped = [], [], []
+    print(f"[INFO] total rows in map: {len(rows)}")
+    print(
+        f"[INFO] targets selected:  {len(targets)} (accept_any={args.accept_any_pmcid}, accept_status={accept_status})")
+
+    for rec in targets:
+        res = download_one(rec, outd, overwrite=args.overwrite)
+        if res["ok"] is True:
+            successes.append({**rec, **res})
+        elif res["ok"] is False:
+            failures.append({**rec, **res})
+        else:
+            skipped.append({**rec, **res})
+
+    success_log = rundir / "pmc_02_success.jsonl"
+    failure_log = rundir / "pmc_02_failures.jsonl"
+    skipped_log = rundir / "pmc_02_skipped.jsonl"
+    write_jsonl(success_log, successes)
+    write_jsonl(failure_log, failures)
+    write_jsonl(skipped_log, skipped)
+
+    print(f"[DONE] out_dir={outd}")
+    print(f"  downloaded: {len(successes)}")
+    print(f"  failed    : {len(failures)}  (see {failure_log})")
+    print(f"  skipped   : {len(skipped)}   (existing or filtered)")
+    print(f"[LOGS] success -> {success_log}")
+    print(f"[LOGS] failures-> {failure_log}")
+    print(f"[LOGS] skipped -> {skipped_log}")
 
 
 if __name__ == "__main__":

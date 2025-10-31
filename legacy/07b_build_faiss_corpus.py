@@ -21,7 +21,7 @@ import torch
 from sentence_transformers import SentenceTransformer
 from tqdm import tqdm
 
-ROOT = pathlib.Path(".")
+ROOT = pathlib.Path("../scripts")
 IN = ROOT / "data/processed/protocol_corpus_docs.jsonl"
 RAG = ROOT / "data/rag";
 RAG.mkdir(parents=True, exist_ok=True)

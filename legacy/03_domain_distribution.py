@@ -22,7 +22,7 @@ OUTDIR.mkdir(parents=True, exist_ok=True)
 # 파일명 호환(언더스코어/하이픈 혼용 대비)
 CANDIDATES = [
     ("bio_protocol", ["bio_protocol.json"]),
-    ("protocol_io", ["protocol_io.json", "protocol-io.json"]),
+    ("protocol_io", ["protocols_io.json", "protocol-io.json"]),
     ("protocol_exchange", ["protocol_exchange.json", "protocol-exchange.json"]),
 ]
 

@@ -5,13 +5,13 @@
 출력:
   - data/rag/corpus_fts.sqlite  (FTS5 인덱스)
 """
-import orjson
 import pathlib
 import sqlite3
 
+import orjson
 from tqdm import tqdm
 
-ROOT = pathlib.Path(".")
+ROOT = pathlib.Path("../scripts")
 IN = ROOT / "data/processed/protocol_corpus_docs.jsonl"
 DB = ROOT / "data/rag/corpus_fts.sqlite"
 DB.parent.mkdir(parents=True, exist_ok=True)

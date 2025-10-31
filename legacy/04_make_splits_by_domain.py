@@ -32,7 +32,7 @@ OUT.mkdir(parents=True, exist_ok=True)
 # 파일명 후보(언더스코어/하이픈 모두 허용)
 CANDS = [
     ("bio_protocol", ["bio_protocol.json"]),
-    ("protocol_io", ["protocol_io.json", "protocol-io.json"]),
+    ("protocol_io", ["protocols_io.json", "protocol-io.json"]),
     ("protocol_exchange", ["protocol_exchange.json", "protocol-exchange.json"]),
 ]
 

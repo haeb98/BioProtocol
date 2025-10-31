@@ -28,7 +28,7 @@ OUT_MISS = SPLITS / "test_ids_missing.txt"
 # 파일명 후보(언더스코어/하이픈 모두 허용)
 SOURCES = [
     ("bio_protocol", ["bio_protocol.json"]),  # 1순위
-    ("protocol_io", ["protocol_io.json"]),  # 2순위
+    ("protocol_io", ["protocols_io.json"]),  # 2순위
     ("protocol_exchange", ["protocol_exchange.json"]),  # 3순위
 ]
 
