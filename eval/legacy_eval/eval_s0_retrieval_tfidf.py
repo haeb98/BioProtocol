@@ -24,7 +24,7 @@ from tqdm import tqdm
 
 from rag.retriever_light import HybridRetrieverLight
 
-ROOT = pathlib.Path(".")
+ROOT = pathlib.Path("..")
 GOLD = ROOT / "data/gold/gold_pairs.jsonl"
 OUT_DIR = ROOT / "eval";
 OUT_DIR.mkdir(parents=True, exist_ok=True)

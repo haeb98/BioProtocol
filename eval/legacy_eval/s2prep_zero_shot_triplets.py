@@ -1,12 +1,12 @@
 # eval/s2prep_zero_shot_triplets.py
 import json
-import orjson
 import os
 import pathlib
 
+import orjson
 from tqdm import tqdm
 
-ROOT = pathlib.Path(".")
+ROOT = pathlib.Path("..")
 GOLD = ROOT / "data/gold/gold_pairs_pmc_bioprotocol_balanced.jsonl"
 OUT = ROOT / "eval/s2prep_triplets.jsonl"
 OUT.parent.mkdir(parents=True, exist_ok=True)

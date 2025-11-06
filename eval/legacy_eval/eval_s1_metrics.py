@@ -36,7 +36,7 @@ from sentence_transformers import SentenceTransformer, util as st_util
 from sklearn.feature_extraction.text import TfidfVectorizer
 from tqdm import tqdm
 
-ROOT = pathlib.Path(".")
+ROOT = pathlib.Path("..")
 TAG = os.environ.get("OUT_TAG", "s1")
 IN = ROOT / f"eval/{TAG}_generations.jsonl"
 OUTJ = ROOT / f"eval/{TAG}_metrics_report.json"

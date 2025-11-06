@@ -1,11 +1,11 @@
 import json
-import orjson
 import pathlib
 import re
 
+import orjson
 from tqdm import tqdm
 
-ROOT = pathlib.Path(".")
+ROOT = pathlib.Path("..")
 IR = ROOT / "eval/s2_ir.jsonl"
 GOLD = ROOT / "data/gold/gold_pairs_pmc_bioprotocol_balanced.jsonl"
 OUTJ = ROOT / "eval/s2_ir_report.json"

@@ -27,7 +27,7 @@ from tqdm import tqdm
 
 from rag.retriever_light import HybridRetrieverLight  # 도메인 제한 없이 사용
 
-ROOT = pathlib.Path(".")
+ROOT = pathlib.Path("..")
 GOLD = ROOT / "data/gold/gold_pairs_pmc_bioprotocol_balanced.jsonl"
 OUT_DIR = ROOT / "eval";
 OUT_DIR.mkdir(parents=True, exist_ok=True)
