@@ -1,295 +1,461 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+
 """
-pmc_04_build_gold_pairs_for_testset.py (v3)
-- 느슨/엄격 임계 모두 지원
-- 섹션 whitelist/blacklist + prefer_regular
-- 페어(JSONL)와 리포트(CSV) 항상 생성
+pmc_04_build_gold_pairs_for_testset.py  (v2 – protocol_sim, soft coverage, null keywords)
+
+- Build gold pairs between Bio-protocol items (b) and grouped article sections (a)
+
+Changes:
+  * action_coverage -> protocol_sim (b.protocol vs a.sec_text similarity)
+    - Keep action_coverage for backward-compat but set equal to protocol_sim.
+    - protocol_sim = max(word-jaccard, char-3gram-jaccard)
+  * keywords_sim: if b.keywords empty -> null; else fraction contained in a.sec_text
+  * materials_coverage / param_coverage:
+    - report both strict and soft; final metric = max(strict, soft)
+    - soft(materials): token subset overlap >= 0.6 against text token set
+    - soft(params): tolerant regex (spaces/hyphens/μ/°C variants)
+
+Also outputs length/token comparisons between a.sec_text and b.hierarchical_protocol.
 """
 
 import argparse
 import csv
 import json
-import pathlib
 import re
-from collections import defaultdict
+from pathlib import Path
 
-# orjson이 있으면 사용 (속도↑), 없으면 표준 json로 대체
-try:
-    import orjson as _orjson
-
-
-    def jloads(b):
-        return _orjson.loads(b)
-except Exception:
-    import json as _orjson
+# -------------------------
+# Tokenization & similarity
+# -------------------------
+TOKEN_RX = re.compile(r"[A-Za-z0-9]+", re.I)
 
 
-    def jloads(b):
-        return _orjson.loads(b)
-
-ACTIONS = {"incubate", "centrifuge", "mix", "add", "transfer", "pipette", "aliquot", "vortex",
-           "resuspend", "pellet", "wash", "dry", "filter", "measure", "dilute", "prepare",
-           "heat", "cool", "shake", "spin", "stain", "fix", "mount", "label", "load", "elute"}
-
-MATERIAL_HINTS = {"buffer", "pbs", "ethanol", "methanol", "bleach", "nacl", "glycerol", "yeast", "agar", "water", "h2o",
-                  "dmso", "triton", "edta", "mgso4", "kcl", "k2hpo4", "kh2po4", "nh4", "medium", "media", "reagent",
-                  "solution"}
-
-RE_PARAM = re.compile(r"\b(\d+(?:\.\d+)?)\s*(°c|degc|s|min|h|hr|hrs|ms|rpm|g|xg|µl|ul|ml|l|%)\b", re.I)
-TOKSPLIT = re.compile(r"\W+")
+def to_tokens(s: str) -> list[str]:
+    return TOKEN_RX.findall((s or "").lower())
 
 
-def tokset(s): return set(t for t in TOKSPLIT.split((s or "").lower()) if t)
+def to_tset(s: str) -> set[str]:
+    return set(to_tokens(s))
 
 
-def jacc(a, b): return (len(a & b) / max(1, len(a | b))) if (a or b) else 0.0
+def jaccard_set(A: set[str], B: set[str]) -> float:
+    if not A and not B: return 1.0
+    if not A or not B: return 0.0
+    return len(A & B) / max(1, len(A | B))
 
 
-def extract_actions(t): return sorted(list(ACTIONS & tokset(t)))
+def char_ngrams(s: str, n: int = 3) -> set[str]:
+    s = (s or "").lower()
+    # collapse spaces/punct a bit
+    s = re.sub(r"\s+", " ", s).strip()
+    s = re.sub(r"[^a-z0-9 ]+", "", s)
+    if len(s) < n: return {s} if s else set()
+    return {s[i:i + n] for i in range(len(s) - n + 1)}
 
 
-def extract_materials(t):
-    toks = tokset(t);
-    mats = set()
-    for h in MATERIAL_HINTS:
-        if h in toks: mats.add(h)
-    for tt in list(toks):
-        if re.match(r"^(nacl|kcl|pbs|h2o|ethanol|methanol|glycerol|triton|edta|dmso)$", tt):
-            mats.add(tt)
-    return sorted(list(mats))
+def jaccard_text(a: str, b: str) -> float:
+    # word-level
+    wj = jaccard_set(to_tset(a), to_tset(b))
+    # char 3-gram
+    cj = jaccard_set(char_ngrams(a, 3), char_ngrams(b, 3))
+    return max(wj, cj)
 
 
-def extract_params(t): return [m.group(0) for m in RE_PARAM.finditer(t or "")]
+def safe_len(s: str) -> int:
+    return len(s or "")
 
 
-def flatten_hier(h):
-    if not isinstance(h, dict): return ""
-
-    def keyer(k):
-        return [int(p) if p.isdigit() else p for p in k.split(".")]
-
-    lines = []
-    for k in sorted(h.keys(), key=keyer):
-        v = h[k]
-        if isinstance(v, dict) and "title" in v:
-            lines.append(v["title"])
-        elif isinstance(v, str):
-            lines.append(v)
-    return "\n".join(lines)
+def safe_tokens(s: str) -> int:
+    return len(to_tokens(s or ""))
 
 
-def load_bio(path):
-    data = jloads(pathlib.Path(path).read_bytes())
-    return {str(r.get("id") or "").strip(): r for r in data if r.get("id")}
+# -------------------------
+# Bio-protocol helpers
+# -------------------------
+def get_keywords_list(brec) -> list[str]:
+    kw = brec.get("keywords")
+    out = []
+    if not kw:
+        return out
+    if isinstance(kw, list):
+        for k in kw:
+            if isinstance(k, str) and k.strip():
+                out.append(k.strip())
+            elif isinstance(k, dict):
+                v = (k.get("keyword") or k.get("name") or "").strip()
+                if v: out.append(v)
+    elif isinstance(kw, str):
+        parts = re.split(r"[;,]", kw)
+        out = [p.strip() for p in parts if p.strip()]
+    # dedup lower
+    seen = set();
+    res = []
+    for k in out:
+        lk = k.lower()
+        if lk not in seen:
+            seen.add(lk);
+            res.append(k)
+    return res
 
 
-def load_ids(path):
-    rows = set()
-    with open(path, "r", encoding="utf-8") as f:
-        hdr = f.readline().strip().split(",")
-        idx = {h: i for i, h in enumerate(hdr)}
-        for line in f:
-            cells = line.rstrip("\n").split(",")
-            pid = cells[idx.get("protocol_id", 0)].strip() if cells else ""
-            if pid: rows.add(pid)
-    return rows
+def get_material_candidates(brec) -> list[str]:
+    src = brec.get("input") or brec.get("materials") or ""
+    items = []
+    if isinstance(src, list):
+        for x in src:
+            if isinstance(x, str) and x.strip():
+                items.extend(re.split(r"[,\n;]", x))
+    elif isinstance(src, str) and src.strip():
+        items = re.split(r"[,\n;]", src)
+    items = [re.sub(r"\s+", " ", it).strip() for it in items if it and it.strip()]
+    # very light filter
+    ban = {"-", "—", "and", "or"}
+    items = [it for it in items if it.lower() not in ban]
+    # dedup
+    seen = set();
+    res = []
+    for it in items:
+        lk = it.lower()
+        if lk not in seen:
+            seen.add(lk);
+            res.append(it)
+    return res[:100]
 
 
-def load_arts(path):
-    arr = []
-    with open(path, "r", encoding="utf-8") as f:
+STEP_NUMBER_RX = re.compile(r"^\s*\d+\.\s*")
+UNIT_RX = re.compile(
+    r"\b(\d+(?:\.\d+)?)\s?(mL|ml|µl|μl|L|g|mg|µg|μg|kg|M|mM|nM|µM|μM|%|°C|degC|min|h|hr|hrs|hours|sec|s|rpm|g|xg)\b",
+    re.I
+)
+
+
+def get_param_candidates(brec) -> list[str]:
+    prot = brec.get("protocol") or ""
+    if not isinstance(prot, str) or not prot.strip():
+        return []
+    out = []
+    for line in prot.splitlines():
+        # strip leading numbering like "1. "
+        line_ = STEP_NUMBER_RX.sub("", line)
+        for m in UNIT_RX.finditer(line_):
+            out.append(m.group(0).strip())
+    # dedup keep order
+    seen = set();
+    res = []
+    for s in out:
+        lk = s.lower()
+        if lk not in seen:
+            seen.add(lk);
+            res.append(s)
+    return res[:150]
+
+
+# -------------------------
+# Coverage (strict/soft)
+# -------------------------
+def contains_word_boundary(needle: str, hay: str) -> bool:
+    toks = needle.split()
+    hay_l = (hay or "").lower()
+    ndl = needle.lower().strip()
+    if not ndl: return False
+    if len(toks) == 1:
+        return re.search(rf"\b{re.escape(ndl)}\b", hay_l) is not None
+    return ndl in hay_l
+
+
+def fraction_contains_strict(cands: list[str], text: str) -> tuple[float, int, int]:
+    if not cands: return (0.0, 0, 0)
+    hits = 0
+    for c in cands:
+        if contains_word_boundary(c.lower(), text):
+            hits += 1
+    return (hits / len(cands), hits, len(cands))
+
+
+def normalize_unit_token(s: str) -> str:
+    s = (s or "").strip()
+    # unify micro symbol, degree
+    s = s.replace("μl", "µl").replace("μg", "µg")
+    s = s.replace("degc", "°c").replace("° C", "°C").replace("℃", "°C")
+    s = re.sub(r"\s+", " ", s)
+    return s
+
+
+def param_pattern(needle: str) -> re.Pattern:
+    # make tolerant regex for number+unit like "10 mL", "10mL", "10-mL", "10ml"
+    n = normalize_unit_token(needle.lower())
+    n = n.replace(" ", r"\s*").replace("-", r"[-\s]*")
+    n = n.replace("°c", r"(?:°\s?c|degc)")
+    # word boundary-ish
+    return re.compile(rf"(?<!\d){n}(?!\d)", re.I)
+
+
+def fraction_params_strict(cands: list[str], text: str) -> tuple[float, int, int]:
+    if not cands: return (0.0, 0, 0)
+    hay = (text or "")
+    hits = 0
+    for c in cands:
+        pat = param_pattern(c)
+        if pat.search(hay):
+            hits += 1
+    return (hits / len(cands), hits, len(cands))
+
+
+def fraction_contains_soft(cands: list[str], text: str, thresh: float = 0.6) -> tuple[float, int, int]:
+    """
+    Soft: candidate tokens must be present in text tokens with ratio >= thresh.
+    (order-free, global presence)
+    """
+    if not cands: return (0.0, 0, 0)
+    text_toks = to_tset(text)
+    hits = 0
+    for c in cands:
+        toks = set(to_tokens(c))
+        toks = {t for t in toks if t}  # drop empties
+        if not toks:
+            continue
+        cov = len(toks & text_toks) / len(toks)
+        if cov >= thresh:
+            hits += 1
+    return (hits / len(cands), hits, len(cands))
+
+
+# -------------------------
+# IO helpers
+# -------------------------
+def read_ids_csv(p: Path) -> set[str]:
+    s = set()
+    with p.open(newline="", encoding="utf-8") as f:
+        for r in csv.DictReader(f):
+            pid = (r.get("protocol_id") or "").strip()
+            if pid: s.add(pid)
+    return s
+
+
+def load_bio(bio_json: Path) -> dict:
+    js = json.loads(bio_json.read_text(encoding="utf-8"))
+    idx = {}
+    for r in js:
+        pid = str(r.get("protocol_id") or r.get("id") or "").strip()
+        if not pid: continue
+        idx[pid] = r
+    return idx
+
+
+def load_arts(grouped_jsonl: Path) -> dict:
+    by_pid = {}
+    with grouped_jsonl.open("r", encoding="utf-8") as f:
         for line in f:
             try:
-                arr.append(json.loads(line))
-            except json.JSONDecodeError:
-                pass
-    best = {}
-    grp = defaultdict(list)
-    for r in arr: grp[r.get("protocol_id", "")].append(r)
-
-    def totlen(x):
-        return sum(len(v) for v in (x.get("sections") or {}).values())
-
-    for pid, recs in grp.items():
-        if pid: best[pid] = sorted(recs, key=totlen, reverse=True)[0]
-    return best
+                rec = json.loads(line)
+            except:
+                continue
+            pid = rec.get("protocol_id")
+            if not pid: continue
+            by_pid.setdefault(pid, []).append(rec)
+    return by_pid
 
 
+def choose_sections(a: dict, prefer_regular: bool = True) -> tuple[str, list[str]]:
+    sections = a.get("sections") or {}
+    stats = a.get("stats") or {}
+    titles = sorted(sections.keys())
+    used = [];
+    parts = []
+    for t in titles:
+        src = (stats.get(t) or {}).get("source", "")
+        if prefer_regular and src == "heuristic":
+            continue
+        parts.append(sections[t]);
+        used.append(t)
+    if not parts and titles:
+        for t in titles:
+            parts.append(sections[t]);
+            used.append(t)
+    return ("\n\n".join(parts).strip(), used)
+
+
+# -------------------------
+# Metrics per pair
+# -------------------------
+def compute_metrics(b: dict, a: dict, prefer_regular: bool):
+    # texts
+    sec_text, section_list = choose_sections(a, prefer_regular=prefer_regular)
+    b_title = b.get("title") or ""
+    a_title = a.get("title") or ""
+
+    # 1) title_sim
+    title_sim = jaccard_text(b_title, a_title)
+
+    # 2) keywords_sim (null if keywords empty)
+    b_keywords = get_keywords_list(b)
+    if not b_keywords:
+        keywords_sim = None
+        kw_hits = 0;
+        kw_total = 0
+    else:
+        # fraction exact-contained with word boundary
+        hits = 0
+        for kw in b_keywords:
+            k = kw.strip().lower()
+            if not k: continue
+            if contains_word_boundary(k, sec_text):
+                hits += 1
+        kw_hits = hits;
+        kw_total = len(b_keywords)
+        keywords_sim = (hits / max(1, len(b_keywords)))
+
+    # 3) protocol_sim (b.protocol vs sec_text)
+    b_protocol = b.get("protocol") or ""
+    protocol_sim = jaccard_text(b_protocol, sec_text)
+
+    # 4) materials coverage (strict & soft)
+    mat_items = get_material_candidates(b)
+    m_strict, m_hits_s, m_tot = fraction_contains_strict(mat_items, sec_text)
+    m_soft, m_hits_sf, _ = fraction_contains_soft(mat_items, sec_text, 0.6)
+    material_coverage = max(m_strict, m_soft)
+
+    # 5) params coverage (strict tolerant regex & soft token)
+    param_items = get_param_candidates(b)
+    p_strict, p_hits_s, p_tot = fraction_params_strict(param_items, sec_text)
+    p_soft, p_hits_sf, _ = fraction_contains_soft(param_items, sec_text, 0.6)
+    param_coverage = max(p_strict, p_soft)
+
+    # 6) length/token comparison
+    b_hp = b.get("hierarchical_protocol") or ""
+    b_hp_str = b_hp if isinstance(b_hp, str) else json.dumps(b_hp, ensure_ascii=False)
+
+    metrics = {
+        "title_sim": round(title_sim, 4),
+
+        "keywords_sim": (None if keywords_sim is None else round(keywords_sim, 4)),
+        "keywords_hits": kw_hits,
+        "keywords_total": kw_total,
+
+        "material_coverage": round(material_coverage, 4),
+        "material_cov_strict": round(m_strict, 4),
+        "material_cov_soft": round(m_soft, 4),
+
+        # action_coverage kept for backward-compat but equals protocol_sim
+        "protocol_sim": round(protocol_sim, 4),
+        "action_coverage": round(protocol_sim, 4),
+
+        "param_coverage": round(param_coverage, 4),
+        "param_cov_strict": round(p_strict, 4),
+        "param_cov_soft": round(p_soft, 4),
+
+        "sec_chars": safe_len(sec_text),
+        "sec_tokens": safe_tokens(sec_text),
+        "hier_chars": safe_len(b_hp_str),
+        "hier_tokens": safe_tokens(b_hp_str),
+
+        "section_list": section_list,
+    }
+
+    details = {
+        "materials_items": mat_items,
+        "params_items": param_items,
+    }
+
+    return metrics, details, sec_text
+
+
+# -------------------------
+# Main
+# -------------------------
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--bio", required=True)
-    ap.add_argument("--ids", required=True)
-    ap.add_argument("--arts", required=True)
-    ap.add_argument("--out", default="data/gold/gold_pairs_testset.jsonl")
-    ap.add_argument("--report", default="data/gold/testset_consistency_report.csv")
-    ap.add_argument("--min-section", type=int, default=150)
-    ap.add_argument("--prefer-regular", action="store_true", default=False)
-
-    # 임계: strong 필터 (없으면 전수 출력)
-    ap.add_argument("--min-action-overlap", type=float, default=0.0)
-    ap.add_argument("--min-material-overlap", type=float, default=0.0)
-    ap.add_argument("--min-param-coverage", type=float, default=0.0)
-    ap.add_argument("--filter-mode", choices=["any", "all"], default="any")
-
-    # 섹션 필터링
-    ap.add_argument("--whitelist-sections",
-                    default="methods|materials|experimental|star methods|experimental model and subject details")
-    ap.add_argument("--blacklist-sections", default="results|discussion|abstract")
+    ap.add_argument("--bio", required=True, help="data/raw/bio_protocol.json")
+    ap.add_argument("--ids", required=True, help="CSV with protocol_id column (test set)")
+    ap.add_argument("--arts", required=True, help="grouped article sections jsonl")
+    ap.add_argument("--out", required=True, help="output jsonl (gold_pairs_testset.jsonl)")
+    ap.add_argument("--report", default="data/gold/testset_consistency_report.csv", help="CSV report")
+    ap.add_argument("--prefer-regular", action="store_true", help="ignore sections whose source is 'heuristic'")
     args = ap.parse_args()
 
-    bio = load_bio(args.bio)
-    ids = load_ids(args.ids)
-    arts = load_arts(args.arts)
+    ids = read_ids_csv(Path(args.ids))
+    bio_idx = load_bio(Path(args.bio))
+    arts_by_pid = load_arts(Path(args.arts))
 
-    outp = pathlib.Path(args.out);
-    outp.parent.mkdir(parents=True, exist_ok=True)
-    rep = pathlib.Path(args.report);
-    rep.parent.mkdir(parents=True, exist_ok=True)
+    out_rows = []
+    rep_rows = []
 
-    wl = re.compile(args.whitelist_sections, re.I) if args.whitelist_sections.strip() else None
-    bl = re.compile(args.blacklist_sections, re.I) if args.blacklist_sections.strip() else None
+    for pid in ids:
+        b = bio_idx.get(pid)
+        if not b: continue
+        cand_arts = arts_by_pid.get(pid, [])
+        if not cand_arts: continue
 
-    # 리포트 헤더 미리 작성 (항상 파일 생성 보장)
-    with open(rep, "w", newline="", encoding="utf-8") as f:
-        w = csv.writer(f)
-        w.writerow([
-            "protocol_id", "pmcid", "domain",
-            "doi_match", "title_sim", "keyword_sim",
-            "action_overlap", "material_overlap", "param_coverage",
-            "section_list", "sections_total_chars", "sections_total_tokens",
-            "suspect_mismatch", "notes"
-        ])
+        # pick article with best title similarity to BioProtocol title
+        best = None;
+        best_sim = -1
+        for a in cand_arts:
+            sim = jaccard_text(b.get("title") or "", a.get("title") or "")
+            if sim > best_sim:
+                best_sim = sim;
+                best = a
+        a = best
 
-    def pass_filter(aov, mov, pov):
-        flags = []
-        if args.min_action_overlap > 0:  flags.append(aov >= args.min_action_overlap)
-        if args.min_material_overlap > 0: flags.append(mov >= args.min_material_overlap)
-        if args.min_param_coverage > 0:  flags.append(pov >= args.min_param_coverage)
-        if not flags: return True
-        return all(flags) if args.filter_mode == "all" else any(flags)
+        metrics, details, sec_text = compute_metrics(b, a, prefer_regular=args.prefer_regular)
 
-    n_all = 0;
-    n_written = 0
-    with open(outp, "w", encoding="utf-8") as jf, open(rep, "a", newline="", encoding="utf-8") as rf:
-        w = csv.writer(rf)
-        for pid in sorted(ids):
-            n_all += 1
-            b = bio.get(pid)
-            a = arts.get(pid)
-            if not b or not a:
-                w.writerow([pid, "", (b or {}).get("classification", {}).get("primary_domain", "Unknown"),
-                            0, 0, 0, 0, 0, 0, "", 0, 0, 1, "no_bio" if not b else "no_article_sections"])
-                continue
+        row = {
+            "protocol_id": pid,
+            "pmcid": a.get("pmcid"),
+            "domain": a.get("domain") or b.get("classification", {}).get("primary_domain"),
+            "bio": {
+                "title": b.get("title"),
+                "keywords": get_keywords_list(b),
+                "hierarchical_protocol": b.get("hierarchical_protocol"),
+                "protocol": b.get("protocol")
+            },
+            "article": {
+                "title": a.get("title"),
+                "meta": a.get("meta", {}),
+                "sections": a.get("sections", {}),
+                "section_list": metrics.get("section_list")
+            },
+            "sec_text": sec_text,
+            "metrics": metrics,
+            "details": details
+        }
+        out_rows.append(row)
 
-            # 섹션 필터
-            raw_secs = a.get("sections") or {}
-            if wl or bl:
-                filtered = {}
-                for title, txt in raw_secs.items():
-                    t = title or ""
-                    if wl and not wl.search(t):  # whitelist 미포함
-                        continue
-                    if bl and bl.search(t):  # blacklist 포함
-                        continue
-                    filtered[t] = txt
-            else:
-                filtered = raw_secs
+        rep_rows.append({
+            "protocol_id": pid,
+            "pmcid": a.get("pmcid"),
+            "title_sim": metrics["title_sim"],
+            "keywords_sim": "" if metrics["keywords_sim"] is None else metrics["keywords_sim"],
+            "materials_cov": metrics["material_coverage"],
+            "materials_cov_strict": metrics["material_cov_strict"],
+            "materials_cov_soft": metrics["material_cov_soft"],
+            "protocol_sim": metrics["protocol_sim"],
+            "param_cov": metrics["param_coverage"],
+            "param_cov_strict": metrics["param_cov_strict"],
+            "param_cov_soft": metrics["param_cov_soft"],
+            "sec_tokens": metrics["sec_tokens"],
+            "hier_tokens": metrics["hier_tokens"],
+        })
 
-            stats = a.get("stats") or {}
-            if args.prefer_regular:
-                reg = {k: v for k, v in filtered.items() if (stats.get(k, {}).get("source") == "regular")}
-                chosen = reg if reg else filtered
-            else:
-                chosen = filtered
+    # write outputs
+    Path(args.out).parent.mkdir(parents=True, exist_ok=True)
+    with open(args.out, "w", encoding="utf-8") as w:
+        for r in out_rows:
+            w.write(json.dumps(r, ensure_ascii=False) + "\n")
 
-            secs = {k: v for k, v in chosen.items() if len(v) >= args.min_section}
-            sec_text = "\n\n".join([secs[k] for k in sorted(secs.keys())])
-            sec_chars = len(sec_text);
-            sec_toks = len((sec_text or "").split())
+    Path(args.report).parent.mkdir(parents=True, exist_ok=True)
+    with open(args.report, "w", newline="", encoding="utf-8") as f:
+        fns = ["protocol_id", "pmcid", "title_sim", "keywords_sim",
+               "materials_cov", "materials_cov_strict", "materials_cov_soft",
+               "protocol_sim", "param_cov", "param_cov_strict", "param_cov_soft",
+               "sec_tokens", "hier_tokens"]
+        cw = csv.DictWriter(f, fieldnames=fns)
+        cw.writeheader()
+        for r in rep_rows:
+            cw.writerow(r)
 
-            prot_text = "\n".join([
-                (b.get("title") or ""),
-                (b.get("input") or ""),
-                (b.get("protocol") or ""),
-                (flatten_hier(b.get("hierarchical_protocol") or {}) or "")
-            ])
-
-            title_sim = jacc(tokset((b.get("title") or "")), tokset((a.get("title") or "")))
-            keyword_sim = jacc(tokset((b.get("keywords") or "")), tokset(sec_text))
-
-            act_b, act_m = set(extract_actions(prot_text)), set(extract_actions(sec_text))
-            mat_b, mat_m = set(extract_materials(prot_text)), set(extract_materials(sec_text))
-            par_b = extract_params(prot_text)
-
-            action_overlap = jacc(act_b, act_m)
-            material_overlap = jacc(mat_b, mat_m)
-            param_cov = (sum(1 for p in par_b if p.lower() in sec_text.lower()) / max(1, len(par_b))) if par_b else 0.0
-
-            doi_b = (b.get("url") or "").lower()
-            doi_b = doi_b.split("doi.org/")[-1] if "doi.org/" in doi_b else ""
-            doi_a = ((a.get("meta") or {}).get("doi") or "").lower()
-            doi_match = int(doi_b and doi_a and (doi_b == doi_a))
-
-            suspect = 1 if (action_overlap < 0.15 and material_overlap < 0.15 and param_cov < 0.15) else 0
-            notes = "" if secs else "all_sections_too_short"
-
-            # strong 임계가 있으면 통과분만 JSONL 기록(전수 리포트를 원하면 임계 0으로 실행)
-            if not pass_filter(action_overlap, material_overlap, param_cov):
-                w.writerow([
-                    pid, a.get("pmcid", ""),
-                    (b.get("classification") or {}).get("primary_domain", "Unknown"),
-                    round(doi_match, 3), round(title_sim, 3), round(keyword_sim, 3),
-                    round(action_overlap, 3), round(material_overlap, 3), round(param_cov, 3),
-                    "|".join(sorted(secs.keys())), sec_chars, sec_toks, suspect, "filtered_out"
-                ])
-                continue
-
-            pair = {
-                "protocol_id": pid,
-                "domain": (b.get("classification") or {}).get("primary_domain", "Unknown"),
-                "article": {
-                    "pmcid": a.get("pmcid", ""),
-                    "xml_path": a.get("xml_path", ""),
-                    "title": a.get("title", ""),
-                    "meta": a.get("meta", {}),
-                    "sections": secs
-                },
-                "protocol": {
-                    "title": b.get("title") or "",
-                    "keywords": b.get("keywords") or "",
-                    "url": b.get("url") or "",
-                    "hierarchical_protocol": b.get("hierarchical_protocol") or {},
-                    "text_flat": prot_text
-                },
-                "consistency": {
-                    "doi_match": bool(doi_match),
-                    "title_sim": round(title_sim, 3),
-                    "keyword_sim": round(keyword_sim, 3),
-                    "action_overlap": round(action_overlap, 3),
-                    "material_overlap": round(material_overlap, 3),
-                    "param_coverage": round(param_cov, 3),
-                    "section_list": sorted(list(secs.keys())),
-                    "sections_total_chars": sec_chars,
-                    "sections_total_tokens": sec_toks,
-                    "suspect_mismatch": bool(suspect),
-                    "notes": notes
-                }
-            }
-            json.dump(pair, open(outp, "a", encoding="utf-8"));
-            open(outp, "a").write("\n")
-            w.writerow([
-                pid, a.get("pmcid", ""),
-                (b.get("classification") or {}).get("primary_domain", "Unknown"),
-                round(doi_match, 3), round(title_sim, 3), round(keyword_sim, 3),
-                round(action_overlap, 3), round(material_overlap, 3), round(param_cov, 3),
-                "|".join(sorted(secs.keys())), sec_chars, sec_toks, suspect, notes
-            ])
-            n_written += 1
-
-    print(f"[OK] processed ids={len(ids)}, written_pairs={n_written}")
-    print(f"[OK] wrote pairs:  {outp}")
-    print(f"[OK] wrote report: {rep}")
+    print(f"[OK] wrote pairs: {args.out} (rows={len(out_rows)})")
+    print(f"[OK] report: {args.report}")
 
 
 if __name__ == "__main__":
