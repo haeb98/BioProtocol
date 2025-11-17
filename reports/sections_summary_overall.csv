@@ -1,0 +1,8 @@
+metric,value
+articles,46
+sections,46
+tokens_total,269002
+chars_total,1688653
+sections_per_article_avg,1.0
+tokens_per_article_avg,5847.87
+chars_per_article_avg,36709.85

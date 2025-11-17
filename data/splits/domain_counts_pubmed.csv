@@ -1,0 +1,18 @@
+domain,count_all_candidates,count_after_min_filter,picked
+Microbiology & Virology,157,157,5
+Cell Biology & Culture,135,135,5
+Plant Science & Technology,126,126,5
+Biochemical & Molecular Functional Analysis,106,106,5
+Neuroscience Methods,94,94,5
+Immunological Techniques,93,93,5
+Molecular Biology Techniques,86,86,5
+Bioimaging Technologies,66,66,5
+Model Organism-Specific Techniques,65,65,5
+Genomics Technologies,31,31,5
+Structural Biology Techniques,12,0,0
+Bioinformatics Methods,9,0,0
+Histology Techniques,9,0,0
+Synthetic Biology & Bioengineering,8,0,0
+Pharmacology & Drug Development,7,0,0
+Toxicology & Safety Testing,3,0,0
+Unclassified: Single-Molecule Proteomics,1,0,0

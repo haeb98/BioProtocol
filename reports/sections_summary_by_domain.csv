@@ -1,0 +1,11 @@
+domain,articles,sections,tokens_total,chars_total,sections_per_article,tokens_per_article,chars_per_article,src_regular,src_merged,src_heuristic
+Cell Biology & Culture,5,5,22938,146865,1.0,4587.6,29373.0,5,0,0
+Genomics Technologies,5,5,23416,152538,1.0,4683.2,30507.6,5,0,0
+Immunological Techniques,5,5,30123,186516,1.0,6024.6,37303.2,5,0,0
+Molecular Biology Techniques,5,5,26573,171718,1.0,5314.6,34343.6,5,0,0
+Neuroscience Methods,5,5,24790,154322,1.0,4958.0,30864.4,5,0,0
+Plant Science & Technology,5,5,22279,140711,1.0,4455.8,28142.2,5,0,0
+Biochemical & Molecular Functional Analysis,4,4,27184,167454,1.0,6796.0,41863.5,4,0,0
+Bioimaging Technologies,4,4,45341,276896,1.0,11335.25,69224.0,4,0,0
+Microbiology & Virology,4,4,26820,170133,1.0,6705.0,42533.25,4,0,0
+Model Organism-Specific Techniques,4,4,19538,121500,1.0,4884.5,30375.0,4,0,0
