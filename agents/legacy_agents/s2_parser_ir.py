@@ -22,7 +22,7 @@ except Exception:
 
     _HAS_NEW = False
 
-ROOT = pathlib.Path(".")
+ROOT = pathlib.Path("..")
 GOLD = ROOT / "data/gold/gold_pairs_pmc_bioprotocol_balanced.jsonl"
 OUT = ROOT / "eval/s2_ir.jsonl"
 DBG = ROOT / "eval/_debug_s2_ir"

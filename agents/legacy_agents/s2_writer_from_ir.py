@@ -3,7 +3,7 @@ import pathlib
 
 import orjson
 
-ROOT = pathlib.Path(".")
+ROOT = pathlib.Path("..")
 IN_IR = ROOT / "eval/s2_ir.jsonl"
 GOLD = ROOT / "data/gold/gold_pairs_pmc_bioprotocol_balanced.jsonl"
 OUT = ROOT / "eval/s2_generations.jsonl"

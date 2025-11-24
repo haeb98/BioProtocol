@@ -43,7 +43,7 @@ except Exception:
 
     _HAS_NEW_OPENAI = False
 
-ROOT = pathlib.Path(".")
+ROOT = pathlib.Path("..")
 GOLD = ROOT / "data/gold/gold_pairs_pmc_bioprotocol_balanced.jsonl"
 OUT_TAG = os.environ.get("OUT_TAG", "s1")  # ← 기본 s1
 OUT = ROOT / f"eval/{OUT_TAG}_generations.jsonl"

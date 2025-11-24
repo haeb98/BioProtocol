@@ -1,11 +1,11 @@
 # agents/s00_writer_methods_only.py
 import json
-import orjson
 import os
 import pathlib
 import re
 import time
 
+import orjson
 from tqdm import tqdm
 
 # OpenAI client (new or legacy)
@@ -18,7 +18,7 @@ except Exception:
 
     _HAS_NEW = False
 
-ROOT = pathlib.Path(".")
+ROOT = pathlib.Path("..")
 PAIRS = ROOT / "data/gold/gold_pairs_pmc_bioprotocol_balanced.jsonl"
 OUT = ROOT / "eval/s00_generations.jsonl"
 DBG = ROOT / "eval/_debug_s00"
