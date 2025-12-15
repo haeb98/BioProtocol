@@ -1,0 +1,64 @@
+Title: Isolation of Chromatin-bound Proteins from Subcellular Fractions for Biochemical Analysis
+
+Materials:
+- Cor3–1 and P19 cells
+- Complete media components (as listed above)
+- Priming medium components (as listed above)
+- Differentiation medium components (as listed above)
+- Adenovirus CMV-CRE and CMV-null (Vector Biolabs, 1045 N)
+- Lipofectamine 2000 (Invitrogen, 11668-027)
+- Plasmids (as listed in Supplementary Table S2)
+- PBS (Phosphate Buffered Saline)
+- E1, E2, and E3 buffers (composition as listed above)
+- Protease inhibitor cocktail (cOmplete, Roche)
+- Bioruptor (Diagenode)
+- Benzonase (Novagen, 70664-3)
+- BCA protein assay kit (Thermo)
+- Agarose-TUBEs (LifeSensors, UM401)
+- RIPA lysis buffer (Sigma-Aldrich, R0278)
+- Cycloheximide (Sigma-Aldrich, C4859)
+- SDS-PAGE and Western blotting materials
+- Antibodies (as listed above)
+- ECL detection reagents (GE Healthcare, RPN2106 and RPN2232)
+- Centrifuge and microcentrifuge
+- Rocker platform
+
+Procedure:
+
+1. Cell Culture and Transfection:
+   1.1. Grow Cor3–1 and P19 cells in their respective media as described above.
+   1.2. For neuronal differentiation of Cor3–1 cells, follow the medium change and supplementation schedule as specified.
+   1.3. Transduce Floxed-Huwe1-RYFP Cor3–1 cells with adenovirus CMV-CRE or CMV-null as controls.
+   1.4. Transfect P19 cells with Ascl1 plasmid constructs using Lipofectamine 2000 when cells reach 80% confluence.
+
+2. Cellular Fractionation:
+   2.1. Seed Cor3–1 cells at 1.5 × 10^6 in 10 cm dishes and P19 cells at 1.0 × 10^6 in 10 cm dishes.
+   2.2. Wash cells with room temperature PBS and scrape into 1 ml PBS.
+   2.3. Pellet cells at 1,200 rpm at 4°C for 3 min.
+   2.4. Resuspend pellets in 5 volumes of ice-cold E1 buffer with protease inhibitors and pipette gently 5 times.
+   2.5. Centrifuge at 3,400 rpm at 4°C for 2 min and collect the supernatant (cytoplasmic fraction).
+   2.6. Resuspend the pellet in the same volume of E1 buffer and repeat centrifugation. Discard the supernatant.
+   2.7. Resuspend the pellet in 2 volumes of ice-cold E2 buffer with protease inhibitors and centrifuge. Collect the supernatant (nuclear fraction).
+   2.8. Resuspend the remaining pellet in ice-cold E3 buffer with protease inhibitors, sonicate for 5 min (Bioruptor, 30 sec ON/30 sec OFF), and centrifuge. Collect the supernatant (chromatin fraction).
+
+3. Protein Quantification:
+   3.1. Determine protein concentration of each fraction using the BCA protein assay kit.
+
+4. Agarose-TUBEs Pull Down:
+   4.1. Incubate 15 μl of 50% Agarose-TUBEs with 350-450 μg of proteins from the cytoplasmic and chromatin fractions for 1 hour at 4°C on a rocker platform.
+   4.2. Centrifuge at 1,000 × g at 4°C for 5 min and collect the supernatant (unbound fraction).
+   4.3. Wash the Agarose-TUBEs 3 times as per the manufacturer’s instructions.
+   4.4. Boil the Agarose-TUBEs in reducing sample buffer for 5 min, centrifuge, and collect the eluted samples (bound fraction).
+
+5. Western Blot Analysis:
+   5.1. Prepare samples from total cell lysates or fractionated lysates.
+   5.2. Perform SDS-PAGE and transfer proteins onto nitrocellulose membranes.
+   5.3. Block membranes with 10% non-fat milk in TBS-0.1% Tween and probe overnight with primary antibodies.
+   5.4. Incubate with appropriate HRP-conjugated secondary antibodies.
+   5.5. Develop membranes using ECL detection reagents.
+
+6. Data Analysis:
+   6.1. Quantify protein levels using densitometry software.
+   6.2. Analyze data and present as means ± SEM from at least three independent experiments.
+
+Note: Ensure to maintain sterile conditions throughout the cell culture process and handle all samples on ice to prevent protein degradation. Dispose of waste according to your institution's safety protocols.

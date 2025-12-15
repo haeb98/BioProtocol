@@ -1,0 +1,1767 @@
+[
+  {
+    "action": "Grow",
+    "materials": "Cor3–1 neural stem cells",
+    "parameters": {},
+    "produces": "Expanded Cor3–1 neural stem cells",
+    "confidence": 0.9,
+    "hallucination": false,
+    "protocol_id": "Bio-protocol-2096",
+    "task_id": "Bio-protocol-2096::T1",
+    "task_name": "Cell culture and maintenance",
+    "step_id": "Bio-protocol-2096::T1::S1",
+    "step_text": "Grow Cor3–1 neural stem cells in Complete media.",
+    "span_chunk": "Neural stem cells, Cor3–1 were grown in Complete media (DMEM/HAM’S-F12 (Sigma, D8437), 1.45% Glucose (Sigma, G28644 ), 1 × MEM-NEAA (Gibco, 11140-035), 100 units/ml penicillin and 100 μg/ml streptomycin (Gibco, 15140-122), 0.16% BSA (Gibco, 15260-037), 0.1 mM β-Mercapto-ethanol (Gibco 31350-010), 1% B-27 supplement (Gibco, 17504-044) and 0.5% N2 supplement (Gibco, 17502-048))."
+  },
+  {
+    "protocol_id": "Bio-protocol-2096",
+    "task_id": "Bio-protocol-2096::T1",
+    "task_name": "Cell culture and maintenance",
+    "step_id": "Bio-protocol-2096::T1::S2",
+    "step_text": "Supplement Complete media with growth factors before changing the medium or passaging the cells.",
+    "action": "Supplement Complete media with growth factors",
+    "materials": [
+      {
+        "name": "mouse EGF",
+        "details": "Peprotech, 315-09",
+        "amount": 10,
+        "unit": "ng/ml"
+      },
+      {
+        "name": "human FGF",
+        "details": "R&D systems, 233-FB",
+        "amount": 10,
+        "unit": "ng/ml"
+      },
+      {
+        "name": "Laminin",
+        "details": "Sigma, L2020-1MG",
+        "amount": 1,
+        "unit": "μg/ml"
+      },
+      {
+        "name": "Complete media",
+        "details": null,
+        "amount": null,
+        "unit": null
+      }
+    ],
+    "parameters": [
+      {
+        "name": "media",
+        "value": "Complete",
+        "unit": null
+      },
+      {
+        "name": "supplement",
+        "value": "growth factors",
+        "unit": null
+      }
+    ],
+    "produces": "Supplemented Complete media",
+    "confidence": 0.9,
+    "hallucination": false,
+    "span_chunk": "Before changing the medium or passaging the cells, 10 ng/ml mouse EGF (Peprotech, 315-09), 10 ng/ml human FGF (R&D systems, 233-FB) and 1 μg/ml Laminin (Sigma, L2020-1MG) were added to the required volume of Complete media."
+  },
+  {
+    "action": "maintain",
+    "materials": [
+      {
+        "name": "P19 cells",
+        "amount": null,
+        "unit": null
+      },
+      {
+        "name": "MEM-α",
+        "amount": null,
+        "unit": null
+      },
+      {
+        "name": "FBS",
+        "amount": "10%",
+        "unit": "v/v",
+        "notes": "typical concentration, exact amount should be verified"
+      },
+      {
+        "name": "antibiotics",
+        "amount": "1%",
+        "unit": "v/v",
+        "notes": "typical concentration, exact amount should be verified"
+      }
+    ],
+    "parameters": [],
+    "produces": [],
+    "confidence": 0.9,
+    "hallucination": false,
+    "protocol_id": "Bio-protocol-2096",
+    "task_id": "Bio-protocol-2096::T1",
+    "task_name": "Cell culture and maintenance",
+    "step_id": "Bio-protocol-2096::T1::S3",
+    "step_text": "Maintain P19 cells in MEM-α supplemented with FBS and antibiotics.",
+    "span_chunk": "P19 cells were maintained in MEM-α (Gibco, 41061-029) supplemented with 10% FBS and 100 units/ml penicillin and 100 μg/ml streptomycin."
+  },
+  {
+    "protocol_id": "Bio-protocol-2096",
+    "task_id": "Bio-protocol-2096::T2",
+    "task_name": "Neuronal differentiation",
+    "step_id": "Bio-protocol-2096::T2::S1",
+    "step_text": "Transfer the seeded neural stem cells into priming medium 24 hours after seeding.",
+    "action": "Transfer",
+    "parameters": [
+      {
+        "name": "time after seeding",
+        "value": 24,
+        "unit": "hours",
+        "raw": "24 hours after seeding"
+      },
+      {
+        "name": "duration",
+        "value": 3,
+        "unit": "days",
+        "raw": "for 3 days"
+      }
+    ],
+    "materials": [
+      {
+        "name": "seeded neural stem cells",
+        "details": ""
+      },
+      {
+        "name": "priming medium",
+        "details": "Euromed-N supplemented with 1% B-27 without vitamin A, 0.5% N2, and 10 ng/ml human FGF"
+      }
+    ],
+    "produces": [
+      {
+        "name": "primed neural stem cells for neuronal differentiation",
+        "details": ""
+      }
+    ],
+    "confidence": 0.9,
+    "hallucination": false,
+    "span_chunk": "For neuronal differentiation, 24 hours after seeding, cells were transferred into a priming medium..."
+  },
+  {
+    "protocol_id": "Bio-protocol-2096",
+    "task_id": "Bio-protocol-2096::T2",
+    "task_name": "Neuronal differentiation",
+    "step_id": "Bio-protocol-2096::T2::S2",
+    "step_text": "Maintain the cells in the priming medium for 3 days.",
+    "span_chunk": "For neuronal differentiation, 24 hours after seeding, cells were transferred into a priming medium... supplemented with 1% B-27 without vitamin A, 0.5% N2 and 10 ng/ml human FGF for 3 days.",
+    "id": "Step",
+    "action": "Maintain the cells in the priming medium",
+    "parameters": [
+      {
+        "name": "time",
+        "value": 3,
+        "unit": "days",
+        "raw": "for 3 days"
+      }
+    ],
+    "materials": [
+      "cells",
+      "priming medium"
+    ],
+    "produces": "",
+    "confidence": 0.9,
+    "hallucination": false
+  },
+  {
+    "protocol_id": "Bio-protocol-2096",
+    "task_id": "Bio-protocol-2096::T2",
+    "task_name": "Neuronal differentiation",
+    "step_id": "Bio-protocol-2096::T2::S3",
+    "step_text": "Transfer the cells into differentiation medium after the priming period.",
+    "action": "Transfer the cells",
+    "materials": [
+      {
+        "name": "cells",
+        "quantity": null,
+        "unit": null
+      },
+      {
+        "name": "differentiation medium",
+        "quantity": null,
+        "unit": null
+      }
+    ],
+    "parameters": [
+      {
+        "name": "into",
+        "value": "differentiation medium",
+        "unit": null
+      },
+      {
+        "name": "after",
+        "value": "the priming period",
+        "unit": null
+      }
+    ],
+    "produces": null,
+    "confidence": 0.9,
+    "hallucination": false,
+    "span_chunk": "Cells were then transferred into a differentiation medium..."
+  },
+  {
+    "action": "Change the differentiation medium",
+    "parameters": {
+      "frequency": "every 3 days",
+      "FGF concentration reduction": "by half each time until it reaches zero",
+      "BDNF concentration": "constant at 30 ng/ml"
+    },
+    "materials": {
+      "differentiation medium": {},
+      "FGF": {},
+      "BDNF": {
+        "concentration": "30 ng/ml"
+      }
+    },
+    "produces": {
+      "differentiated cells in medium": {
+        "FGF concentration": "reduced by half each time until zero",
+        "BDNF concentration": "constant at 30 ng/ml"
+      }
+    },
+    "confidence": 0.9,
+    "hallucination": false,
+    "protocol_id": "Bio-protocol-2096",
+    "task_id": "Bio-protocol-2096::T2",
+    "task_name": "Neuronal differentiation",
+    "step_id": "Bio-protocol-2096::T2::S4",
+    "step_text": "Change the differentiation medium every 3 days, reducing the FGF concentration by half each time until it reaches zero, while maintaining a constant concentration of BDNF at 30 ng/ml.",
+    "span_chunk": "followed by a change of medium every 3 days with reduction of the FGF concentration by half to zero and a constant concentration of BDNF at 30 ng/ml."
+  },
+  {
+    "action": "grow",
+    "materials": [
+      {
+        "name": "P19 cells",
+        "details": null
+      },
+      {
+        "name": "MEM-α medium",
+        "details": "Gibco, 41061-029"
+      },
+      {
+        "name": "FBS",
+        "details": "10%"
+      },
+      {
+        "name": "penicillin",
+        "details": "100 units/ml"
+      },
+      {
+        "name": "streptomycin",
+        "details": "100 μg/ml"
+      }
+    ],
+    "parameters": [
+      {
+        "name": "confluence",
+        "value": 80,
+        "unit": "%"
+      }
+    ],
+    "produces": [
+      {
+        "name": "P19 cells",
+        "details": "grown to 80% confluence"
+      }
+    ],
+    "confidence": 0.9,
+    "hallucination": false,
+    "protocol_id": "Bio-protocol-2096",
+    "task_id": "Bio-protocol-2096::T3",
+    "task_name": "Cell transfection",
+    "step_id": "Bio-protocol-2096::T3::S1",
+    "step_text": "Grow P19 cells in MEM-α medium supplemented with 10% FBS and 100 units/ml penicillin and 100 μg/ml streptomycin until they reach 80% confluence.",
+    "span_chunk": "P19 cells were maintained in MEM-α (Gibco, 41061-029) supplemented with 10% FBS and 100 units/ml penicillin and 100 μg/ml streptomycin."
+  },
+  {
+    "action": "Prepare the transfection mixture",
+    "materials": {
+      "plasmid DNA": {},
+      "Lipofectamine 2000": {
+        "catalog_number": "11668-027",
+        "manufacturer": "Invitrogen"
+      },
+      "proliferation medium": {}
+    },
+    "parameters": {
+      "ratio": "1:2",
+      "DNA_to_Lipofectamine": true
+    },
+    "produces": {
+      "transfection mixture": {}
+    },
+    "confidence": 0.9,
+    "hallucination": false,
+    "protocol_id": "Bio-protocol-2096",
+    "task_id": "Bio-protocol-2096::T3",
+    "task_name": "Cell transfection",
+    "step_id": "Bio-protocol-2096::T3::S2",
+    "step_text": "Prepare the transfection mixture by diluting the plasmid DNA and Lipofectamine 2000 in the proliferation medium at a 1:2 ratio (DNA:Lipofectamine).",
+    "span_chunk": "P19 cells were transfected at 80% confluence with Lipofectamine 2000 (Invitrogen, 11668-027) in proliferation medium following the manufacturer’s instructions with a 1:2 ratio (DNA:Lipofectamine)."
+  },
+  {
+    "action": "transfect",
+    "materials": {
+      "P19 cells": {},
+      "Lipofectamine 2000": {
+        "catalog_number": "11668-027",
+        "manufacturer": "Invitrogen"
+      },
+      "proliferation medium": {},
+      "DNA mixture": {}
+    },
+    "parameters": {
+      "cell confluence": "80%",
+      "DNA:Lipofectamine ratio": "1:2"
+    },
+    "produces": {
+      "transfected P19 cells": {}
+    },
+    "confidence": 0.9,
+    "hallucination": false,
+    "protocol_id": "Bio-protocol-2096",
+    "task_id": "Bio-protocol-2096::T3",
+    "task_name": "Cell transfection",
+    "step_id": "Bio-protocol-2096::T3::S3",
+    "step_text": "Transfect the P19 cells with the prepared mixture when they are at 80% confluence, following the manufacturer's instructions for Lipofectamine 2000.",
+    "span_chunk": "P19 cells were transfected at 80% confluence with Lipofectamine 2000 (Invitrogen, 11668-027) in proliferation medium following the manufacturer’s instructions with a 1:2 ratio (DNA:Lipofectamine)."
+  },
+  {
+    "protocol_id": "Bio-protocol-2096",
+    "task_id": "Bio-protocol-2096::T4",
+    "task_name": "Quantitative Real-Time PCR",
+    "step_id": "Bio-protocol-2096::T4::S1",
+    "step_text": "Extract total RNA from cells using the RNeasy kit (Qiagen).",
+    "span_chunk": "Total RNA was extracted from cells using the RNeasy kit (Qiagen).",
+    "id": "Step",
+    "action": "Extract total RNA from cells",
+    "parameters": [],
+    "materials": [
+      "cells",
+      "RNeasy kit (Qiagen)"
+    ],
+    "produces": [
+      "total RNA"
+    ],
+    "confidence": 0.9,
+    "hallucination": false
+  },
+  {
+    "protocol_id": "Bio-protocol-2096",
+    "task_id": "Bio-protocol-2096::T4",
+    "task_name": "Quantitative Real-Time PCR",
+    "step_id": "Bio-protocol-2096::T4::S2",
+    "step_text": "Synthesize template cDNAs using the QuantiTect Reverse Transcription Kit (Qiagen).",
+    "action": "synthesize",
+    "materials": [
+      {
+        "name": "QuantiTect Reverse Transcription Kit",
+        "supplier": "Qiagen"
+      }
+    ],
+    "produces": [
+      {
+        "name": "template cDNAs"
+      }
+    ],
+    "parameters": [
+      {
+        "name": "RNA input amount",
+        "value": "typical amount as per kit instructions",
+        "note": "Exact amount not specified in protocol, inferred from common kit usage"
+      },
+      {
+        "name": "incubation times",
+        "value": "typical times as per kit instructions",
+        "note": "Exact times not specified in protocol, inferred from common kit usage"
+      },
+      {
+        "name": "incubation temperatures",
+        "value": "typical temperatures as per kit instructions",
+        "note": "Exact temperatures not specified in protocol, inferred from common kit usage"
+      }
+    ],
+    "span_chunk": "Template cDNAs were synthesised using the QuantiTect Reverse Transcription Kit (Qiagen),",
+    "confidence": 0.9,
+    "hallucination": false
+  },
+  {
+    "protocol_id": "Bio-protocol-2096",
+    "task_id": "Bio-protocol-2096::T4",
+    "task_name": "Quantitative Real-Time PCR",
+    "step_id": "Bio-protocol-2096::T4::S3",
+    "step_text": "Perform qRT-PCR using QuantiFast SYBR Green Master Mix (Qiagen) in a Lightcycler 480 PCR system (Roche).",
+    "span_chunk": "qRT-PCR was performed using QuantiFast SYBR Green Master Mix (Qiagen) in a Lightcycler 480 PCR system (Roche).",
+    "id": "Step",
+    "action": "Perform qRT-PCR",
+    "parameters": [
+      {
+        "name": "Master Mix",
+        "value": "QuantiFast SYBR Green",
+        "unit": null,
+        "raw": "QuantiFast SYBR Green Master Mix (Qiagen)"
+      },
+      {
+        "name": "PCR system",
+        "value": "Lightcycler 480",
+        "unit": null,
+        "raw": "Lightcycler 480 PCR system (Roche)"
+      }
+    ],
+    "materials": [
+      "QuantiFast SYBR Green Master Mix",
+      "Lightcycler 480 PCR system"
+    ],
+    "produces": "qRT-PCR results",
+    "confidence": 0.9,
+    "hallucination": false
+  },
+  {
+    "action": "lyse",
+    "materials": {
+      "cells": {},
+      "RIPA buffer": {},
+      "protease inhibitor cocktail": {}
+    },
+    "parameters": {
+      "method": "direct lysis with RIPA buffer complemented with protease inhibitor cocktail",
+      "details": "Volumes and specific conditions are based on common laboratory practices as exact protocol details are not provided."
+    },
+    "produces": {
+      "total cell lysates": {}
+    },
+    "confidence": 0.9,
+    "hallucination": false,
+    "protocol_id": "Bio-protocol-2096",
+    "task_id": "Bio-protocol-2096::T5",
+    "task_name": "Western blotting",
+    "step_id": "Bio-protocol-2096::T5::S1",
+    "step_text": "Obtain total cell lysates by lysing cells directly with RIPA buffer complemented with protease inhibitor cocktail.",
+    "span_chunk": "Western blots were either performed from total cell lysates obtained by lysing cells directly with RIPA buffer (Sigma-Aldrich) complemented with protease inhibitor cocktail (cOmplete, Roche)"
+  },
+  {
+    "protocol_id": "Bio-protocol-2096",
+    "task_id": "Bio-protocol-2096::T5",
+    "task_name": "Western blotting",
+    "step_id": "Bio-protocol-2096::T5::S2",
+    "step_text": "Determine the protein concentration using the BCA protein assay kit.",
+    "span_chunk": "Proteins concentration was determined using BCA protein assay kit (Thermo).",
+    "id": "Step",
+    "action": "Determine the protein concentration",
+    "parameters": [],
+    "materials": [
+      "BCA protein assay kit"
+    ],
+    "produces": "protein concentration",
+    "confidence": 0.9,
+    "hallucination": false
+  },
+  {
+    "protocol_id": "Bio-protocol-2096",
+    "task_id": "Bio-protocol-2096::T5",
+    "task_name": "Western blotting",
+    "step_id": "Bio-protocol-2096::T5::S3",
+    "step_text": "Carry out SDS-PAGE electrophoresis using 10% pre-cast polyacrylamide gels in MOPS buffer.",
+    "span_chunk": "SDS-PAGE electrophoresis was carried out in 10% pre-cast polyacrylamide gels (Novex) in MOPS buffer.",
+    "id": "Step",
+    "action": "Carry out SDS-PAGE electrophoresis",
+    "parameters": [
+      {
+        "name": "type of polyacrylamide gels",
+        "value": "10",
+        "unit": "%",
+        "raw": "10% pre-cast polyacrylamide gels"
+      }
+    ],
+    "materials": [
+      "SDS-PAGE",
+      "polyacrylamide gels",
+      "MOPS buffer"
+    ],
+    "produces": [],
+    "confidence": 0.9,
+    "hallucination": false
+  },
+  {
+    "protocol_id": "Bio-protocol-2096",
+    "task_id": "Bio-protocol-2096::T5",
+    "task_name": "Western blotting",
+    "step_id": "Bio-protocol-2096::T5::S4",
+    "step_text": "Transfer the separated proteins onto nitrocellulose membranes.",
+    "span_chunk": "After transfer onto nitrocellulose,",
+    "id": "Step",
+    "action": "Transfer the separated proteins onto nitrocellulose membranes",
+    "parameters": [],
+    "materials": [
+      "separated proteins",
+      "nitrocellulose membranes"
+    ],
+    "produces": "",
+    "confidence": 0.9,
+    "hallucination": false
+  },
+  {
+    "action": "block the membranes",
+    "materials": [
+      {
+        "name": "non-fat milk",
+        "concentration": "10%",
+        "unit": "%",
+        "state": "solid"
+      },
+      {
+        "name": "TBS-0.1% Tween solution",
+        "components": [
+          {
+            "name": "TBS",
+            "state": "liquid"
+          },
+          {
+            "name": "Tween",
+            "concentration": "0.1%",
+            "unit": "%",
+            "state": "liquid"
+          }
+        ]
+      }
+    ],
+    "parameters": {
+      "duration": "1 hour",
+      "unit": "hour"
+    },
+    "produces": [],
+    "confidence": 0.9,
+    "hallucination": false,
+    "protocol_id": "Bio-protocol-2096",
+    "task_id": "Bio-protocol-2096::T5",
+    "task_name": "Western blotting",
+    "step_id": "Bio-protocol-2096::T5::S5",
+    "step_text": "Block the membranes for 1 hour with 10% non-fat milk in TBS-0.1% Tween solution.",
+    "span_chunk": "membranes were blocked for 1hr with 10% non-fat milk in TBS-0.1% Tween solution"
+  },
+  {
+    "action": "Probe the membranes",
+    "materials": [
+      "primary antibodies",
+      "membranes"
+    ],
+    "parameters": {
+      "duration": "overnight",
+      "temperature": "4°C",
+      "condition": "specific to the proteins of interest"
+    },
+    "produces": [],
+    "confidence": 0.9,
+    "hallucination": false,
+    "protocol_id": "Bio-protocol-2096",
+    "task_id": "Bio-protocol-2096::T5",
+    "task_name": "Western blotting",
+    "step_id": "Bio-protocol-2096::T5::S6",
+    "step_text": "Probe the membranes overnight with primary antibodies specific to the proteins of interest.",
+    "span_chunk": "and probed overnight with primary antibody"
+  },
+  {
+    "action": "Develop the membranes",
+    "materials": [
+      "ECL Prime",
+      "ECL detection reagents",
+      "membranes"
+    ],
+    "parameters": {
+      "for Ascl1": "using ECL Prime",
+      "for other antibodies": "using ECL detection reagents"
+    },
+    "produces": {
+      "description": "Developed membranes with detected signals for Ascl1 or other antibodies"
+    },
+    "confidence": 0.9,
+    "hallucination": false,
+    "protocol_id": "Bio-protocol-2096",
+    "task_id": "Bio-protocol-2096::T5",
+    "task_name": "Western blotting",
+    "step_id": "Bio-protocol-2096::T5::S7",
+    "step_text": "Develop the membranes using ECL Prime for Ascl1 or ECL detection reagents for the other antibodies.",
+    "span_chunk": "Membranes were developed using ECL Prime (GE Healthcare, RPN2232) for Ascl1 or ECL detection reagents (GE Healthcare, RPN2106) for the other antibodies."
+  },
+  {
+    "protocol_id": "Bio-protocol-2096",
+    "task_id": "Bio-protocol-2096::T6",
+    "task_name": "Cellular fractionation",
+    "step_id": "Bio-protocol-2096::T6::S1",
+    "step_text": "Wash cells once with room temperature PBS and scrape into 1 ml PBS.",
+    "action": "Wash and scrape",
+    "materials": {
+      "Cells": {},
+      "PBS": {
+        "amount": 1,
+        "unit": "ml",
+        "state": "room temperature"
+      }
+    },
+    "parameters": {
+      "Temperature": {
+        "value": "Room",
+        "unit": "Temperature"
+      },
+      "Volume": {
+        "value": 1,
+        "unit": "ml"
+      }
+    },
+    "produces": {
+      "Washed and scraped cells": {
+        "amount": 1,
+        "unit": "ml"
+      }
+    },
+    "confidence": 0.9,
+    "hallucination": false,
+    "span_chunk": "Cells were washed once with room temperature PBS and scraped into 1 ml PBS."
+  },
+  {
+    "protocol_id": "Bio-protocol-2096",
+    "task_id": "Bio-protocol-2096::T6",
+    "task_name": "Cellular fractionation",
+    "step_id": "Bio-protocol-2096::T6::S2",
+    "step_text": "Pellet cells by centrifugation at 1,200 rpm at 4°C for 3 minutes.",
+    "action": "Pellet cells by centrifugation",
+    "materials": [
+      {
+        "name": "cells",
+        "quantity": null,
+        "unit": null,
+        "type": "biological"
+      },
+      {
+        "name": "Eppendorf tube",
+        "quantity": null,
+        "unit": null,
+        "type": "consumable"
+      }
+    ],
+    "parameters": [
+      {
+        "name": "Centrifugation speed",
+        "value": 1200,
+        "unit": "rpm"
+      },
+      {
+        "name": "Temperature",
+        "value": 4,
+        "unit": "°C"
+      },
+      {
+        "name": "Time",
+        "value": 3,
+        "unit": "minutes"
+      }
+    ],
+    "produces": [
+      {
+        "name": "pellet cells",
+        "quantity": null,
+        "unit": null,
+        "type": "biological"
+      }
+    ],
+    "confidence": 0.9,
+    "hallucination": false,
+    "span_chunk": "Cells were pelleted at 1,200 rpm in an eppendorf tube at 4°C for 3 min."
+  },
+  {
+    "action": "resuspend",
+    "materials": {
+      "cell_pellet": {},
+      "E1_buffer": {
+        "composition": {
+          "Hepes-KOH": "50 mM",
+          "NaCl": "140 mM",
+          "EDTA": "1 mM",
+          "glycerol": "10%",
+          "NP-40": "0.5%",
+          "triton X-100": "0.25%",
+          "DTT": "1 mM"
+        },
+        "temperature": "ice-cold"
+      },
+      "protease_inhibitor_cocktail": {
+        "concentration": "1x"
+      }
+    },
+    "parameters": {
+      "volumes": "5",
+      "pipetting": {
+        "times": 5,
+        "technique": "gently up and down"
+      }
+    },
+    "produces": {
+      "resuspended_cells": {}
+    },
+    "confidence": 0.9,
+    "hallucination": false,
+    "protocol_id": "Bio-protocol-2096",
+    "task_id": "Bio-protocol-2096::T6",
+    "task_name": "Cellular fractionation",
+    "step_id": "Bio-protocol-2096::T6::S3",
+    "step_text": "Resuspend the cell pellet in 5 volumes of ice-cold E1 buffer complemented with 1x protease inhibitor cocktail and pipette gently up and down 5 times.",
+    "span_chunk": "Pellets were covered with 5 volumes of ice-cold E1 buffer (50 mM Hepes-KOH pH 7.5, 140 mM NaCl, 1 mM EDTA pH8.0, 10% glycerol, 0.5% NP-40, 0.25% triton X-100, 1 mM DTT) complemented with 1x protease inhibitor cocktail and were gently pipetted up and down (5 times)."
+  },
+  {
+    "action": "centrifuge",
+    "materials": [],
+    "parameters": {
+      "speed": "3,400 rpm",
+      "temperature": "4°C",
+      "duration": "2 minutes"
+    },
+    "produces": "supernatant (cytoplasm fraction)",
+    "confidence": 0.9,
+    "hallucination": false,
+    "protocol_id": "Bio-protocol-2096",
+    "task_id": "Bio-protocol-2096::T6",
+    "task_name": "Cellular fractionation",
+    "step_id": "Bio-protocol-2096::T6::S4",
+    "step_text": "Centrifuge at 3,400 rpm at 4°C for 2 minutes and collect the supernatant in a fresh tube (cytoplasm fraction).",
+    "span_chunk": "Before centrifugation at 3,400 rpm at 4°C for 2 min. The supernatant was collected in a fresh tube (cytoplasm fraction)."
+  },
+  {
+    "protocol_id": "Bio-protocol-2096",
+    "task_id": "Bio-protocol-2096::T6",
+    "task_name": "Cellular fractionation",
+    "step_id": "Bio-protocol-2096::T6::S5",
+    "step_text": "Resuspend the remaining pellet in the same volume of E1 buffer, centrifuge as before, and discard the supernatant.",
+    "action": "Resuspend the remaining pellet, centrifuge as before, and discard the supernatant",
+    "materials": [
+      {
+        "name": "pellet",
+        "quantity": null,
+        "unit": null
+      },
+      {
+        "name": "E1 buffer",
+        "quantity": "5 volumes",
+        "unit": null,
+        "details": "50 mM Hepes-KOH pH 7.5, 140 mM NaCl, 1 mM EDTA pH 8.0, 10% glycerol, 0.5% NP-40, 0.25% triton X-100, 1 mM DTT, complemented with 1× protease inhibitor cocktail"
+      }
+    ],
+    "parameters": [
+      {
+        "name": "centrifugation speed",
+        "value": 3400,
+        "unit": "rpm"
+      },
+      {
+        "name": "centrifugation temperature",
+        "value": 4,
+        "unit": "°C"
+      },
+      {
+        "name": "centrifugation duration",
+        "value": 2,
+        "unit": "min"
+      }
+    ],
+    "produces": [
+      {
+        "name": "supernatant",
+        "action": "discard"
+      }
+    ],
+    "confidence": 0.9,
+    "hallucination": false,
+    "span_chunk": "The pellet was resuspended by gentle pipetting in the same volume of E1 buffer and centrifuged as before. The supernatant was discarded."
+  },
+  {
+    "action": "resuspend",
+    "materials": [
+      {
+        "name": "pellet",
+        "state": "solid",
+        "characteristics": [
+          "nucleus fraction"
+        ]
+      },
+      {
+        "name": "E2 buffer",
+        "state": "liquid",
+        "components": [
+          {
+            "name": "Tris-HCl",
+            "concentration": "10 mM",
+            "pH": "8.0"
+          },
+          {
+            "name": "NaCl",
+            "concentration": "200 mM"
+          },
+          {
+            "name": "EDTA",
+            "concentration": "1 mM",
+            "pH": "8.0"
+          },
+          {
+            "name": "EGTA",
+            "concentration": "0.5 mM",
+            "pH": "8.0"
+          }
+        ]
+      },
+      {
+        "name": "protease inhibitor cocktail",
+        "state": "liquid",
+        "concentration": "1x"
+      }
+    ],
+    "parameters": [
+      {
+        "name": "volume",
+        "value": "2",
+        "unit": "volumes",
+        "reference": "pellet volume"
+      },
+      {
+        "name": "temperature",
+        "value": "4",
+        "unit": "°C"
+      },
+      {
+        "name": "time",
+        "value": "10",
+        "unit": "minutes"
+      },
+      {
+        "name": "centrifugation speed",
+        "value": "3400",
+        "unit": "rpm"
+      },
+      {
+        "name": "centrifugation duration",
+        "value": "2",
+        "unit": "minutes"
+      }
+    ],
+    "produces": [
+      {
+        "name": "supernatant",
+        "state": "liquid",
+        "characteristics": [
+          "nucleus fraction"
+        ]
+      }
+    ],
+    "confidence": 0.9,
+    "hallucination": false,
+    "protocol_id": "Bio-protocol-2096",
+    "task_id": "Bio-protocol-2096::T6",
+    "task_name": "Cellular fractionation",
+    "step_id": "Bio-protocol-2096::T6::S6",
+    "step_text": "Resuspend the pellet in the same volume of E2 buffer complemented with 1x protease inhibitor cocktail, leave for 10 minutes on ice, centrifuge, and collect the supernatant in a fresh tube (nucleus fraction).",
+    "span_chunk": "The pellet was resuspended by gentle pipetting in the same volume of E2 buffer (10 mM Tris-HCl pH8.0, 200 mM NaCl, 1 mM EDTA pH8.0, 0.5 mM EGTA pH8.0) complemented with 1x protease inhibitor cocktail and left for 10 min on ice. After centrifugation at 3,400 rpm at 4°C for 2 min, the supernatant was collected in a fresh tube (nucleus fraction)."
+  },
+  {
+    "protocol_id": "Bio-protocol-2096",
+    "task_id": "Bio-protocol-2096::T6",
+    "task_name": "Cellular fractionation",
+    "step_id": "Bio-protocol-2096::T6::S7",
+    "step_text": "Resuspend the remaining pellet in ice-cold E3 buffer complemented with 1x protease inhibitor cocktail in the same volume used for E1, sonicate for 5 minutes on setting H, 30 seconds ON/30 seconds OFF, and centrifuge at 13,000 rpm at 4°C for 10 minutes to obtain the chromatin fraction.",
+    "span_chunk": "The pellet was resuspended in ice-cold E3 buffer (500 mM Tris-HCl, 500 mM NaCl) complemented with 1x protease inhibitor cocktail by gentle pipetting in the same volume used for E1. The solution (chromatin fraction) was sonicated in a Bioruptor (Diagenode) for 5 min on setting H, 30 sec ON/30 sec OFF.",
+    "id": "Step",
+    "action": "Resuspend the remaining pellet, sonicate, and centrifuge",
+    "parameters": [
+      {
+        "name": "Buffer",
+        "value": "E3",
+        "unit": null,
+        "raw": "E3 buffer"
+      },
+      {
+        "name": "Protease inhibitor cocktail",
+        "value": "1x",
+        "unit": null,
+        "raw": "1x protease inhibitor cocktail"
+      },
+      {
+        "name": "Sonicate duration",
+        "value": "5",
+        "unit": "minutes",
+        "raw": "sonicate for 5 minutes"
+      },
+      {
+        "name": "Sonicate setting",
+        "value": "H",
+        "unit": null,
+        "raw": "setting H"
+      },
+      {
+        "name": "Sonicate cycle",
+        "value": "30 seconds ON/30 seconds OFF",
+        "unit": null,
+        "raw": "30 seconds ON/30 seconds OFF"
+      },
+      {
+        "name": "Centrifuge speed",
+        "value": "13,000",
+        "unit": "rpm",
+        "raw": "centrifuge at 13,000 rpm"
+      },
+      {
+        "name": "Centrifuge temperature",
+        "value": "4",
+        "unit": "°C",
+        "raw": "at 4°C"
+      },
+      {
+        "name": "Centrifuge duration",
+        "value": "10",
+        "unit": "minutes",
+        "raw": "for 10 minutes"
+      }
+    ],
+    "materials": [
+      "pellet",
+      "E3 buffer",
+      "protease inhibitor cocktail"
+    ],
+    "produces": "chromatin fraction",
+    "confidence": 0.9,
+    "hallucination": false
+  },
+  {
+    "protocol_id": "Bio-protocol-2096",
+    "task_id": "Bio-protocol-2096::T6",
+    "task_name": "Cellular fractionation",
+    "step_id": "Bio-protocol-2096::T6::S8",
+    "step_text": "Determine the protein concentration of all fractions using BCA protein assay kit.",
+    "span_chunk": "All fractions were centrifuged at 13,000 rpm at 4°C for 10 min and protein concentration was determined using BCA protein assay kit.",
+    "id": "Step",
+    "action": "Determine the protein concentration of all fractions",
+    "parameters": [],
+    "materials": [
+      "BCA protein assay kit",
+      "protein",
+      "fractions"
+    ],
+    "produces": [
+      "protein concentration"
+    ],
+    "confidence": 0.9,
+    "hallucination": false
+  },
+  {
+    "protocol_id": "Bio-protocol-2096",
+    "task_id": "Bio-protocol-2096::T7",
+    "task_name": "Agarose-TUBEs pull down",
+    "step_id": "Bio-protocol-2096::T7::S1",
+    "step_text": "Prepare 15 μl of 50% Agarose-TUBEs for the pull-down assay.",
+    "span_chunk": "15 μl of 50% Agarose-TUBEs (LifeSensors, UM401) were used to pull down between 350 μg and 450 μg of ubiquitylated proteins from the cytoplasm and chromatin fractions",
+    "id": "Step",
+    "action": "Prepare",
+    "parameters": [
+      {
+        "name": "Volume",
+        "value": "15",
+        "unit": "μl",
+        "raw": "15 μl"
+      },
+      {
+        "name": "Concentration",
+        "value": "50",
+        "unit": "%",
+        "raw": "50%"
+      }
+    ],
+    "materials": [
+      "Agarose-TUBEs"
+    ],
+    "produces": "Agarose-TUBEs for the pull-down assay",
+    "confidence": 0.9,
+    "hallucination": false
+  },
+  {
+    "action": "incubate",
+    "materials": [
+      {
+        "name": "Agarose-TUBEs",
+        "details": "15 μl of 50% Agarose-TUBEs (LifeSensors, UM401)"
+      },
+      {
+        "name": "ubiquitylated proteins",
+        "details": "from cytoplasm and chromatin fractions"
+      }
+    ],
+    "parameters": [
+      {
+        "name": "amount of ubiquitylated proteins",
+        "range": {
+          "from": "350 μg",
+          "to": "450 μg"
+        }
+      },
+      {
+        "name": "final volume",
+        "value": "500 μl",
+        "details": "of respective buffers"
+      }
+    ],
+    "produces": {
+      "details": "ubiquitylated proteins incubated with Agarose-TUBEs in respective buffers"
+    },
+    "confidence": 0.9,
+    "hallucination": false,
+    "protocol_id": "Bio-protocol-2096",
+    "task_id": "Bio-protocol-2096::T7",
+    "task_name": "Agarose-TUBEs pull down",
+    "step_id": "Bio-protocol-2096::T7::S2",
+    "step_text": "Incubate the Agarose-TUBEs with 350 μg to 450 μg of ubiquitylated proteins from cytoplasm and chromatin fractions in a final volume of 500 μl of respective buffers.",
+    "span_chunk": "15 μl of 50% Agarose-TUBEs (LifeSensors, UM401) were used to pull down between 350 μg and 450 μg of ubiquitylated proteins from the cytoplasm and chromatin fractions in 500 μl final volume of respective buffers."
+  },
+  {
+    "action": "Perform the incubation",
+    "materials": [],
+    "parameters": {
+      "duration": "1 hour",
+      "temperature": "4°C",
+      "equipment": "rocker platform"
+    },
+    "produces": [],
+    "confidence": 0.9,
+    "hallucination": false,
+    "protocol_id": "Bio-protocol-2096",
+    "task_id": "Bio-protocol-2096::T7",
+    "task_name": "Agarose-TUBEs pull down",
+    "step_id": "Bio-protocol-2096::T7::S3",
+    "step_text": "Perform the incubation for 1 hour at 4°C on a rocker platform.",
+    "span_chunk": "Incubation was performed for 1 hour at 4°C on a rocker platform."
+  },
+  {
+    "action": "centrifuge",
+    "materials": [
+      "Agarose-TUBEs"
+    ],
+    "parameters": {
+      "speed": "1,000 x g",
+      "temperature": "4°C",
+      "duration": "5 minutes"
+    },
+    "produces": [],
+    "confidence": 0.9,
+    "hallucination": false,
+    "protocol_id": "Bio-protocol-2096",
+    "task_id": "Bio-protocol-2096::T7",
+    "task_name": "Agarose-TUBEs pull down",
+    "step_id": "Bio-protocol-2096::T7::S4",
+    "step_text": "Collect the Agarose-TUBEs by centrifugation at 1,000 x g at 4°C for 5 minutes.",
+    "span_chunk": "Agarose-TUBEs were collected by centrifugation at 1,000 x g at 4°C for 5 minutes."
+  },
+  {
+    "protocol_id": "Bio-protocol-2096",
+    "task_id": "Bio-protocol-2096::T7",
+    "task_name": "Agarose-TUBEs pull down",
+    "step_id": "Bio-protocol-2096::T7::S5",
+    "step_text": "Wash the Agarose-TUBEs three times as per the manufacturer's instructions.",
+    "action": "Wash the Agarose-TUBEs",
+    "parameters": [
+      {
+        "name": "Number of washes",
+        "value": 3,
+        "unit": "times",
+        "raw": "three times"
+      }
+    ],
+    "materials": [
+      "Agarose-TUBEs"
+    ],
+    "produces": [],
+    "confidence": 0.9,
+    "hallucination": false,
+    "span_chunk": "Agarose-TUBEs were washed 3 times following the manufacturer’s instructions."
+  },
+  {
+    "protocol_id": "Bio-protocol-2096",
+    "task_id": "Bio-protocol-2096::T7",
+    "task_name": "Agarose-TUBEs pull down",
+    "step_id": "Bio-protocol-2096::T7::S6",
+    "step_text": "Boil the Agarose-TUBEs in reducing sample buffer for 5 minutes.",
+    "span_chunk": "Agarose-TUBEs were boiled in reducing sample buffer for 5 minutes.",
+    "id": "Step",
+    "action": "Boil",
+    "parameters": [
+      {
+        "name": "time",
+        "value": 5,
+        "unit": "minutes",
+        "raw": "for 5 minutes"
+      }
+    ],
+    "materials": [
+      "Agarose-TUBEs",
+      "reducing sample buffer"
+    ],
+    "produces": "",
+    "confidence": 0.9,
+    "hallucination": false
+  },
+  {
+    "action": "centrifuge",
+    "materials": {
+      "Agarose-TUBEs": {
+        "state": "boiled",
+        "name": "Agarose-TUBEs"
+      }
+    },
+    "parameters": {
+      "speed": {
+        "value": 16000,
+        "unit": "x g",
+        "condition": "maximum"
+      },
+      "duration": {
+        "value": 1,
+        "unit": "minute"
+      },
+      "equipment": "top bench centrifuge"
+    },
+    "produces": {},
+    "confidence": 0.9,
+    "hallucination": false,
+    "protocol_id": "Bio-protocol-2096",
+    "task_id": "Bio-protocol-2096::T7",
+    "task_name": "Agarose-TUBEs pull down",
+    "step_id": "Bio-protocol-2096::T7::S7",
+    "step_text": "Centrifuge the boiled Agarose-TUBEs at maximum speed in a top bench centrifuge for 1 minute.",
+    "span_chunk": "Centrifuged at maximum speed in a top bench centrifuge for 1 minute."
+  },
+  {
+    "action": "Load the eluted samples onto gels",
+    "materials": {
+      "gels": "10% pre-cast polyacrylamide gels (Novex)",
+      "buffer": "MOPS buffer"
+    },
+    "parameters": {},
+    "produces": {
+      "analysis_result": "gel electrophoresis analysis of eluted samples"
+    },
+    "confidence": 0.9,
+    "hallucination": false,
+    "protocol_id": "Bio-protocol-2096",
+    "task_id": "Bio-protocol-2096::T7",
+    "task_name": "Agarose-TUBEs pull down",
+    "step_id": "Bio-protocol-2096::T7::S8",
+    "step_text": "Load the eluted samples onto gels for analysis.",
+    "span_chunk": "Eluted samples were loaded onto gels."
+  },
+  {
+    "action": "Treat",
+    "materials": [
+      "Cor3-1 cells",
+      "transfected P19 cells",
+      "cycloheximide"
+    ],
+    "parameters": {
+      "concentration": "10 μg/ml"
+    },
+    "produces": [],
+    "confidence": 0.9,
+    "hallucination": false,
+    "protocol_id": "Bio-protocol-2096",
+    "task_id": "Bio-protocol-2096::T8",
+    "task_name": "Protein stability assay",
+    "step_id": "Bio-protocol-2096::T8::S1",
+    "step_text": "Treat Cor3-1 cells or transfected P19 cells with 10 μg/ml cycloheximide.",
+    "span_chunk": "Cor3-1 cells or transfected P19 cells... were treated with 10 μg/ml cycloheximide..."
+  },
+  {
+    "protocol_id": "Bio-protocol-2096",
+    "task_id": "Bio-protocol-2096::T8",
+    "task_name": "Protein stability assay",
+    "step_id": "Bio-protocol-2096::T8::S2",
+    "step_text": "Harvest cells at defined time points after treatment with cycloheximide.",
+    "action": "Harvest cells",
+    "parameters": [
+      {
+        "name": "time points",
+        "value": "defined",
+        "unit": null,
+        "raw": "defined time points"
+      },
+      {
+        "name": "treatment",
+        "value": "after",
+        "unit": null,
+        "raw": "after treatment"
+      }
+    ],
+    "materials": [
+      {
+        "name": "cells",
+        "category": "biological"
+      },
+      {
+        "name": "cycloheximide",
+        "category": "chemical"
+      },
+      {
+        "name": "RIPA lysis buffer",
+        "details": "Sigma-Aldrich, R0278",
+        "category": "chemical"
+      }
+    ],
+    "produces": [
+      {
+        "name": "Harvested cells",
+        "details": "using RIPA lysis buffer or fractionation",
+        "category": "biological"
+      }
+    ],
+    "confidence": 0.9,
+    "hallucination": false,
+    "span_chunk": "At define time points, cells were harvested..."
+  },
+  {
+    "protocol_id": "Bio-protocol-2096",
+    "task_id": "Bio-protocol-2096::T8",
+    "task_name": "Protein stability assay",
+    "step_id": "Bio-protocol-2096::T8::S3",
+    "step_text": "Prepare equal amounts of each whole cell lysate or fractionated lysate for analysis.",
+    "span_chunk": "Equal amount of each whole cell lysate or fractionated lysate was separated on SDS-PAGE...",
+    "id": "Step",
+    "action": "Prepare equal amounts of each whole cell lysate or fractionated lysate for analysis",
+    "parameters": [],
+    "materials": [
+      "whole cell lysate",
+      "fractionated lysate"
+    ],
+    "produces": [],
+    "confidence": 0.9,
+    "hallucination": false
+  },
+  {
+    "protocol_id": "Bio-protocol-2096",
+    "task_id": "Bio-protocol-2096::T8",
+    "task_name": "Protein stability assay",
+    "step_id": "Bio-protocol-2096::T8::S4",
+    "step_text": "Separate the lysates on SDS-PAGE and transfer them to a membrane for immunoblotting.",
+    "span_chunk": "...was separated on SDS-PAGE and immmunoblotted...",
+    "id": "Step",
+    "action": "Separate the lysates on SDS-PAGE and transfer them to a membrane for immunoblotting",
+    "parameters": [],
+    "materials": [
+      "lysates",
+      "SDS-PAGE",
+      "membrane"
+    ],
+    "produces": [
+      "immunoblot"
+    ],
+    "confidence": 0.9,
+    "hallucination": false
+  },
+  {
+    "action": "Quantify the protein levels",
+    "materials": [],
+    "parameters": [],
+    "produces": [],
+    "confidence": 0.9,
+    "hallucination": false,
+    "protocol_id": "Bio-protocol-2096",
+    "task_id": "Bio-protocol-2096::T8",
+    "task_name": "Protein stability assay",
+    "step_id": "Bio-protocol-2096::T8::S5",
+    "step_text": "Quantify the protein levels using FiJi software.",
+    "span_chunk": "Protein levels were quantified with FiJi software."
+  },
+  {
+    "action": "Calculate the half-lives of the proteins",
+    "materials": [],
+    "parameters": {
+      "analysis_type": "nonlinear regression analysis",
+      "model": "One phase decay",
+      "software": "Prism"
+    },
+    "produces": [],
+    "confidence": 0.9,
+    "hallucination": false,
+    "protocol_id": "Bio-protocol-2096",
+    "task_id": "Bio-protocol-2096::T8",
+    "task_name": "Protein stability assay",
+    "step_id": "Bio-protocol-2096::T8::S6",
+    "step_text": "Calculate the half-lives of the proteins using nonlinear regression analysis (One phase decay, Prism).",
+    "span_chunk": "Half-lives were calculated using a nonlinear regression analysis (One phase decay, Prism)."
+  },
+  {
+    "action": "fix the cells",
+    "materials": [
+      "4% paraformaldehyde"
+    ],
+    "parameters": {
+      "duration": "10 minutes",
+      "temperature": "room temperature"
+    },
+    "produces": [
+      "fixed cells"
+    ],
+    "confidence": 0.9,
+    "hallucination": false,
+    "protocol_id": "Bio-protocol-2096",
+    "task_id": "Bio-protocol-2096::T9",
+    "task_name": "Immunocytochemistry",
+    "step_id": "Bio-protocol-2096::T9::S1",
+    "step_text": "Fix the cells in 4% paraformaldehyde for 10 minutes at room temperature.",
+    "span_chunk": "cells were fixed in 4% paraformaldehyde for 10 min at room temperature."
+  },
+  {
+    "action": "wash",
+    "materials": [
+      "cells",
+      "PBS"
+    ],
+    "parameters": {
+      "number_of_washes": 2
+    },
+    "produces": [],
+    "confidence": 0.9,
+    "hallucination": false,
+    "protocol_id": "Bio-protocol-2096",
+    "task_id": "Bio-protocol-2096::T9",
+    "task_name": "Immunocytochemistry",
+    "step_id": "Bio-protocol-2096::T9::S2",
+    "step_text": "Wash the cells twice in PBS.",
+    "span_chunk": "Cells were then washed twice in PBS"
+  },
+  {
+    "action": "permeabilize the cells",
+    "materials": {
+      "Triton X-100 PBS": {
+        "concentration": "0.2%",
+        "amount": null
+      }
+    },
+    "parameters": {
+      "duration": "10 minutes",
+      "temperature": "room temperature"
+    },
+    "produces": {
+      "permeabilized cells": {}
+    },
+    "confidence": 0.9,
+    "hallucination": false,
+    "protocol_id": "Bio-protocol-2096",
+    "task_id": "Bio-protocol-2096::T9",
+    "task_name": "Immunocytochemistry",
+    "step_id": "Bio-protocol-2096::T9::S3",
+    "step_text": "Permeabilize the cells in 0.2% Triton X-100 PBS for 10 minutes at room temperature.",
+    "span_chunk": "permeabilised in 0.2% Triton X-100 PBS for 10 min at room temperature."
+  },
+  {
+    "action": "block",
+    "materials": {
+      "PBS": {},
+      "BSA": {
+        "concentration": "3%",
+        "state": "solid"
+      }
+    },
+    "parameters": {
+      "duration": "60 minutes",
+      "temperature": "room temperature"
+    },
+    "produces": {},
+    "confidence": 0.9,
+    "hallucination": false,
+    "protocol_id": "Bio-protocol-2096",
+    "task_id": "Bio-protocol-2096::T9",
+    "task_name": "Immunocytochemistry",
+    "step_id": "Bio-protocol-2096::T9::S4",
+    "step_text": "Block the cells in PBS with 3% BSA for 60 minutes at room temperature.",
+    "span_chunk": "Blocking was performed in PBS with 3% BSA for 60 min at room temperature."
+  },
+  {
+    "action": "incubate",
+    "materials": [
+      {
+        "name": "cells",
+        "characteristics": []
+      },
+      {
+        "name": "Anti-Ascl1 primary antibody",
+        "characteristics": [
+          {
+            "name": "source",
+            "value": "Abcam, ab74065"
+          }
+        ],
+        "amount": "5 μg/ml",
+        "unit": "μg/ml"
+      },
+      {
+        "name": "PBS",
+        "characteristics": []
+      },
+      {
+        "name": "FBS",
+        "characteristics": [],
+        "amount": "2%",
+        "unit": "%"
+      },
+      {
+        "name": "Triton X-100",
+        "characteristics": [],
+        "amount": "0.02%",
+        "unit": "%"
+      }
+    ],
+    "parameters": {
+      "temperature": "4°C",
+      "duration": "overnight",
+      "condition": "without rocking"
+    },
+    "produces": [],
+    "confidence": 0.9,
+    "hallucination": false,
+    "protocol_id": "Bio-protocol-2096",
+    "task_id": "Bio-protocol-2096::T9",
+    "task_name": "Immunocytochemistry",
+    "step_id": "Bio-protocol-2096::T9::S5",
+    "step_text": "Incubate the cells with Anti-Ascl1 primary antibody at 5 μg/ml final concentration in PBS with 2% FBS and 0.02% Triton X-100 overnight at 4°C without rocking.",
+    "span_chunk": "Anti-Ascl1 primary antibody (Abcam, ab74065) was used at 5 μg/ml final concentration in PBS with 2% FBS and 0.02% Triton X-100 overnight at 4°C without rocking."
+  },
+  {
+    "action": "wash",
+    "materials": [
+      {
+        "name": "cells",
+        "details": ""
+      },
+      {
+        "name": "0.02% Triton X-100 PBS",
+        "details": ""
+      }
+    ],
+    "parameters": [
+      {
+        "name": "number of washes",
+        "value": 3,
+        "unit": ""
+      },
+      {
+        "name": "duration of each wash",
+        "value": 5,
+        "unit": "minutes"
+      }
+    ],
+    "produces": [
+      {
+        "name": "washed cells",
+        "details": ""
+      }
+    ],
+    "confidence": 0.9,
+    "hallucination": false,
+    "protocol_id": "Bio-protocol-2096",
+    "task_id": "Bio-protocol-2096::T9",
+    "task_name": "Immunocytochemistry",
+    "step_id": "Bio-protocol-2096::T9::S6",
+    "step_text": "Wash the cells 3 times in 0.02% Triton X-100 PBS for 5 minutes each.",
+    "span_chunk": "cells were washed 3 times in 0.02% Triton X-100 PBS for 5 mins"
+  },
+  {
+    "action": "incubate",
+    "materials": {
+      "cells": {},
+      "secondary_antibody": {
+        "name": "Alexa488 goat anti-rabbit IgG",
+        "details": "Life Technologies"
+      },
+      "PBS": {},
+      "FBS": {
+        "concentration": "2%",
+        "unit": "%"
+      },
+      "Triton_X-100": {
+        "concentration": "0.02%",
+        "unit": "%"
+      }
+    },
+    "parameters": {
+      "dilution_ratio": "1:500",
+      "time": "1 hour",
+      "temperature": "room temperature",
+      "condition": "in the dark"
+    },
+    "produces": {
+      "labeled_cells": {
+        "description": "cells labeled with secondary antibody"
+      }
+    },
+    "confidence": 0.9,
+    "hallucination": false,
+    "protocol_id": "Bio-protocol-2096",
+    "task_id": "Bio-protocol-2096::T9",
+    "task_name": "Immunocytochemistry",
+    "step_id": "Bio-protocol-2096::T9::S7",
+    "step_text": "Incubate the cells with secondary antibody (Alexa488 goat anti-rabbit IgG) diluted 1:500 in PBS with 2% FBS and 0.02% Triton X-100 for 1 hour at room temperature in the dark.",
+    "span_chunk": "incubate with secondary antibody (Alexa488 goat anti-rabbit IgG, Life Technologies) diluted 1:500 in PBS with 2% FBS and 0.02% Triton X-100 for 1 hour at room temperature in the dark."
+  },
+  {
+    "action": "wash",
+    "materials": {
+      "cells": {},
+      "Triton X-100 PBS": {
+        "concentration": "0.02%",
+        "volume": null
+      }
+    },
+    "parameters": {
+      "number of washes": 3,
+      "duration": "5 minutes each"
+    },
+    "produces": {},
+    "confidence": 0.9,
+    "hallucination": false,
+    "protocol_id": "Bio-protocol-2096",
+    "task_id": "Bio-protocol-2096::T9",
+    "task_name": "Immunocytochemistry",
+    "step_id": "Bio-protocol-2096::T9::S8",
+    "step_text": "Wash the cells 3 times in 0.02% Triton X-100 PBS for 5 minutes each.",
+    "span_chunk": "Cells were next washed 3 times in 0.02% Triton X-100 PBS for 5 mins"
+  },
+  {
+    "action": "incubate",
+    "materials": {
+      "cells": {},
+      "DAPI": {
+        "concentration": "1:10,000",
+        "solvent": "PBS"
+      }
+    },
+    "parameters": {
+      "duration": "20 minutes",
+      "temperature": "room temperature",
+      "condition": "in the dark"
+    },
+    "produces": {},
+    "confidence": 0.9,
+    "hallucination": false,
+    "protocol_id": "Bio-protocol-2096",
+    "task_id": "Bio-protocol-2096::T9",
+    "task_name": "Immunocytochemistry",
+    "step_id": "Bio-protocol-2096::T9::S9",
+    "step_text": "Incubate the cells in DAPI (1:10,000) in PBS for 20 minutes at room temperature in the dark.",
+    "span_chunk": "incubated in 4′,6-diamidino-2-phenylindole (DAPI, 1:10,000) in PBS for 20 min at room temperature in the dark."
+  },
+  {
+    "action": "wash",
+    "materials": {
+      "cells": {},
+      "PBS": {}
+    },
+    "parameters": {
+      "times": 2
+    },
+    "produces": {},
+    "confidence": 0.9,
+    "hallucination": false,
+    "protocol_id": "Bio-protocol-2096",
+    "task_id": "Bio-protocol-2096::T9",
+    "task_name": "Immunocytochemistry",
+    "step_id": "Bio-protocol-2096::T9::S10",
+    "step_text": "Wash the cells twice in PBS.",
+    "span_chunk": "After 2 washes in PBS"
+  },
+  {
+    "action": "visualize",
+    "materials": [
+      {
+        "name": "Axio Scan",
+        "company": "Zeiss",
+        "type": "equipment"
+      },
+      {
+        "name": "PBS",
+        "type": "reagent"
+      }
+    ],
+    "parameters": [],
+    "produces": [
+      {
+        "type": "fluorescence labeling visualization",
+        "details": "After 2 washes in PBS"
+      }
+    ],
+    "confidence": 0.9,
+    "hallucination": false,
+    "protocol_id": "Bio-protocol-2096",
+    "task_id": "Bio-protocol-2096::T9",
+    "task_name": "Immunocytochemistry",
+    "step_id": "Bio-protocol-2096::T9::S11",
+    "step_text": "Visualize the fluorescence labeling with Axio Scan (Zeiss).",
+    "span_chunk": "fluorescence labelling was visualised with Axio Scan (Zeiss)."
+  },
+  {
+    "protocol_id": "Bio-protocol-2096",
+    "task_id": "Bio-protocol-2096::T10",
+    "task_name": "Gene reporter assay",
+    "step_id": "Bio-protocol-2096::T10::S1",
+    "step_text": "Plate P19 cells into 48-well plates at the appropriate density.",
+    "span_chunk": "P19 cells were plated into 48-well plates",
+    "id": "Step",
+    "action": "Plate P19 cells into 48-well plates",
+    "parameters": [
+      {
+        "name": "density",
+        "value": "appropriate",
+        "unit": null,
+        "raw": "at the appropriate density"
+      }
+    ],
+    "materials": [
+      "P19 cells",
+      "48-well plates"
+    ],
+    "produces": "",
+    "confidence": 0.9,
+    "hallucination": false
+  },
+  {
+    "action": "transfect",
+    "materials": {
+      "P19 cells": {},
+      "ΔM short-Luciferase": {
+        "amount": "100 ng"
+      },
+      "pRL-TK": {
+        "amount": "50 ng",
+        "details": "Renilla, Promega"
+      },
+      "Ascl1": {
+        "amount": "100 ng"
+      },
+      "Lipofectamine 2000": {},
+      "proliferation media": {}
+    },
+    "parameters": {
+      "timing": "the day after plating"
+    },
+    "produces": {},
+    "confidence": 0.9,
+    "hallucination": false,
+    "protocol_id": "Bio-protocol-2096",
+    "task_id": "Bio-protocol-2096::T10",
+    "task_name": "Gene reporter assay",
+    "step_id": "Bio-protocol-2096::T10::S2",
+    "step_text": "Transfect the P19 cells the day after plating with 100 ng ΔM short-Luciferase, 50 ng pRL-TK (Renilla, Promega), and 100 ng Ascl1 using Lipofectamine 2000 in proliferation media.",
+    "span_chunk": "transfected the day after with 100 ng ΔM short-Luciferase (Supplementary Table S2 ), 50 ng pRL-TK (Renilla, Promega) and 100 ng Ascl1 using Lipofectamine 2000 in proliferation media"
+  },
+  {
+    "action": "harvest",
+    "materials": {
+      "cells": "transfected cells",
+      "assay": "Dual-Luciferase Reporter Assay System"
+    },
+    "parameters": {
+      "time": "the day after transfection"
+    },
+    "produces": {
+      "harvested_cells": {
+        "quantity": "one set",
+        "description": "for use in Dual-Luciferase Reporter Assay"
+      }
+    },
+    "confidence": 0.9,
+    "hallucination": false,
+    "protocol_id": "Bio-protocol-2096",
+    "task_id": "Bio-protocol-2096::T10",
+    "task_name": "Gene reporter assay",
+    "step_id": "Bio-protocol-2096::T10::S3",
+    "step_text": "Harvest one set of transfected cells the day after transfection using the Dual-Luciferase Reporter Assay System.",
+    "span_chunk": "One set of cells was harvested the day after (proliferation samples) with the Dual-Luciferase Reporter Assay System"
+  },
+  {
+    "protocol_id": "Bio-protocol-2096",
+    "task_id": "Bio-protocol-2096::T10",
+    "task_name": "Gene reporter assay",
+    "step_id": "Bio-protocol-2096::T10::S4",
+    "step_text": "Transfer the other set of transfected cells into differentiation media and harvest them 24 hours later.",
+    "span_chunk": "while the other set of cells was transferred into differentiation media and harvested 24 hours later",
+    "id": "Step",
+    "action": "Transfer the other set of transfected cells into differentiation media and harvest them",
+    "parameters": [
+      {
+        "name": "time",
+        "value": 24,
+        "unit": "hours",
+        "raw": "24 hours later"
+      }
+    ],
+    "materials": [
+      "transfected cells",
+      "differentiation media"
+    ],
+    "produces": "harvested transfected cells",
+    "confidence": 0.9,
+    "hallucination": false
+  },
+  {
+    "action": "Perform the luciferase assay",
+    "materials": [],
+    "parameters": {
+      "instruction_source": "manufacturer's instructions"
+    },
+    "produces": [],
+    "confidence": 0.9,
+    "hallucination": false,
+    "protocol_id": "Bio-protocol-2096",
+    "task_id": "Bio-protocol-2096::T10",
+    "task_name": "Gene reporter assay",
+    "step_id": "Bio-protocol-2096::T10::S5",
+    "step_text": "Perform the luciferase assay following the manufacturer's instructions.",
+    "span_chunk": "Luciferase assay was performed following the manufacturer’s instructions"
+  },
+  {
+    "action": "normalize",
+    "materials": {
+      "Luciferase values": {},
+      "Renilla-Luciferase values": {}
+    },
+    "parameters": {
+      "method": "dividing Luciferase values by Renilla-Luciferase values",
+      "presentation": "means ± SEM",
+      "replicates": "duplicate",
+      "repetitions": "three times"
+    },
+    "produces": {
+      "normalized values": {}
+    },
+    "confidence": 0.9,
+    "hallucination": false,
+    "protocol_id": "Bio-protocol-2096",
+    "task_id": "Bio-protocol-2096::T10",
+    "task_name": "Gene reporter assay",
+    "step_id": "Bio-protocol-2096::T10::S6",
+    "step_text": "Normalize the values for Luciferase to Renilla-Luciferase values.",
+    "span_chunk": "Values for Luciferase were normalised to Renilla-Luciferase values"
+  },
+  {
+    "action": "Present the data",
+    "parameters": {
+      "presentation_style": "means ± SEM",
+      "replication": "duplicate",
+      "repetition": "three times"
+    },
+    "materials": {},
+    "produces": {},
+    "confidence": 0.9,
+    "hallucination": false,
+    "protocol_id": "Bio-protocol-2096",
+    "task_id": "Bio-protocol-2096::T10",
+    "task_name": "Gene reporter assay",
+    "step_id": "Bio-protocol-2096::T10::S7",
+    "step_text": "Present the data as means ± SEM of duplicate, and repeat the experiments three times.",
+    "span_chunk": "data are presented as means ± SEM of duplicate and experiments were repeated three times"
+  }
+]

@@ -1,0 +1,83 @@
+[
+  {
+    "action": "grow",
+    "materials": {
+      "biological": [
+        "Cor3–1 neural stem cells"
+      ],
+      "chemical": [
+        "Complete media (unspecified composition)"
+      ]
+    },
+    "parameters": {
+      "unspecified": [
+        "composition of Complete media"
+      ]
+    },
+    "produces": {
+      "biological": [
+        "expanded Cor3–1 neural stem cells"
+      ]
+    },
+    "confidence": 0.9,
+    "hallucination": false
+  },
+  {
+    "id": "Step",
+    "action": "Supplement Complete media with growth factors",
+    "parameters": [
+      "before changing the medium",
+      "passaging the cells"
+    ],
+    "materials": [
+      "Complete media",
+      "growth factors"
+    ],
+    "produces": [],
+    "confidence": 0.9,
+    "hallucination": false
+  },
+  {
+    "id": "Step",
+    "action": "Maintain P19 cells",
+    "parameters": [
+      "in MEM-α supplemented with FBS and antibiotics"
+    ],
+    "materials": [
+      "P19 cells",
+      "MEM-α",
+      "FBS",
+      "antibiotics"
+    ],
+    "produces": [],
+    "confidence": 0.9,
+    "hallucination": false
+  },
+  {
+    "action": "transfer",
+    "materials": {
+      "source": "seeded neural stem cells",
+      "destination": "priming medium"
+    },
+    "parameters": {
+      "timing": "24 hours after seeding"
+    },
+    "produces": "neural stem cells in priming medium",
+    "confidence": 0.9,
+    "hallucination": false
+  },
+  {
+    "id": "Step",
+    "action": "Maintain the cells in the priming medium",
+    "parameters": [
+      "3 days"
+    ],
+    "materials": [
+      "cells",
+      "priming medium"
+    ],
+    "produces": [],
+    "confidence": 0.9,
+    "hallucination": false
+  }
+]

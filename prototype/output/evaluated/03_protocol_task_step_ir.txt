@@ -1,0 +1,43 @@
+Title: Isolation of Chromatin-bound Proteins from Subcellular Fractions for Biochemical Analysis
+
+Materials:
+- Cor3–1 neural stem cells
+- Complete media
+- Growth factors: mouse EGF (Peprotech, 315-09), human FGF (R&D systems, 233-FB), Laminin (Sigma, L2020-1MG)
+- PBS (Phosphate-Buffered Saline)
+- Eppendorf tubes
+- E1 buffer (ice-cold): 50 mM Hepes-KOH pH 7.5, 140 mM NaCl, 1 mM EDTA pH 8.0, 10% glycerol, 0.5% NP-40, 0.25% triton X-100, 1 mM DTT
+- Protease inhibitor cocktail (1x)
+- E2 buffer: 10 mM Tris-HCl pH 8.0, 200 mM NaCl, 1 mM EDTA pH 8.0, 0.5 mM EGTA pH 8.0
+- E3 buffer (composition not specified)
+- Sonicator
+- BCA protein assay kit
+- Centrifuge capable of 13,000 rpm at 4°C
+- Benchtop centrifuge
+
+Protocol:
+
+1. Cell Culture and Maintenance:
+   a. Grow Cor3–1 neural stem cells in complete media supplemented with 10 ng/ml mouse EGF, 10 ng/ml human FGF, and 1 μg/ml Laminin.
+   b. Maintain cells in a humidified incubator at 37°C with 5% CO2.
+
+2. Cellular Fractionation:
+   a. Wash the cultured cells with 1 ml of room temperature PBS.
+   b. Scrape the cells and collect them into Eppendorf tubes.
+   c. Pellet cells by centrifugation at 1200 rpm for 3 minutes at 4°C.
+   d. Resuspend the cell pellet in 5 volumes of ice-cold E1 buffer supplemented with 1x protease inhibitor cocktail. Pipette gently up and down 5 times.
+   e. Centrifuge at 3,400 rpm for 2 minutes at 4°C and discard the supernatant.
+   f. Resuspend the remaining pellet in 5 volumes of E1 buffer and repeat the centrifugation step. Discard the supernatant.
+   g. Resuspend the nuclear fraction pellet in 2 volumes of E2 buffer supplemented with 1x protease inhibitor cocktail. Incubate on ice for 10 minutes.
+   h. Centrifuge at 3,400 rpm for 2 minutes at 4°C and discard the supernatant.
+   i. Resuspend the remaining pellet in E3 buffer supplemented with 1x protease inhibitor cocktail.
+   j. Sonicate the suspension for 5 minutes with a setting of H and a cycle of 30 seconds ON/30 seconds OFF.
+   k. Centrifuge at 13,000 rpm for 10 minutes at 4°C. Collect the supernatant containing chromatin-bound proteins.
+
+3. Protein Quantification:
+   a. Use the BCA protein assay kit to determine the protein concentration of the chromatin-bound protein fraction according to the manufacturer's instructions.
+
+4. Biochemical Analysis:
+   a. Proceed with the desired biochemical analysis, such as Western blotting or immunoprecipitation, using the isolated chromatin-bound protein fraction.
+
+Note: This protocol focuses on the isolation of chromatin-bound proteins from subcellular fractions and does not include the steps for subsequent biochemical analysis, which should be performed according to the specific requirements of the chosen analytical method.

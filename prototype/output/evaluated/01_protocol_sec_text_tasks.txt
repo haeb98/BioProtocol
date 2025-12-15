@@ -1,0 +1,66 @@
+Title: Isolation of Chromatin-bound Proteins from Subcellular Fractions for Biochemical Analysis
+
+Materials:
+- Cor3–1 neural stem cells and P19 cells
+- Complete media components (DMEM/HAM’S-F12, Glucose, MEM-NEAA, penicillin, streptomycin, BSA, β-Mercapto-ethanol, B-27 supplement, N2 supplement)
+- Growth factors (EGF, FGF, BDNF, Laminin)
+- Euromed-N medium
+- Neurobasal medium
+- MEM-α medium supplemented with 10% FBS
+- Lipofectamine 2000
+- RNeasy kit (Qiagen)
+- QuantiTect Reverse Transcription Kit (Qiagen)
+- QuantiFast SYBR Green Master Mix (Qiagen)
+- Lightcycler 480 PCR system (Roche)
+- RIPA buffer (Sigma-Aldrich)
+- Protease inhibitor cocktail (cOmplete, Roche)
+- BCA protein assay kit (Thermo)
+- SDS-PAGE electrophoresis materials
+- Nitrocellulose membrane
+- Primary and secondary antibodies
+- ECL detection reagents (GE Healthcare)
+- PBS
+- E1, E2, E3 buffers
+- Bioruptor (Diagenode)
+- Benzonase (Novagen)
+- Agarose-TUBEs (LifeSensors)
+- Cycloheximide (Sigma-Aldrich)
+- FiJi software
+- ECM-coated 24-well plate (Sigma)
+- Paraformaldehyde
+- Triton X-100
+- BSA
+- Alexa488 goat anti-rabbit IgG (Life Technologies)
+- DAPI
+- Axio Scan (Zeiss)
+- 48-well plates
+- ΔM short-Luciferase, pRL-TK (Renilla, Promega)
+- Dual-Luciferase Reporter Assay System (Promega)
+- Tecan Infinite 200Pro microplate reader
+
+Methods:
+
+Cellular Fractionation
+1. Seed Cor3–1 cells at 1.5 × 10^6 in 10 cm dishes and P19 cells at 1.0 × 10^6 in 10 cm dishes.
+2. Wash cells once with room temperature PBS and scrape into 1 ml PBS.
+3. Pellet cells at 1,200 rpm in an Eppendorf tube at 4°C for 3 minutes.
+4. Resuspend pellets in 5 volumes of ice-cold E1 buffer with protease inhibitor cocktail and pipette gently up and down 5 times.
+5. Centrifuge at 3,400 rpm at 4°C for 2 minutes and collect the supernatant (cytoplasm fraction) in a fresh tube.
+6. Resuspend the pellet in the same volume of E1 buffer and repeat centrifugation. Discard the supernatant.
+7. Resuspend the pellet in the same volume of E1 buffer and leave on ice for 10 minutes.
+8. Centrifuge at 3,400 rpm at 4°C for 2 minutes and discard the supernatant.
+9. Resuspend the pellet in 2 volumes of ice-cold E2 buffer with protease inhibitor cocktail and centrifuge as before. Collect the supernatant (nucleus fraction).
+10. Resuspend the pellet in the same volume of E2 buffer and leave on ice for 10 minutes.
+11. Centrifuge at 3,400 rpm at 4°C for 2 minutes and discard the supernatant.
+12. Resuspend the pellet in ice-cold E3 buffer with protease inhibitor cocktail in the same volume used for E1.
+13. Sonicate the solution (chromatin fraction) in a Bioruptor for 5 minutes on setting H, 30 seconds ON/30 seconds OFF, or digest with Benzonase for TUBEs pull down.
+14. Centrifuge all fractions at 13,000 rpm at 4°C for 10 minutes and determine protein concentration using BCA protein assay kit.
+
+Agarose-TUBEs Pull Down
+15. Use 15 μl of 50% Agarose-TUBEs to pull down 350-450 μg of ubiquitylated proteins from the cytoplasm and chromatin fractions in 500 μl final volume of respective buffers.
+16. Incubate for 1 hour at 4°C on a rocker platform.
+17. Collect Agarose-TUBEs by centrifugation at 1,000 × g at 4°C for 5 minutes and collect the supernatant (unbound fraction).
+18. Wash Agarose-TUBEs 3 times following the manufacturer’s instructions.
+19. Boil Agarose-TUBEs in reducing sample buffer for 5 minutes, centrifuge at maximum speed for 1 minute, and load eluted samples onto gels (Bound fraction: 15 μl for Ascl1 and 5 μl for loading controls) alongside 5 μg of proteins from the unbound fraction and 5 μg from fractionated lysates (Input).
+
+Note: This protocol focuses on the isolation of chromatin-bound proteins for biochemical analysis. Other methods listed in the task list are related to cell culture, transfection, and assays that are not directly involved in the isolation process. Therefore, they are not included in this protocol but can be referenced as needed for complete experimental setup.

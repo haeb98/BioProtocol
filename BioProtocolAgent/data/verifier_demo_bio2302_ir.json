@@ -1,0 +1,989 @@
+{
+  "protocol_id": "Bio-protocol-2302",
+  "actions_verified": [
+    {
+      "action_id": "Bio-protocol-2302::T1::S1::A1",
+      "step_id": "Bio-protocol-2302::T1::S1",
+      "protocol_id": "Bio-protocol-2302",
+      "task_id": "Bio-protocol-2302::T1",
+      "action": "Dilute",
+      "description": "Dilute 8 M LiCl with RNase-free water to prepare a 0.1 volume solution and incubate on ice for 2 hours.",
+      "materials": [
+        {
+          "name": "8 M LiCl",
+          "role": "reagent",
+          "volume": "",
+          "concentration": "8 M",
+          "state": "liquid",
+          "source": "methods_text"
+        },
+        {
+          "name": "RNase-free water",
+          "role": "reagent",
+          "volume": "",
+          "concentration": "",
+          "state": "liquid",
+          "source": "methods_text"
+        }
+      ],
+      "conditions": [],
+      "produces": [
+        "0.1 volume solution of LiCl"
+      ],
+      "evidence_span": "RNA were incubated with 0.1 volume of 8 M LiCl diluted in RNase-free water on ice for 2 h.",
+      "source": "llm_extracted",
+      "verification": {
+        "global_verdict": "supported",
+        "evidence_spans": [
+          "RNA were incubated with 0.1 volume of 8 M LiCl diluted in RNase-free water on ice for 2 h."
+        ],
+        "revision_notes": "Added incubation condition on ice for 2 hours to the action description.",
+        "order_suggestion": "no_change"
+      }
+    },
+    {
+      "action_id": "Bio-protocol-2302::T1::S2::A1",
+      "step_id": "Bio-protocol-2302::T1::S2",
+      "protocol_id": "Bio-protocol-2302",
+      "task_id": "Bio-protocol-2302::T1",
+      "action": "Incubate",
+      "description": "Incubate the RNA with the diluted LiCl solution on ice for 2 hours.",
+      "materials": [
+        {
+          "name": "RNA",
+          "role": "substrate",
+          "volume": "",
+          "concentration": "",
+          "state": "liquid",
+          "source": "methods_text"
+        },
+        {
+          "name": "8 M LiCl diluted in RNase-free water",
+          "role": "reagent",
+          "volume": "0.1 volume",
+          "concentration": "8 M",
+          "state": "liquid",
+          "source": "methods_text"
+        }
+      ],
+      "conditions": [
+        {
+          "type": "temperature",
+          "value": "0",
+          "unit": "°C",
+          "source": "methods_text"
+        },
+        {
+          "type": "duration",
+          "value": "2",
+          "unit": "hours",
+          "source": "methods_text"
+        }
+      ],
+      "produces": [],
+      "evidence_span": "The RNA were incubated with 0.1 volume of 8 M LiCl diluted in RNase-free water on ice for 2 h",
+      "source": "llm_extracted",
+      "verification": {
+        "global_verdict": "supported",
+        "evidence_spans": [
+          "The RNA were incubated with 0.1 volume of 8 M LiCl diluted in RNase-free water on ice for 2 h.",
+          "Total RNA was isolated from colonic tissues using TRIzol."
+        ],
+        "revision_notes": "No corrections needed; the action IR is consistent with the Methods section.",
+        "order_suggestion": "no_change"
+      }
+    },
+    {
+      "action_id": "Bio-protocol-2302::T2::S1::A1",
+      "step_id": "Bio-protocol-2302::T2::S1",
+      "protocol_id": "Bio-protocol-2302",
+      "task_id": "Bio-protocol-2302::T2",
+      "action": "Centrifuge",
+      "description": "Centrifuge the RNA mixture to separate the RNA pellets from the rest of the mixture.",
+      "materials": [
+        {
+          "name": "RNA mixture",
+          "role": "substrate",
+          "volume": "",
+          "concentration": "",
+          "state": "liquid",
+          "source": "methods_text"
+        },
+        {
+          "name": "Centrifuge",
+          "role": "instrument",
+          "volume": "",
+          "concentration": "",
+          "state": "",
+          "source": "methods_text"
+        }
+      ],
+      "conditions": [
+        {
+          "type": "speed",
+          "value": "14000",
+          "unit": "g",
+          "source": "methods_text"
+        },
+        {
+          "type": "duration",
+          "value": "30",
+          "unit": "minutes",
+          "source": "methods_text"
+        },
+        {
+          "type": "temperature",
+          "value": "4",
+          "unit": "°C",
+          "source": "methods_text"
+        }
+      ],
+      "produces": [
+        "RNA pellets"
+      ],
+      "evidence_span": "then centrifuged at 14,000 g for 30 min at 4°C.",
+      "source": "llm_extracted",
+      "verification": {
+        "global_verdict": "supported",
+        "evidence_spans": [
+          "then centrifuged at 14,000 g for 30 min at 4°C.",
+          "Total RNA was isolated from colonic tissues using TRIzol (Life Technologies, Carlsbad, CA) according to the manufacturer’s instructions."
+        ],
+        "revision_notes": "No corrections needed; the action IR is consistent with the Methods section.",
+        "order_suggestion": "no_change"
+      }
+    },
+    {
+      "action_id": "Bio-protocol-2302::T2::S2::A1",
+      "step_id": "Bio-protocol-2302::T2::S2",
+      "protocol_id": "Bio-protocol-2302",
+      "task_id": "Bio-protocol-2302::T2",
+      "action": "Pour out",
+      "description": "Remove the supernatants after centrifugation to isolate RNA pellets.",
+      "materials": [
+        {
+          "name": "Supernatants",
+          "role": "other",
+          "volume": "",
+          "concentration": "",
+          "state": "liquid",
+          "source": "methods_text"
+        },
+        {
+          "name": "RNA pellets",
+          "role": "other",
+          "volume": "",
+          "concentration": "",
+          "state": "solid",
+          "source": "methods_text"
+        }
+      ],
+      "conditions": [],
+      "produces": [
+        "Isolated RNA pellets"
+      ],
+      "evidence_span": "The supernatants were poured out and the pellets of RNA dissolved in 200 μl of RNase-free water.",
+      "source": "llm_extracted",
+      "verification": {
+        "global_verdict": "supported",
+        "evidence_spans": [
+          "The supernatants were poured out and the pellets of RNA dissolved in 200 μl of RNase-free water."
+        ],
+        "revision_notes": "No corrections needed; the action is accurately described.",
+        "order_suggestion": "no_change"
+      }
+    },
+    {
+      "action_id": "Bio-protocol-2302::T2::S3::A1",
+      "step_id": "Bio-protocol-2302::T2::S3",
+      "protocol_id": "Bio-protocol-2302",
+      "task_id": "Bio-protocol-2302::T2",
+      "action": "Dissolve",
+      "description": "Dissolve the RNA pellets in RNase-free water.",
+      "materials": [
+        {
+          "name": "RNA pellets",
+          "role": "substrate",
+          "volume": "",
+          "concentration": "",
+          "state": "solid",
+          "source": "methods_text"
+        },
+        {
+          "name": "RNase-free water",
+          "role": "solvent",
+          "volume": "200 μl",
+          "concentration": "",
+          "state": "liquid",
+          "source": "methods_text"
+        }
+      ],
+      "conditions": [],
+      "produces": [
+        "dissolved RNA"
+      ],
+      "verification": {
+        "global_verdict": "supported",
+        "evidence_spans": [
+          "the pellets of RNA dissolved in 200 μl of RNase-free water."
+        ],
+        "revision_notes": "No corrections needed; the action is accurately described.",
+        "order_suggestion": "no_change"
+      }
+    },
+    {
+      "action_id": "Bio-protocol-2302::T3::S1::A1",
+      "step_id": "Bio-protocol-2302::T3::S1",
+      "protocol_id": "Bio-protocol-2302",
+      "task_id": "Bio-protocol-2302::T3",
+      "action": "Incubate",
+      "description": "Incubate the RNA with lithium chloride solution on ice.",
+      "materials": [
+        {
+          "name": "RNA",
+          "role": "substrate",
+          "volume": "",
+          "concentration": "",
+          "state": "liquid",
+          "source": "methods_text"
+        },
+        {
+          "name": "8 M LiCl diluted in RNase-free water",
+          "role": "reagent",
+          "volume": "0.1 volume",
+          "concentration": "8 M",
+          "state": "liquid",
+          "source": "methods_text"
+        }
+      ],
+      "conditions": [
+        {
+          "type": "temperature",
+          "value": "0",
+          "unit": "°C",
+          "source": "methods_text"
+        },
+        {
+          "type": "duration",
+          "value": "2",
+          "unit": "hours",
+          "source": "methods_text"
+        }
+      ],
+      "produces": [],
+      "evidence_span": "The RNA were incubated with 0.1 volume of 8 M LiCl diluted in RNase-free water on ice for 2 h",
+      "source": "llm_extracted",
+      "verification": {
+        "global_verdict": "supported",
+        "evidence_spans": [
+          "RNA were incubated with 0.1 volume of 8 M LiCl diluted in RNase-free water on ice for 2 h"
+        ],
+        "revision_notes": "No corrections needed; all details are accurate.",
+        "order_suggestion": "no_change"
+      }
+    },
+    {
+      "action_id": "Bio-protocol-2302::T3::S2::A1",
+      "step_id": "Bio-protocol-2302::T3::S2",
+      "protocol_id": "Bio-protocol-2302",
+      "task_id": "Bio-protocol-2302::T3",
+      "action": "Centrifuge",
+      "description": "Centrifuge the incubated RNA to separate it from the lithium chloride solution.",
+      "materials": [
+        {
+          "name": "RNA",
+          "role": "substrate",
+          "volume": "",
+          "concentration": "",
+          "state": "liquid",
+          "source": "methods_text"
+        },
+        {
+          "name": "lithium chloride solution",
+          "role": "reagent",
+          "volume": "",
+          "concentration": "",
+          "state": "liquid",
+          "source": "methods_text"
+        }
+      ],
+      "conditions": [
+        {
+          "type": "speed",
+          "value": "14,000",
+          "unit": "g",
+          "source": "methods_text"
+        },
+        {
+          "type": "duration",
+          "value": "30",
+          "unit": "minutes",
+          "source": "methods_text"
+        },
+        {
+          "type": "temperature",
+          "value": "4",
+          "unit": "°C",
+          "source": "methods_text"
+        }
+      ],
+      "produces": [
+        "pellet of RNA",
+        "supernatant"
+      ],
+      "evidence_span": "then centrifuged at 14,000 g for 30 min at 4°C",
+      "source": "llm_extracted",
+      "verification": {
+        "global_verdict": "supported",
+        "evidence_spans": [
+          "the RNA were incubated with 0.1 volume of 8 M LiCl diluted in RNase-free water on ice for 2 h and then centrifuged at 14,000 g for 30 min at 4°C",
+          "lithium chloride"
+        ],
+        "revision_notes": "No corrections needed; the action IR is consistent with the Methods.",
+        "order_suggestion": "no_change"
+      }
+    },
+    {
+      "action_id": "Bio-protocol-2302::T3::S3::A1",
+      "step_id": "Bio-protocol-2302::T3::S3",
+      "protocol_id": "Bio-protocol-2302",
+      "task_id": "Bio-protocol-2302::T3",
+      "action": "Pour out",
+      "description": "Remove the supernatants to eliminate the lithium chloride solution.",
+      "materials": [
+        {
+          "name": "supernatants",
+          "role": "other",
+          "volume": "",
+          "concentration": "",
+          "state": "liquid",
+          "source": "methods_text"
+        }
+      ],
+      "conditions": [],
+      "produces": [],
+      "evidence_span": "The supernatants were poured out",
+      "source": "llm_extracted",
+      "verification": {
+        "global_verdict": "supported",
+        "evidence_spans": [
+          "The supernatants were poured out",
+          "The RNA were incubated with 0.1 volume of 8 M LiCl diluted in RNase-free water on ice for 2 h"
+        ],
+        "revision_notes": "No corrections needed; the action is accurately represented.",
+        "order_suggestion": "no_change"
+      }
+    },
+    {
+      "action_id": "Bio-protocol-2302::T3::S3::A2",
+      "step_id": "Bio-protocol-2302::T3::S3",
+      "protocol_id": "Bio-protocol-2302",
+      "task_id": "Bio-protocol-2302::T3",
+      "action": "Dissolve",
+      "description": "Dissolve the RNA pellets in RNase-free water.",
+      "materials": [
+        {
+          "name": "RNA pellets",
+          "role": "substrate",
+          "volume": "",
+          "concentration": "",
+          "state": "solid",
+          "source": "methods_text"
+        },
+        {
+          "name": "RNase-free water",
+          "role": "solvent",
+          "volume": "200 μl",
+          "concentration": "",
+          "state": "liquid",
+          "source": "methods_text"
+        }
+      ],
+      "conditions": [],
+      "produces": [
+        "dissolved RNA"
+      ],
+      "evidence_span": "the pellets of RNA dissolved in 200 μl of RNase-free water",
+      "source": "llm_extracted",
+      "verification": {
+        "global_verdict": "unknown",
+        "revision_notes": "Verifier could not produce a grounded Final Answer."
+      }
+    },
+    {
+      "action_id": "Bio-protocol-2302::T4::S1::A1",
+      "step_id": "Bio-protocol-2302::T4::S1",
+      "protocol_id": "Bio-protocol-2302",
+      "task_id": "Bio-protocol-2302::T4",
+      "action": "Incubate",
+      "description": "Incubate the RNA with sodium acetate and ethanol on ice.",
+      "materials": [
+        {
+          "name": "RNA",
+          "role": "substrate",
+          "volume": "",
+          "concentration": "",
+          "state": "liquid",
+          "source": "methods_text"
+        },
+        {
+          "name": "3 M sodium acetate (pH 5.2)",
+          "role": "reagent",
+          "volume": "0.1 volume",
+          "concentration": "3 M",
+          "state": "liquid",
+          "source": "methods_text"
+        },
+        {
+          "name": "100% absolute ethanol",
+          "role": "reagent",
+          "volume": "2 volumes",
+          "concentration": "100%",
+          "state": "liquid",
+          "source": "methods_text"
+        },
+        {
+          "name": "ice",
+          "role": "other",
+          "volume": "",
+          "concentration": "",
+          "state": "solid",
+          "source": "llm_inferred"
+        }
+      ],
+      "conditions": [
+        {
+          "type": "temperature",
+          "value": "0",
+          "unit": "°C",
+          "source": "llm_inferred"
+        },
+        {
+          "type": "duration",
+          "value": "30",
+          "unit": "min",
+          "source": "methods_text"
+        }
+      ],
+      "produces": [
+        "precipitated RNA"
+      ],
+      "evidence_span": "The RNA was precipitated at -20°C for 30 min, in 0.1 volume of 3 M sodium acetate (pH 5.2) and 2 volumes of 100% absolute ethanol.",
+      "source": "llm_extracted",
+      "verification": {
+        "global_verdict": "supported",
+        "evidence_spans": [
+          "The RNA was precipitated at -20°C for 30 min, in 0.1 volume of 3 M sodium acetate (pH 5.2) and 2 volumes of 100% absolute ethanol."
+        ],
+        "revision_notes": "All elements of the action IR are supported by the Methods section.",
+        "order_suggestion": "no_change"
+      }
+    },
+    {
+      "action_id": "Bio-protocol-2302::T4::S2::A1",
+      "step_id": "Bio-protocol-2302::T4::S2",
+      "protocol_id": "Bio-protocol-2302",
+      "task_id": "Bio-protocol-2302::T4",
+      "action": "Incubate",
+      "description": "Place the mixture at -20°C for 30 minutes to allow RNA precipitation.",
+      "materials": [
+        {
+          "name": "RNA mixture",
+          "role": "substrate",
+          "volume": "",
+          "concentration": "",
+          "state": "liquid",
+          "source": "methods_text"
+        }
+      ],
+      "conditions": [
+        {
+          "type": "temperature",
+          "value": "-20",
+          "unit": "°C",
+          "source": "methods_text"
+        },
+        {
+          "type": "duration",
+          "value": "30",
+          "unit": "min",
+          "source": "methods_text"
+        }
+      ],
+      "produces": [
+        "precipitated RNA"
+      ],
+      "evidence_span": "The RNA was precipitated at -20°C for 30 min",
+      "source": "llm_extracted",
+      "verification": {
+        "global_verdict": "supported",
+        "evidence_spans": [
+          "The RNA was precipitated at -20°C for 30 min",
+          "RNA extraction"
+        ],
+        "revision_notes": "No corrections needed; the action is well-supported by the Methods.",
+        "order_suggestion": "no_change"
+      }
+    },
+    {
+      "action_id": "Bio-protocol-2302::T4::S3::A1",
+      "step_id": "Bio-protocol-2302::T4::S3",
+      "protocol_id": "Bio-protocol-2302",
+      "task_id": "Bio-protocol-2302::T4",
+      "action": "Centrifuge",
+      "description": "Centrifuge the mixture to pellet the precipitated RNA.",
+      "materials": [
+        {
+          "name": "RNA mixture",
+          "role": "substrate",
+          "volume": "",
+          "concentration": "",
+          "state": "liquid",
+          "source": "methods_text"
+        }
+      ],
+      "conditions": [
+        {
+          "type": "speed",
+          "value": "14,000",
+          "unit": "g",
+          "source": "methods_text"
+        },
+        {
+          "type": "duration",
+          "value": "30",
+          "unit": "min",
+          "source": "methods_text"
+        },
+        {
+          "type": "temperature",
+          "value": "4",
+          "unit": "°C",
+          "source": "methods_text"
+        }
+      ],
+      "produces": [
+        "pelleted RNA"
+      ],
+      "evidence_span": "The RNA was then centrifuged at 14,000 g for 30 min at 4°C.",
+      "source": "llm_extracted",
+      "verification": {
+        "global_verdict": "supported",
+        "evidence_spans": [
+          "The RNA was then centrifuged at 14,000 g for 30 min at 4°C.",
+          "Total RNA was isolated from colonic tissues using TRIzol..."
+        ],
+        "revision_notes": "No corrections needed; the action is accurately described.",
+        "order_suggestion": "no_change"
+      }
+    },
+    {
+      "action_id": "Bio-protocol-2302::T4::S4::A1",
+      "step_id": "Bio-protocol-2302::T4::S4",
+      "protocol_id": "Bio-protocol-2302",
+      "task_id": "Bio-protocol-2302::T4",
+      "action": "Wash and centrifuge",
+      "description": "Wash the RNA pellet with 100 μL of 70% ethanol to remove impurities and salts, then centrifuge at 14,000 g for 10 min at 4°C.",
+      "materials": [
+        {
+          "name": "70% ethanol",
+          "role": "reagent",
+          "volume": "100 μL",
+          "concentration": "70%",
+          "state": "",
+          "source": "methods_text"
+        }
+      ],
+      "conditions": [],
+      "produces": [
+        "washed RNA pellet"
+      ],
+      "evidence_span": "the pellets were washed with 100 μL of 70% ethanol and centrifuged at 14,000 g for 10 min at 4°C",
+      "source": "llm_extracted",
+      "verification": {
+        "global_verdict": "partially_supported",
+        "evidence_spans": [
+          "the pellets were washed with 100 μL of 70% ethanol and centrifuged at 14,000 g for 10 min at 4°C"
+        ],
+        "revision_notes": "The action IR needs to include the centrifugation step after washing the RNA pellet.",
+        "order_suggestion": "no_change"
+      }
+    },
+    {
+      "action_id": "Bio-protocol-2302::T4::S4::A2",
+      "step_id": "Bio-protocol-2302::T4::S4",
+      "protocol_id": "Bio-protocol-2302",
+      "task_id": "Bio-protocol-2302::T4",
+      "action": "Discard",
+      "description": "Discard the supernatant after washing the RNA pellet.",
+      "materials": [],
+      "conditions": [],
+      "produces": [
+        "discarded supernatant"
+      ],
+      "evidence_span": "Discard the supernatant",
+      "source": "llm_extracted",
+      "verification": {
+        "global_verdict": "supported",
+        "evidence_spans": [
+          "The supernatants were poured out",
+          "The pellets were washed with 100 μL of 70% ethanol and centrifuged at 14,000 g for 10 min at 4°C."
+        ],
+        "revision_notes": "No corrections needed; the action is supported by the Methods.",
+        "order_suggestion": "no_change"
+      }
+    },
+    {
+      "action_id": "Bio-protocol-2302::T4::S5::A1",
+      "step_id": "Bio-protocol-2302::T4::S5",
+      "protocol_id": "Bio-protocol-2302",
+      "task_id": "Bio-protocol-2302::T4",
+      "action": "Centrifuge",
+      "description": "Centrifuge the washed pellet to pellet the RNA after the ethanol wash.",
+      "materials": [
+        {
+          "name": "washed pellet",
+          "role": "substrate",
+          "volume": "",
+          "concentration": "",
+          "state": "solid",
+          "source": "methods_text"
+        }
+      ],
+      "conditions": [
+        {
+          "type": "speed",
+          "value": "14,000",
+          "unit": "g",
+          "source": "methods_text"
+        },
+        {
+          "type": "duration",
+          "value": "10",
+          "unit": "min",
+          "source": "methods_text"
+        },
+        {
+          "type": "temperature",
+          "value": "4",
+          "unit": "°C",
+          "source": "methods_text"
+        }
+      ],
+      "produces": [
+        "pelleted RNA"
+      ],
+      "evidence_span": "centrifuged at 14,000 g for 10 min at 4°C.",
+      "source": "llm_extracted",
+      "verification": {
+        "global_verdict": "supported",
+        "evidence_spans": [
+          "The pellets were washed with 100 μL of 70% ethanol and centrifuged at 14,000 g for 10 min at 4°C."
+        ],
+        "revision_notes": "The action IR is accurate and matches the Methods section.",
+        "order_suggestion": "no_change"
+      }
+    },
+    {
+      "action_id": "Bio-protocol-2302::T4::S6::A1",
+      "step_id": "Bio-protocol-2302::T4::S6",
+      "protocol_id": "Bio-protocol-2302",
+      "task_id": "Bio-protocol-2302::T4",
+      "action": "Remove",
+      "description": "Remove the supernatant from the RNA pellet after centrifugation.",
+      "materials": [],
+      "conditions": [],
+      "produces": [],
+      "verification": {
+        "global_verdict": "supported",
+        "evidence_spans": [
+          "The supernatants were poured out",
+          "centrifuged at 14,000 g for 30 min at 4°C"
+        ],
+        "revision_notes": "The action is supported and correctly described. Minor revision to include 'after centrifugation' for clarity.",
+        "order_suggestion": "no_change"
+      }
+    },
+    {
+      "action_id": "Bio-protocol-2302::T4::S6::A2",
+      "step_id": "Bio-protocol-2302::T4::S6",
+      "protocol_id": "Bio-protocol-2302",
+      "task_id": "Bio-protocol-2302::T4",
+      "action": "Dissolve",
+      "description": "Dissolve the RNA pellet in RNase-free water.",
+      "materials": [
+        {
+          "name": "RNase-free water",
+          "role": "reagent",
+          "volume": "20–50 μL",
+          "concentration": "",
+          "state": "liquid",
+          "source": "methods_text"
+        }
+      ],
+      "conditions": [],
+      "produces": [
+        "dissolved RNA"
+      ],
+      "evidence_span": "the RNA was dissolved in 20–50 μl of RNAse-free water",
+      "source": "llm_extracted",
+      "verification": {
+        "global_verdict": "supported",
+        "evidence_spans": [
+          "the RNA was dissolved in 20–50 μl of RNAse-free water"
+        ],
+        "revision_notes": "No corrections needed; the action is accurately represented.",
+        "order_suggestion": "no_change"
+      }
+    },
+    {
+      "action_id": "Bio-protocol-2302::T5::S1::A1",
+      "step_id": "Bio-protocol-2302::T5::S1",
+      "protocol_id": "Bio-protocol-2302",
+      "task_id": "Bio-protocol-2302::T5",
+      "action": "Add",
+      "description": "Add 100 μL of 70% ethanol to the RNA pellet for washing.",
+      "materials": [
+        {
+          "name": "70% ethanol",
+          "role": "reagent",
+          "volume": "100 μL",
+          "concentration": "70%",
+          "state": "",
+          "source": "methods_text"
+        }
+      ],
+      "conditions": [],
+      "produces": [
+        "washed RNA pellet"
+      ],
+      "evidence_span": "the pellets were washed with 100 μL of 70% ethanol",
+      "source": "llm_extracted",
+      "verification": {
+        "global_verdict": "supported",
+        "evidence_spans": [
+          "The supernatants were removed and the pellets were washed with 100 μL of 70% ethanol and centrifuged at 14,000 g for 10 min at 4°C."
+        ],
+        "revision_notes": "No corrections needed; action is well-supported by the Methods.",
+        "order_suggestion": "no_change"
+      }
+    },
+    {
+      "action_id": "Bio-protocol-2302::T5::S2::A1",
+      "step_id": "Bio-protocol-2302::T5::S2",
+      "protocol_id": "Bio-protocol-2302",
+      "task_id": "Bio-protocol-2302::T5",
+      "action": "Centrifuge",
+      "description": "Centrifuge the sample to separate the RNA pellet from the ethanol wash.",
+      "materials": [
+        {
+          "name": "sample",
+          "role": "other",
+          "volume": "",
+          "concentration": "",
+          "state": "",
+          "source": "methods_text"
+        }
+      ],
+      "conditions": [
+        {
+          "type": "speed",
+          "value": "14,000",
+          "unit": "g",
+          "source": "methods_text"
+        },
+        {
+          "type": "duration",
+          "value": "10",
+          "unit": "minutes",
+          "source": "methods_text"
+        },
+        {
+          "type": "temperature",
+          "value": "4",
+          "unit": "°C",
+          "source": "methods_text"
+        }
+      ],
+      "produces": [
+        "RNA pellet"
+      ],
+      "evidence_span": "and centrifuged at 14,000 g for 10 min at 4°C.",
+      "source": "llm_extracted",
+      "verification": {
+        "global_verdict": "partially_supported",
+        "evidence_spans": [
+          "The RNA was then centrifuged at 14,000 g for 30 min at 4°C.",
+          "and centrifuged at 14,000 g for 10 min at 4°C."
+        ],
+        "revision_notes": "The duration of centrifugation in the action IR should be corrected to 30 minutes to match the methods section.",
+        "order_suggestion": "no_change"
+      }
+    },
+    {
+      "action_id": "Bio-protocol-2302::T5::S3::A1",
+      "step_id": "Bio-protocol-2302::T5::S3",
+      "protocol_id": "Bio-protocol-2302",
+      "task_id": "Bio-protocol-2302::T5",
+      "action": "Remove",
+      "description": "Carefully remove the supernatants without disturbing the RNA pellet.",
+      "materials": [
+        {
+          "name": "supernatants",
+          "role": "other",
+          "volume": "",
+          "concentration": "",
+          "state": "liquid",
+          "source": "methods_text"
+        }
+      ],
+      "conditions": [],
+      "produces": [
+        "RNA pellet ready for resuspension"
+      ],
+      "evidence_span": "The supernatants were removed",
+      "source": "llm_extracted",
+      "verification": {
+        "global_verdict": "partially_supported",
+        "evidence_spans": [
+          "The supernatants were poured out and the pellets were washed with 100 μL of 70% ethanol and centrifuged at 14,000 g for 10 min at 4°C.",
+          "the pellets of RNA dissolved in 200 μl of RNase-free water"
+        ],
+        "revision_notes": "The action is supported but should emphasize careful removal to avoid disturbing the RNA pellet.",
+        "order_suggestion": "no_change"
+      }
+    },
+    {
+      "action_id": "Bio-protocol-2302::T6::S1::A1",
+      "step_id": "Bio-protocol-2302::T6::S1",
+      "protocol_id": "Bio-protocol-2302",
+      "task_id": "Bio-protocol-2302::T6",
+      "action": "Centrifuge",
+      "description": "Centrifuge the RNA sample to pellet the RNA.",
+      "materials": [
+        {
+          "name": "RNA sample",
+          "role": "substrate",
+          "volume": "",
+          "concentration": "",
+          "state": "liquid",
+          "source": "methods_text"
+        },
+        {
+          "name": "centrifuge",
+          "role": "instrument",
+          "volume": "",
+          "concentration": "",
+          "state": "",
+          "source": "llm_inferred"
+        }
+      ],
+      "conditions": [
+        {
+          "type": "speed",
+          "value": "14000",
+          "unit": "g",
+          "source": "methods_text"
+        },
+        {
+          "type": "duration",
+          "value": "30",
+          "unit": "minutes",
+          "source": "methods_text"
+        },
+        {
+          "type": "temperature",
+          "value": "4",
+          "unit": "°C",
+          "source": "methods_text"
+        }
+      ],
+      "produces": [
+        "RNA pellet"
+      ],
+      "evidence_span": "The supernatants were poured out and the pellets were washed with 100 μL of 70% ethanol and centrifuged at 14,000 g for 10 min at 4°C.",
+      "source": "llm_extracted",
+      "verification": {
+        "global_verdict": "partially_supported",
+        "evidence_spans": [
+          "The RNA was then centrifuged at 14,000 g for 30 min at 4°C.",
+          "The supernatants were poured out and the pellets were washed with 100 μL of 70% ethanol and centrifuged at 14,000 g for 10 min at 4°C."
+        ],
+        "revision_notes": "The duration of centrifugation should be corrected to 30 minutes for the initial step, while the 10 minutes is part of the washing step.",
+        "order_suggestion": "no_change"
+      }
+    },
+    {
+      "action_id": "Bio-protocol-2302::T6::S2::A1",
+      "step_id": "Bio-protocol-2302::T6::S2",
+      "protocol_id": "Bio-protocol-2302",
+      "task_id": "Bio-protocol-2302::T6",
+      "action": "Remove",
+      "description": "Remove the supernatants carefully without disturbing the RNA pellets.",
+      "materials": [
+        {
+          "name": "supernatants",
+          "role": "other",
+          "volume": "",
+          "concentration": "",
+          "state": "liquid",
+          "source": "methods_text"
+        }
+      ],
+      "conditions": [],
+      "produces": [
+        "RNA pellets"
+      ],
+      "evidence_span": "The supernatants were poured out and the pellets were washed with 100 μL of 70% ethanol and centrifuged at 14,000 g for 10 min at 4°C.",
+      "source": "llm_extracted",
+      "verification": {
+        "global_verdict": "partially_supported",
+        "evidence_spans": [
+          "The supernatants were poured out and the pellets were washed with 100 μL of 70% ethanol and centrifuged at 14,000 g for 10 min at 4°C."
+        ],
+        "revision_notes": "The action is supported, but the phrase 'carefully without disturbing the RNA pellets' is not explicitly stated in the Methods.",
+        "order_suggestion": "no_change"
+      }
+    },
+    {
+      "action_id": "Bio-protocol-2302::T6::S3::A1",
+      "step_id": "Bio-protocol-2302::T6::S3",
+      "protocol_id": "Bio-protocol-2302",
+      "task_id": "Bio-protocol-2302::T6",
+      "action": "Dissolve",
+      "description": "Dissolve the RNA pellets in RNase-free water.",
+      "materials": [
+        {
+          "name": "RNA pellets",
+          "role": "substrate",
+          "volume": "",
+          "concentration": "",
+          "state": "solid",
+          "source": "methods_text"
+        },
+        {
+          "name": "RNase-free water",
+          "role": "solvent",
+          "volume": "20–50 μl",
+          "concentration": "",
+          "state": "liquid",
+          "source": "methods_text"
+        }
+      ],
+      "conditions": [],
+      "produces": [
+        "dissolved RNA"
+      ],
+      "evidence_span": "The supernatants were removed and the RNA was dissolved in 20–50 μl of RNAse-free water.",
+      "source": "llm_extracted",
+      "verification": {
+        "global_verdict": "supported",
+        "evidence_spans": [
+          "The RNA was dissolved in 20–50 μl of RNase-free water."
+        ],
+        "revision_notes": "No corrections needed; the action is well-supported.",
+        "order_suggestion": "no_change"
+      }
+    }
+  ]
+}

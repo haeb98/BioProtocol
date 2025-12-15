@@ -20,18 +20,27 @@ def write_jsonl(data, path):
             f.write(json.dumps(item, ensure_ascii=False) + "\n")
 
 
-def get_prompts(methods_text):
+def get_prompts(sec_text: str, bio_title: str, article_title: str):
     system_prompt = """
-You are an expert biomedical scientist helping to extract scientific tasks from the methods sections of biology papers.
+You are an expert biomedical scientist helping to extract experimental TASKS
+from the methods sections of biology papers.
 
-Your job is to extract a concise list of experimental TASKS from the method section. 
-Each task refers to a distinct experimental procedure such as "preparing RNA samples", "western blotting", or "transfecting cells".
+You are given:
+- ARTICLE_TITLE: the overall paper title.
+- PROTOCOL_TITLE: the specific Bio-protocol title (a particular assay or sub-experiment).
+
+Your job is to extract a concise list of experimental TASKS that are DIRECTLY required to execute the PROTOCOL_TITLE experiment, not every
+procedure described in the article.
 
 STRICT RULES:
-- Do NOT hallucinate or infer anything not explicitly stated in the text. If the task goal is not stated, set it to null.
-- Each task MUST come from the provided text span(s) only and should correspond to a major phase of the experiment.
-- Produce only as many tasks as necessary to reproduce the experiment (typically 4–12)
-- Do not break a single logical step into multiple tasks, and do not combine multiple unrelated steps into one task.
+- Use ONLY the provided METHODS TEXT; do NOT hallucinate or invent tasks.
+- Many methods sections contain multiple experiments. FIRST, mentally list all candidate experimental activities, THEN FILTER them to keep only those
+  whose purpose and readout clearly match PROTOCOL_TITLE.
+- Ignore tasks that belong only to other assays, controls, or unrelated experiments.
+- Each remaining task must correspond to a MAJOR phase of the PROTOCOL_TITLE experiment (e.g., "prepare chromatin fraction", "perform
+  PHB quantification assay").
+- Produce ONLY as many tasks as needed to reproduce PROTOCOL_TITLE(typically 3–10). Do NOT over-segment trivial actions.
+- Do not break a single logical step into multiple tasks, and do not combine unrelated procedures into one task.
 - Return ONLY JSON with a top-level key 'tasks' containing an array of task objects.
 
 For each task, provide:
@@ -41,7 +50,12 @@ For each task, provide:
 - span_chunk (source sentence/paragraph that justifies the task)
 """
 
-    user_prompt = f"METHOD TEXT:\n{methods_text}"
+    user_prompt = f"""ARTICLE_TITLE: {article_title}
+PROTOCOL_TITLE: {bio_title}
+
+METHODS TEXT:
+{sec_text}
+"""
     return system_prompt, user_prompt
 
 
@@ -77,15 +91,17 @@ def main(args):
     discarded_tasks = []
 
     Path(args.out_dir).mkdir(exist_ok=True, parents=True)
-    task_path = Path(args.out_dir) / "b1_tasks_new___.jsonl"
-    discard_path = Path(args.out_dir) / "b1_discarded_tasks.jsonl"
+    task_path = Path(args.out_dir) / "b1_tasks_new_title.jsonl"
+    discard_path = Path(args.out_dir) / "b1_discarded_tasks_.jsonl"
 
     for record in tqdm(input_data, desc="Mining Tasks"):
         protocol_id = record["protocol_id"]
         sec_text = record["sec_text"]
+        bio_title = record["bio"]["title"]
+        article_title = record["article"]["title"]
 
         try:
-            sys_prompt, user_prompt = get_prompts(sec_text)
+            sys_prompt, user_prompt = get_prompts(sec_text=sec_text, bio_title=bio_title, article_title=article_title)
             parsed = call_llm_json(client, args.model, sys_prompt=sys_prompt, user_prompt=user_prompt)
 
             if isinstance(parsed, dict) and "tasks" in parsed:

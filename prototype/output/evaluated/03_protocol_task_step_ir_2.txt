@@ -1,0 +1,43 @@
+Title: Isolation of Chromatin-bound Proteins from Subcellular Fractions for Biochemical Analysis
+
+Materials:
+- Cor3–1 neural stem cells
+- P19 cells
+- Complete media (specific composition not provided)
+- Growth factors:
+  - Mouse EGF (Peprotech, 315-09) at 10 ng/ml
+  - Human FGF (R&D systems, 233-FB) at 10 ng/ml
+  - Laminin (Sigma, L2020-1MG) at 1 μg/ml
+- MEM-α medium
+- Fetal Bovine Serum (FBS) at 10% v/v (verify concentration)
+- Antibiotics at 1% v/v (verify concentration)
+- PBS (Phosphate Buffered Saline) at room temperature
+- Eppendorf tubes
+- E1 buffer (composition: 50 mM Hepes-KOH, 140 mM NaCl, 1 mM EDTA, 10% glycerol, 0.5% NP-40, 0.25% triton X-100, 1 mM DTT, ice-cold)
+- Protease inhibitor cocktail at 1x concentration
+- E2 buffer (composition: 10 mM Tris-HCl pH 8.0, 200 mM NaCl, 1 mM EDTA pH 8.0, 0.5 mM EGTA pH 8.0)
+- E3 buffer (specific composition not provided)
+- Sonicator with setting H and 30 seconds ON/30 seconds OFF cycle
+- BCA protein assay kit
+- Centrifuge capable of 1200 rpm, 3400 rpm, and 13000 rpm at 4°C
+- Benchtop centrifuge capable of 16000 x g
+
+Methods:
+1. Cell Culture and Maintenance:
+   a. Grow Cor3–1 neural stem cells and P19 cells in their respective media supplemented with the appropriate growth factors and antibiotics.
+   b. Maintain P19 cells in MEM-α medium supplemented with 10% FBS and 1% antibiotics.
+
+2. Cellular Fractionation:
+   a. Wash cells with 1 ml of PBS at room temperature and scrape them off the culture dish.
+   b. Pellet cells by centrifugation at 1200 rpm for 3 minutes at 4°C.
+   c. Resuspend the cell pellet in 5 volumes of ice-cold E1 buffer supplemented with 1x protease inhibitor cocktail. Pipette gently up and down 5 times.
+   d. Centrifuge the suspension at 3400 rpm for 2 minutes at 4°C.
+   e. Resuspend the remaining pellet in 5 volumes of E1 buffer and repeat the centrifugation step. Discard the supernatant.
+   f. Resuspend the pellet, which contains the nucleus fraction, in 2 volumes of E2 buffer supplemented with 1x protease inhibitor cocktail. Incubate for 10 minutes at 4°C and centrifuge at 3400 rpm for 2 minutes.
+   g. Resuspend the remaining pellet in E3 buffer supplemented with 1x protease inhibitor cocktail. Sonicate for 5 minutes using setting H with a 30 seconds ON/30 seconds OFF cycle.
+   h. Centrifuge the sonicated suspension at 13000 rpm for 10 minutes at 4°C.
+
+3. Protein Concentration Determination:
+   a. Use the BCA protein assay kit to determine the protein concentration of all fractions obtained from the cellular fractionation process.
+
+Please note that this protocol assumes the use of common laboratory equipment and standard procedures for cell culture, centrifugation, and protein concentration determination. Specific conditions for buffers and growth media should be prepared according to the manufacturer's instructions or standard laboratory protocols. The protocol does not include the steps for biochemical analysis of the isolated chromatin-bound proteins, as those details were not provided in the input.

@@ -1,0 +1,47 @@
+Title: Isolation of Chromatin-bound Proteins from Subcellular Fractions for Biochemical Analysis
+
+Materials:
+- Cell culture dishes (10 cm)
+- PBS (Phosphate-Buffered Saline), room temperature
+- Eppendorf tubes
+- Ice-cold E1 buffer (50 mM Hepes-KOH pH 7.5, 140 mM NaCl, 1 mM EDTA pH 8.0, 10% glycerol, 0.5% NP-40, 0.25% Triton X-100, 1 mM DTT)
+- Protease inhibitor cocktail (1×)
+- Ice-cold E2 buffer (10 mM Tris-HCl pH 8.0, 200 mM NaCl, 1 mM EDTA pH 8.0, 0.5 mM EGTA pH 8.0)
+- Ice-cold E3 buffer (500 mM Tris-HCl, 500 mM NaCl)
+- Bioruptor (Diagenode) or equivalent sonicator
+- Centrifuge capable of 13,000 rpm at 4°C
+- BCA protein assay kit (Thermo)
+- Benzonase (1:1,000, Novagen, 70664-3) for TUBEs pull down (optional)
+
+Methods:
+1. Seed Cor3–1 cells at 1.5 × 10^6 and P19 cells at 1.0 × 10^6 in 10 cm dishes. If P19 cells are to be transfected, use 3 μg of Ascl1 plasmid constructs (see Supplementary Table S2).
+
+2. Once cells have reached the desired confluency, wash them once with room temperature PBS and scrape them into 1 ml PBS.
+
+3. Pellet cells by centrifugation at 1,200 rpm in an Eppendorf tube at 4°C for 3 minutes.
+
+4. Resuspend the cell pellet in 5 volumes of ice-cold E1 buffer complemented with 1× protease inhibitor cocktail. Pipette gently up and down 5 times.
+
+5. Centrifuge at 3,400 rpm at 4°C for 2 minutes. Collect the supernatant in a fresh tube (cytoplasm fraction).
+
+6. Resuspend the pellet in the same volume of E1 buffer and repeat the centrifugation. Discard the supernatant.
+
+7. Resuspend the pellet in the same volume of E1 buffer and leave for 10 minutes on ice.
+
+8. Centrifuge at 3,400 rpm at 4°C for 2 minutes. Discard the supernatant.
+
+9. Resuspend the pellet in 2 volumes of ice-cold E2 buffer complemented with 1× protease inhibitor cocktail. Centrifuge at 3,400 rpm at 4°C for 2 minutes. Collect the supernatant in a fresh tube (nucleus fraction).
+
+10. Resuspend the pellet in the same volume of E2 buffer and repeat centrifugation. Discard the supernatant.
+
+11. Resuspend the pellet in ice-cold E3 buffer complemented with 1× protease inhibitor cocktail by gentle pipetting in the same volume used for E1.
+
+12. Sonicate the solution (chromatin fraction) in a Bioruptor for 5 minutes on setting H, 30 seconds ON/30 seconds OFF.
+
+13. Centrifuge the sonicated solution at 13,000 rpm at 4°C for 10 minutes. The supernatant contains the chromatin-bound proteins.
+
+14. Determine the protein concentration of all fractions using the BCA protein assay kit.
+
+15. Proceed with downstream applications such as western blot analysis or TUBEs pull down. If performing TUBEs pull down, optionally digest the chromatin fraction with Benzonase (1:1,000) before the pull down.
+
+Note: Ensure that all steps involving cell lysates and fractions are performed on ice or at 4°C to prevent protein degradation. Use protease inhibitors throughout the process to protect the proteins from proteolytic activity.

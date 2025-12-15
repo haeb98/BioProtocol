@@ -1,0 +1,11 @@
+protocol_id,num_gen_steps,num_gold_steps,num_matched_steps,num_hallucinated_steps,step_hallucination_rate,param_supported_rate,param_supported_count,param_total_count,contradiction_rate,contradiction_count,contradiction_total,evidence_missing_rate,evidence_missing_count,evidence_total
+Bio-protocol-1111,1,1,1,0,0.0,0.0,0,0,0.0,0,0,1.0,1,1
+Bio-protocol-1373,1,1,1,0,0.0,0.0,0,0,0.0,0,0,1.0,1,1
+Bio-protocol-2096,1,1,1,0,0.0,0.0,0,0,0.0,0,0,1.0,1,1
+Bio-protocol-2302,1,1,1,0,0.0,0.0,0,0,0.0,0,0,1.0,1,1
+Bio-protocol-2617,1,1,1,0,0.0,0.0,0,0,0.0,0,0,1.0,1,1
+Bio-protocol-3584,1,1,1,0,0.0,0.0,0,0,0.0,0,0,1.0,1,1
+Bio-protocol-3607,1,1,1,0,0.0,0.0,0,0,0.0,0,0,1.0,1,1
+Bio-protocol-3617,1,1,1,0,0.0,0.0,0,0,0.0,0,0,1.0,1,1
+Bio-protocol-851,1,1,1,0,0.0,0.0,0,0,0.0,0,0,1.0,1,1
+Bio-protocol-972,1,1,1,0,0.0,0.0,0,0,0.0,0,0,1.0,1,1

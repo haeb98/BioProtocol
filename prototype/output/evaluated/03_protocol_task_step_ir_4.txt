@@ -1,0 +1,80 @@
+# Isolation of Chromatin-bound Proteins from Subcellular Fractions for Biochemical Analysis
+
+## Materials Required:
+- Cor3–1 neural stem cells
+- Complete media with growth factors (mouse EGF, human FGF, Laminin)
+- P19 cells, MEM-α, FBS, antibiotics
+- Priming medium (Euromed-N supplemented with 1% B-27 without vitamin A, 0.5% N2, and 10 ng/ml human FGF)
+- Differentiation medium
+- RNeasy kit (Qiagen)
+- QuantiTect Reverse Transcription Kit (Qiagen)
+- QuantiFast SYBR Green Master Mix (Qiagen)
+- Lightcycler 480 PCR system (Roche)
+- RIPA buffer
+- Protease inhibitor cocktail
+- BCA protein assay kit
+- SDS-PAGE materials, MOPS buffer, nitrocellulose membranes
+- Primary antibodies, ECL Prime, ECL detection reagents
+- PBS
+- E1, E2, and E3 buffers
+- Agarose-TUBEs (LifeSensors, UM401)
+- Cycloheximide
+- 4% paraformaldehyde
+- Triton X-100
+- BSA
+- Anti-Ascl1 primary antibody (Abcam, ab74065)
+- Alexa488 goat anti-rabbit IgG (Life Technologies)
+- DAPI
+- Axio Scan (Zeiss)
+- 48-well plates
+- ΔM short-Luciferase, pRL-TK (Renilla, Promega), Ascl1
+- Lipofectamine 2000 (Invitrogen)
+- Dual-Luciferase Reporter Assay System
+
+## Procedure:
+
+### Cell Culture and Maintenance
+1. Grow Cor3–1 neural stem cells in complete media supplemented with growth factors.
+2. Supplement complete media with 10 ng/ml mouse EGF (Peprotech, 315-09), 10 ng/ml human FGF (R&D systems, 233-FB), and 1 μg/ml Laminin (Sigma, L2020-1MG).
+3. Maintain P19 cells in MEM-α supplemented with 10% FBS and 1% antibiotics, verifying the exact amounts before use.
+
+### Cellular Fractionation
+4. Wash Cor3–1 neural stem cells with 1 ml of room temperature PBS.
+5. Scrape the cells and transfer them into an Eppendorf tube.
+6. Pellet cells by centrifugation at 1200 rpm for 3 minutes at 4°C.
+7. Discard the supernatant and resuspend the cell pellet in 5 volumes of ice-cold E1 buffer (50 mM Hepes-KOH, 140 mM NaCl, 1 mM EDTA, 10% glycerol, 0.5% NP-40, 0.25% triton X-100, 1 mM DTT) complemented with 1x protease inhibitor cocktail. Pipette gently up and down 5 times.
+8. Centrifuge at 3,400 rpm for 2 minutes at 4°C and discard the supernatant.
+9. Resuspend the remaining pellet in 5 volumes of E1 buffer and repeat centrifugation under the same conditions. Discard the supernatant.
+10. Resuspend the pellet, which contains the nucleus fraction, in 2 volumes of E2 buffer (10 mM Tris-HCl pH 8.0, 200 mM NaCl, 1 mM EDTA, 0.5 mM EGTA pH 8.0) complemented with 1x protease inhibitor cocktail.
+11. Incubate for 10 minutes at 4°C and centrifuge at 3,400 rpm for 2 minutes at 4°C. Discard the supernatant.
+12. Resuspend the remaining pellet in E3 buffer complemented with 1x protease inhibitor cocktail.
+13. Sonicate for 5 minutes using setting H with a cycle of 30 seconds ON/30 seconds OFF.
+14. Centrifuge at 13,000 rpm for 10 minutes at 4°C. Retain the supernatant, which contains the chromatin-bound proteins.
+15. Determine the protein concentration of all fractions using the BCA protein assay kit.
+
+### Biochemical Analysis
+16. Prepare samples by adding reducing sample buffer to the isolated chromatin-bound proteins.
+17. Boil the samples for 5 minutes to denature the proteins.
+18. Centrifuge the boiled samples at 16,000 x g for 1 minute using a top bench centrifuge to pellet any insoluble material.
+19. Load the eluted samples onto 10% pre-cast polyacrylamide gels and perform SDS-PAGE electrophoresis using MOPS buffer.
+20. Transfer the separated proteins onto nitrocellulose membranes.
+21. Block the membranes with 10% non-fat milk in TBS-0.1% Tween solution for 1 hour at room temperature.
+22. Probe the membranes with primary antibodies specific to the proteins of interest and incubate overnight at 4°C.
+23. Develop the membranes using ECL Prime for Ascl1 and ECL detection reagents for other antibodies.
+
+### Agarose-TUBEs Pull Down (Optional)
+24. Prepare 15 μl of 50% Agarose-TUBEs.
+25. Incubate the Agarose-TUBEs with 350-450 μg of ubiquitylated proteins from cytoplasm and chromatin fractions in a final volume of 500 μl of respective buffers.
+26. Perform the incubation for 1 hour at 4°C on a rocker platform.
+27. Centrifuge at 1,000 x g for 5 minutes at 4°C.
+28. Wash the Agarose-TUBEs three times.
+29. Boil the Agarose-TUBEs with reducing sample buffer for 5 minutes.
+30. Centrifuge at 16,000 x g for 1 minute and load the eluted samples onto gels for further analysis.
+
+### Notes:
+- Ensure that all buffers and solutions are prepared freshly and kept on ice when not in use to preserve protein integrity.
+- The use of protease inhibitor cocktail is crucial to prevent protein degradation during the isolation process.
+- The sonication step must be optimized to ensure efficient shearing of DNA while preserving protein integrity.
+- The centrifugation speeds and temperatures are critical for the successful separation of cellular fractions and must be adhered to strictly.
+- The boiling of samples in reducing sample buffer is essential for denaturing the proteins and ensuring their proper migration during SDS-PAGE.
+- All steps involving the handling of proteins should be performed at 4°C or on ice to minimize protein degradation.

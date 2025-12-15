@@ -1,0 +1,49 @@
+Title: Isolation of Chromatin-bound Proteins from Subcellular Fractions for Biochemical Analysis
+
+1. Cell Culture and Maintenance
+   1.1. Grow Cor3–1 neural stem cells in Complete media.
+   1.2. Supplement Complete media with 10 ng/ml mouse EGF, 10 ng/ml human FGF, and 1 μg/ml Laminin before changing the medium or passaging the cells.
+   1.3. Maintain P19 cells in MEM-α supplemented with 10% FBS, 100 units/ml penicillin, and 100 μg/ml streptomycin.
+
+2. Neuronal Differentiation
+   2.1. 24 hours after seeding Cor3–1 cells, transfer them into priming medium Euromed-N supplemented with 1% B-27 without vitamin A, 0.5% N2, and 10 ng/ml human FGF for 3 days.
+   2.2. After 3 days in priming medium, transfer cells into differentiation medium (1:3 ratio DMEM/HAM’S-F12:Neurobasal) supplemented with 1% B-27 without vitamin A, 0.5% N2, 10 ng/ml human FGF, 20 ng/ml BDNF, and 1μg/ml Laminin.
+   2.3. Change the differentiation medium every 3 days, reducing the FGF concentration by half each time until it reaches zero, while maintaining a constant concentration of BDNF at 30 ng/ml.
+
+3. Cell Transfection
+   3.1. Grow P19 cells to 80% confluence in MEM-α medium supplemented with 10% FBS, 100 units/ml penicillin, and 100 μg/ml streptomycin.
+   3.2. Prepare the transfection mixture using Lipofectamine 2000 and plasmid DNA at a 1:2 ratio in proliferation medium.
+   3.3. Transfect P19 cells at 80% confluence with the prepared transfection mixture.
+
+4. Cellular Fractionation
+   4.1. Wash Cor3–1 and P19 cells once with room temperature PBS and scrape into 1 ml PBS.
+   4.2. Pellet cells by centrifugation at 1,200 rpm for 3 min at 4°C.
+   4.3. Resuspend cell pellets in 5 volumes of ice-cold E1 buffer supplemented with 1× protease inhibitor cocktail and gently pipette up and down 5 times.
+   4.4. Centrifuge at 3,400 rpm for 2 min at 4°C and collect the supernatant as the cytoplasm fraction.
+   4.5. Resuspend the pellet in the same volume of E1 buffer, centrifuge as before, and discard the supernatant.
+   4.6. Resuspend the pellet in 2 volumes of ice-cold E2 buffer supplemented with 1× protease inhibitor cocktail, leave for 10 min on ice, centrifuge, and collect the supernatant as the nucleus fraction.
+   4.7. Resuspend the remaining pellet in the same volume of E3 buffer supplemented with 1× protease inhibitor cocktail, sonicate for 5 min on setting H (30 sec ON/30 sec OFF), and centrifuge at 13,000 rpm for 10 min at 4°C to obtain the chromatin fraction.
+   4.8. Determine the protein concentration of all fractions using the BCA protein assay kit.
+
+5. Agarose-TUBEs Pull Down
+   5.1. Incubate 15 μl of 50% Agarose-TUBEs with 350-450 μg of ubiquitylated proteins from the cytoplasm and chromatin fractions in 500 μl final volume of respective buffers for 1 hour at 4°C on a rocker platform.
+   5.2. Centrifuge Agarose-TUBEs at 1,000 × g for 5 min at 4°C and collect the supernatant as the unbound fraction.
+   5.3. Wash Agarose-TUBEs 3 times according to the manufacturer’s instructions.
+   5.4. Boil Agarose-TUBEs in reducing sample buffer for 5 min, centrifuge at maximum speed for 1 min, and load the eluted samples onto gels alongside 5 μg of proteins from the unbound fraction and 5 μg from fractionated lysates (Input).
+
+6. Western Blotting
+   6.1. Lyse cells directly with RIPA buffer supplemented with protease inhibitor cocktail or use fractionated lysates.
+   6.2. Determine protein concentration using the BCA protein assay kit.
+   6.3. Carry out SDS-PAGE electrophoresis using 10% pre-cast polyacrylamide gels in MOPS buffer.
+   6.4. Transfer separated proteins onto nitrocellulose membranes.
+   6.5. Block membranes with 10% non-fat milk in TBS-0.1% Tween solution for 1 hour.
+   6.6. Probe membranes overnight at 4°C with primary antibodies specific to the proteins of interest.
+   6.7. Develop membranes using ECL Prime for Ascl1 or ECL detection reagents for other antibodies.
+
+7. Protein Stability Assay
+   7.1. Treat Cor3-1 cells or transfected P19 cells with 10 μg/ml cycloheximide.
+   7.2. At defined time points, harvest cells with RIPA lysis buffer or fractionate as described above.
+   7.3. Separate equal amounts of each whole cell lysate or fractionated lysate on SDS-PAGE and transfer to a membrane for immunoblotting.
+   7.4. Quantify protein levels using FiJi software and calculate half-lives using nonlinear regression analysis (One phase decay) with Prism software.
+
+Please note that this protocol is a summary and should be performed in conjunction with the detailed methods and conditions provided in the original experimental descriptions.

@@ -1,0 +1,175 @@
+[
+  {
+    "action": "Grow",
+    "materials": [
+      {
+        "name": "Cor3–1 neural stem cells",
+        "details": []
+      },
+      {
+        "name": "Complete media",
+        "details": []
+      }
+    ],
+    "parameters": [],
+    "produces": [],
+    "confidence": 0.9,
+    "hallucination": false
+  },
+  {
+    "id": "Step",
+    "action": "Supplement Complete media with growth factors",
+    "parameters": [
+      "before changing the medium",
+      "passaging the cells"
+    ],
+    "materials": [
+      "Complete media",
+      "growth factors"
+    ],
+    "produces": [],
+    "confidence": 0.9,
+    "hallucination": false
+  },
+  {
+    "action": "maintain",
+    "materials": [
+      {
+        "name": "P19 cells",
+        "details": ""
+      },
+      {
+        "name": "MEM-α",
+        "details": "supplemented with FBS and antibiotics"
+      }
+    ],
+    "parameters": {
+      "details": "specific concentrations of FBS and antibiotics are not provided in the Methods section"
+    },
+    "produces": {
+      "details": "maintained P19 cells"
+    },
+    "confidence": 0.9,
+    "hallucination": false
+  },
+  {
+    "action": "transfer",
+    "materials": {
+      "seeded_neural_stem_cells": {},
+      "priming_medium": {}
+    },
+    "parameters": {
+      "timing": "24 hours after seeding"
+    },
+    "produces": {
+      "neural_stem_cells_in_priming_medium": {}
+    },
+    "confidence": 0.9,
+    "hallucination": false
+  },
+  {
+    "action": "maintain",
+    "materials": {
+      "cells": {},
+      "priming medium": {
+        "Euromed-N": {},
+        "B-27 without vitamin A": {
+          "concentration": "1%",
+          "details": "Gibco, 12587010"
+        },
+        "N2": {
+          "concentration": "0.5%"
+        },
+        "human FGF": {
+          "concentration": "10 ng/ml"
+        }
+      }
+    },
+    "parameters": {
+      "duration": "3 days"
+    },
+    "produces": {},
+    "confidence": 0.9,
+    "hallucination": false
+  },
+  {
+    "id": "Step",
+    "action": "Transfer the cells",
+    "parameters": [
+      "after the priming period"
+    ],
+    "materials": [
+      "cells",
+      "differentiation medium"
+    ],
+    "produces": "",
+    "confidence": 0.9,
+    "hallucination": false
+  },
+  {
+    "id": "Step",
+    "action": "Change the differentiation medium",
+    "parameters": [
+      "every 3 days",
+      "reducing the FGF concentration by half each time until it reaches zero",
+      "maintaining a constant concentration of BDNF at 30 ng/ml"
+    ],
+    "materials": [
+      "differentiation medium",
+      "FGF",
+      "BDNF"
+    ],
+    "produces": "",
+    "confidence": 0.9,
+    "hallucination": false
+  },
+  {
+    "id": "Step",
+    "action": "Grow P19 cells",
+    "parameters": [
+      "in MEM-α medium",
+      "supplemented with 10% FBS",
+      "100 units/ml penicillin",
+      "100 μg/ml streptomycin",
+      "until they reach 80% confluence"
+    ],
+    "materials": [
+      "P19 cells",
+      "MEM-α medium",
+      "FBS",
+      "penicillin",
+      "streptomycin"
+    ],
+    "produces": "P19 cells at 80% confluence",
+    "confidence": 0.9,
+    "hallucination": false
+  },
+  {
+    "action": "Prepare the transfection mixture",
+    "materials": [
+      "plasmid DNA",
+      "Lipofectamine 2000",
+      "proliferation medium"
+    ],
+    "parameters": {
+      "ratio": "1:2 (DNA:Lipofectamine)"
+    },
+    "produces": "transfection mixture",
+    "confidence": 0.9,
+    "hallucination": false
+  },
+  {
+    "action": "transfect",
+    "materials": {
+      "cells": "P19 cells",
+      "mixture": "prepared mixture",
+      "transfection_reagent": "Lipofectamine 2000"
+    },
+    "parameters": {
+      "cell_confluence": "80%"
+    },
+    "produces": "transfected P19 cells",
+    "confidence": 0.9,
+    "hallucination": false
+  }
+]

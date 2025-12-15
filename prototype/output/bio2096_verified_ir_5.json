@@ -1,0 +1,116 @@
+[
+  {
+    "action": "Grow",
+    "materials": {
+      "cells": "Cor3–1 neural stem cells",
+      "media": "Complete media"
+    },
+    "parameters": {
+      "temperature": "37 degrees Celsius",
+      "CO2 concentration": "5%",
+      "assumption": "Standard cell culture conditions assumed due to lack of specific information"
+    },
+    "produces": {
+      "description": "Expanded population of Cor3–1 neural stem cells"
+    },
+    "confidence": 0.9,
+    "hallucination": false
+  },
+  {
+    "action": "supplement",
+    "materials": [
+      {
+        "name": "mouse EGF",
+        "details": "10 ng/ml",
+        "supplier": "Peprotech",
+        "catalog_number": "315-09"
+      },
+      {
+        "name": "human FGF",
+        "details": "10 ng/ml",
+        "supplier": "R&D systems",
+        "catalog_number": "233-FB"
+      },
+      {
+        "name": "Laminin",
+        "details": "1 μg/ml",
+        "supplier": "Sigma",
+        "catalog_number": "L2020-1MG"
+      }
+    ],
+    "parameters": [
+      {
+        "name": "volume",
+        "details": "required volume of Complete media"
+      }
+    ],
+    "produces": [
+      {
+        "name": "supplemented Complete media",
+        "details": "with growth factors"
+      }
+    ],
+    "confidence": 0.9,
+    "hallucination": false
+  },
+  {
+    "action": "maintain",
+    "materials": [
+      {
+        "name": "P19 cells",
+        "amount": null,
+        "unit": null,
+        "type": "cell line"
+      },
+      {
+        "name": "MEM-α",
+        "amount": null,
+        "unit": null,
+        "type": "medium"
+      },
+      {
+        "name": "FBS",
+        "amount": "10",
+        "unit": "%",
+        "type": "supplement"
+      },
+      {
+        "name": "antibiotics",
+        "amount": "1",
+        "unit": "%",
+        "type": "supplement"
+      }
+    ],
+    "parameters": [],
+    "produces": [],
+    "confidence": 0.9,
+    "hallucination": false
+  },
+  {
+    "action": "transfer",
+    "materials": {
+      "source_material": "seeded neural stem cells",
+      "destination_material": "priming medium"
+    },
+    "parameters": {
+      "timing": "24 hours after seeding"
+    },
+    "produces": "neural stem cells in priming medium",
+    "confidence": 0.9,
+    "hallucination": false
+  },
+  {
+    "id": "Step",
+    "action": "Maintain the cells in the priming medium",
+    "parameters": [
+      "3 days"
+    ],
+    "materials": [
+      "cells",
+      "priming medium"
+    ],
+    "produces": [],
+    "confidence": 0.9,
+    "hallucination": false
+  }
+]

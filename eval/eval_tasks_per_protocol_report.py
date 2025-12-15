@@ -29,7 +29,7 @@ def cosine_similarity(a: np.ndarray, b: np.ndarray) -> float:
     return max(min(sim, 1.0), -1.0)  # 유효 범위 보정
 
 
-def compute_task_scores(gold_tasks: List[str], pred_tasks: List[str], threshold: float = 0.65) -> Dict:
+def compute_task_scores(gold_tasks: List[str], pred_tasks: List[str], threshold: float = 0.7) -> Dict:
     gold_embs = [get_embedding(t) for t in gold_tasks]
     pred_embs = [get_embedding(t) for t in pred_tasks]
 
