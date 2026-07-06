@@ -398,6 +398,11 @@ pip install -r requirements.txt
 
 - **빠른 시작**: [`QUICKSTART.md`](./QUICKSTART.md)
 - **구조 설명**: [`STRUCTURE.md`](./STRUCTURE.md)
+- **평가 메트릭**: [`EVALUATION_METRICS.md`](./EVALUATION_METRICS.md) ⭐ **필독!**
+  - P1-P6 프롬프트 변이체 상세 설명
+  - 각 평가 메트릭 계산 방식
+  - CSV 파일 구조
+  - 해석 가이드
 - **기술 문서**: [`BioProtocol_Interview_Report.pdf`](./BioProtocol_Interview_Report.pdf)
 - **Grounding 분석**: [`reports/grounding_eval/GROUNDING_ANALYSIS.md`](./reports/grounding_eval/GROUNDING_ANALYSIS.md)
 - **아카이브**: [`_archive/`](./_archive/) - 이전 실험
