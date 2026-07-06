@@ -98,7 +98,7 @@ def evaluate_per_protocol(gold_map, pred_map, out_csv="report/eval_step_structur
         for gi, pi in matched_pairs:
             pred_step = pred_steps[pi]
             gold_text = gold_texts[gi]
-            param_list = pred_step.get("parameters", [])
+            param_list = pred_step.get("conditions", [])
             material_list = pred_step.get("materials", [])
             param_total += len(param_list)
             material_total += len(material_list)

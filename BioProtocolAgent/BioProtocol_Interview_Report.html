@@ -1,0 +1,1114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>BioProtocolAgent Interview Report</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        @page {
+            size: A4;
+            margin: 2cm;
+        }
+
+        body {
+            font-family: 'Apple Color Emoji', 'Segoe UI', Arial, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            font-size: 11pt;
+        }
+
+        h1 {
+            color: #1a5f7a;
+            border-bottom: 3px solid #1a5f7a;
+            padding-bottom: 10px;
+            font-size: 24pt;
+            margin-top: 20px;
+            margin-bottom: 15px;
+            page-break-after: avoid;
+        }
+
+        h2 {
+            color: #2a8fbd;
+            font-size: 18pt;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            page-break-after: avoid;
+        }
+
+        h3 {
+            color: #4a9fcf;
+            font-size: 14pt;
+            margin-top: 15px;
+            margin-bottom: 8px;
+            page-break-after: avoid;
+        }
+
+        p {
+            margin-bottom: 10px;
+            text-align: justify;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            page-break-inside: avoid;
+            font-size: 10pt;
+        }
+
+        table th {
+            background-color: #1a5f7a;
+            color: white;
+            padding: 10px;
+            text-align: left;
+            font-weight: bold;
+            border: 1px solid #0d3a4a;
+        }
+
+        table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        table tr:hover {
+            background-color: #f0f5f7;
+        }
+
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.95em;
+            color: #d63384;
+        }
+
+        pre {
+            background-color: #f4f4f4;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            border-left: 4px solid #1a5f7a;
+            margin: 10px 0;
+            font-family: 'Courier New', monospace;
+            font-size: 9pt;
+            line-height: 1.4;
+            page-break-inside: avoid;
+        }
+
+        pre code {
+            background-color: transparent;
+            padding: 0;
+            color: #333;
+            font-size: 9pt;
+        }
+
+        ul, ol {
+            margin: 10px 0 10px 20px;
+        }
+
+        li {
+            margin: 5px 0;
+        }
+
+        blockquote {
+            border-left: 4px solid #1a5f7a;
+            padding-left: 15px;
+            margin-left: 0;
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        strong {
+            color: #1a5f7a;
+            font-weight: bold;
+        }
+
+        em {
+            font-style: italic;
+            color: #555;
+        }
+
+        hr {
+            border: none;
+            border-top: 2px solid #ddd;
+            margin: 30px 0;
+            page-break-after: avoid;
+        }
+
+        a {
+            color: #2a8fbd;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .table-responsive {
+            page-break-inside: avoid;
+        }
+
+        .code-block {
+            page-break-inside: avoid;
+        }
+    </style>
+</head>
+<body>
+<h1 id="bioprotocolagent-멀티에이전트-프레임워크-기술-스택-리포트">BioProtocolAgent: 멀티에이전트 프레임워크 기술 스택 리포트</h1>
+
+<h2 id="프로젝트-개요">📋 프로젝트 개요</h2>
+
+<p>바이오 프로토콜 생성을 위한 <strong>멀티 에이전트 프레임워크</strong>를 구현한 논문 시스템.<br/>
+    과학 논문의 Methods 섹션에서 <strong>자동으로 바이오 실험 프로토콜을 생성</strong>하는 AI 시스템.</p>
+
+<hr/>
+
+<h2 id="기술-스택">🔧 기술 스택</h2>
+
+<h3 id="1-언어-런타임">1. 언어 &amp; 런타임</h3>
+
+<ul>
+    <li><strong>Python 3.12.7</strong> (최신 LTS 버전)</li>
+    <li>가상환경: <code>.venv</code> (프로젝트 로컬)</li>
+</ul>
+
+<h3 id="2-핵심-aiml-프레임워크">2. 핵심 AI/ML 프레임워크</h3>
+
+<h4 id="llm-에이전트-오케스트레이션">LLM &amp; 에이전트 오케스트레이션</h4>
+
+<table>
+    <thead>
+    <tr>
+        <th>라이브러리</th>
+        <th>버전</th>
+        <th>역할</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><strong>LangGraph</strong></td>
+        <td>1.0.4</td>
+        <td>멀티에이전트 workflow 오케스트레이션</td>
+    </tr>
+    <tr>
+        <td><strong>LangGraph Checkpoint</strong></td>
+        <td>3.0.0</td>
+        <td>상태 저장 및 복구</td>
+    </tr>
+    <tr>
+        <td><strong>LangGraph Prebuilt</strong></td>
+        <td>1.0.5</td>
+        <td>사전정의 agent 템플릿</td>
+    </tr>
+    <tr>
+        <td><strong>LangGraph SDK</strong></td>
+        <td>0.2.9</td>
+        <td>SDK 클라이언트</td>
+    </tr>
+    <tr>
+        <td><strong>LangChain</strong></td>
+        <td>1.1.0</td>
+        <td>LLM 체이닝 및 도구 통합</td>
+    </tr>
+    <tr>
+        <td><strong>LangChain Core</strong></td>
+        <td>1.1.0</td>
+        <td>기본 LLM 인터페이스</td>
+    </tr>
+    </tbody>
+</table>
+
+<h4 id="llm-api">LLM API</h4>
+
+<table>
+    <thead>
+    <tr>
+        <th>라이브러리</th>
+        <th>버전</th>
+        <th>용도</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><strong>OpenAI</strong></td>
+        <td>2.6.0</td>
+        <td>GPT-4, GPT-4o-mini API 호출</td>
+    </tr>
+    <tr>
+        <td><strong>Pydantic</strong></td>
+        <td>2.12.3</td>
+        <td>응답 스키마 검증</td>
+    </tr>
+    <tr>
+        <td><strong>Pydantic Core</strong></td>
+        <td>2.41.4</td>
+        <td>타입 검증 엔진</td>
+    </tr>
+    </tbody>
+</table>
+
+<h4 id="임베딩-벡터-검색">임베딩 &amp; 벡터 검색</h4>
+
+<table>
+    <thead>
+    <tr>
+        <th>라이브러리</th>
+        <th>버전</th>
+        <th>역할</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><strong>Sentence-Transformers</strong></td>
+        <td>5.1.2</td>
+        <td>문장 임베딩 생성</td>
+    </tr>
+    <tr>
+        <td><strong>Torch</strong></td>
+        <td>2.9.0</td>
+        <td>신경망 계산 백엔드</td>
+    </tr>
+    <tr>
+        <td><strong>TorchAudio</strong></td>
+        <td>2.9.0</td>
+        <td>오디오 처리 (의존성)</td>
+    </tr>
+    <tr>
+        <td><strong>TorchVision</strong></td>
+        <td>0.24.0</td>
+        <td>이미지 처리 (의존성)</td>
+    </tr>
+    <tr>
+        <td><strong>FAISS (CPU)</strong></td>
+        <td>1.12.0</td>
+        <td>대규모 벡터 유사도 검색</td>
+    </tr>
+    <tr>
+        <td><strong>Transformers</strong></td>
+        <td>4.57.1</td>
+        <td>사전학습 모델 로드</td>
+    </tr>
+    <tr>
+        <td><strong>HuggingFace Hub</strong></td>
+        <td>0.35.3</td>
+        <td>모델 다운로드 및 관리</td>
+    </tr>
+    </tbody>
+</table>
+
+<h3 id="3-데이터-처리-분석">3. 데이터 처리 &amp; 분석</h3>
+
+<table>
+    <thead>
+    <tr>
+        <th>라이브러리</th>
+        <th>버전</th>
+        <th>용도</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><strong>Pandas</strong></td>
+        <td>-</td>
+        <td>평가 결과 CSV 처리</td>
+    </tr>
+    <tr>
+        <td><strong>NumPy</strong></td>
+        <td>-</td>
+        <td>행렬 계산 (Hungarian Algorithm)</td>
+    </tr>
+    <tr>
+        <td><strong>SciPy</strong></td>
+        <td>-</td>
+        <td>선형 할당 문제 해결</td>
+    </tr>
+    </tbody>
+</table>
+
+<h3 id="4-평가-메트릭">4. 평가 메트릭</h3>
+
+<table>
+    <thead>
+    <tr>
+        <th>라이브러리</th>
+        <th>버전</th>
+        <th>메트릭</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><strong>SacreBleu</strong></td>
+        <td>-</td>
+        <td>BLEU 스코어 (표준 번역 평가)</td>
+    </tr>
+    <tr>
+        <td><strong>ROUGE Score</strong></td>
+        <td>-</td>
+        <td>ROUGE 스코어 (문장 유사도)</td>
+    </tr>
+    <tr>
+        <td><strong>scikit-learn</strong></td>
+        <td>-</td>
+        <td>TF-IDF 기반 코사인 유사도</td>
+    </tr>
+    <tr>
+        <td><strong>Datasets</strong></td>
+        <td>4.4.1</td>
+        <td>벤치마크 데이터셋 로드</td>
+    </tr>
+    </tbody>
+</table>
+
+<h3 id="5-개발실험-환경">5. 개발/실험 환경</h3>
+
+<table>
+    <thead>
+    <tr>
+        <th>라이브러리</th>
+        <th>버전</th>
+        <th>목적</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><strong>Jupyter</strong></td>
+        <td>-</td>
+        <td>노트북 기반 실험</td>
+    </tr>
+    <tr>
+        <td><strong>IPython</strong></td>
+        <td>-</td>
+        <td>인터랙티브 개발</td>
+    </tr>
+    <tr>
+        <td><strong>Python-dotenv</strong></td>
+        <td>0.9.9</td>
+        <td>환경변수 관리 (.env)</td>
+    </tr>
+    </tbody>
+</table>
+
+<hr/>
+
+<h2 id="시스템-아키텍처">🏗️ 시스템 아키텍처</h2>
+
+<h3 id="멀티에이전트-workflow-langgraph">멀티에이전트 Workflow (LangGraph)</h3>
+
+<pre><code>GraphState
+    ↓
+[Task Planner] → 논문 Methods 텍스트에서 "태스크(작업)" 추출
+    ↓
+[Step Planner] → 각 태스크를 "스텝(단계)" 구조화
+    ↓
+[Action Extractor] → 각 스텝을 "액션" + 메터리얼/조건으로 분해
+    ↓
+[Condition Extractor] → 온도, 시간 등 조건 추출
+    ↓
+[Verifier (optional)] → Chain-of-Verification 검증
+    ↓
+[Writer (optional)] → 자연어 프로토콜 생성
+</code></pre>
+
+<h3 id="노드별-상세-설명">노드별 상세 설명</h3>
+
+<h4 id="1-task-planner-task_plannerpy">1. Task Planner (<code>task_planner.py</code>)</h4>
+
+<ul>
+    <li><strong>역할</strong>: 논문 Methods 섹션을 읽고 핵심 실험 작업(task) 추출</li>
+    <li><strong>LLM</strong>: GPT-4-1106-preview (temperature=0.0, JSON mode)</li>
+    <li><strong>입력</strong>: 논문 제목, 프로토콜 명, Methods 텍스트</li>
+    <li><strong>출력</strong>: Task 리스트 (task<em>id, task</em>name, description, span_chunk)</li>
+    <li><strong>특징</strong>:
+        <ul>
+            <li>제목 기반 필터링 (relevant task만 추출)</li>
+            <li>중복/과도한 세분화 방지</li>
+        </ul>
+    </li>
+</ul>
+
+<h4 id="2-step-planner-step_plannerpy">2. Step Planner (<code>step_planner.py</code>)</h4>
+
+<ul>
+    <li><strong>역할</strong>: Task를 단계적 절차(step)로 구조화</li>
+    <li><strong>LLM</strong>: GPT-4o-mini (temperature=0.0)</li>
+    <li><strong>입력</strong>: Task 정보 + Methods 텍스트</li>
+    <li><strong>출력</strong>: StepIR (step<em>id, step</em>text, step<em>rationale, evidence</em>spans)</li>
+    <li><strong>안정성</strong>: 안전한 JSON 파싱 (코드블록 제거, 에러 로깅)</li>
+</ul>
+
+<h4 id="3-action-extractor-action_extractorpy">3. Action Extractor (<code>action_extractor.py</code>)</h4>
+
+<ul>
+    <li><strong>역할</strong>: Step을 원자적 액션(Add, Incubate, Mix, Centrifuge 등)으로 분해</li>
+    <li><strong>LLM</strong>: GPT-4o-mini</li>
+    <li><strong>출력</strong>: ActionIR 리스트
+        <div class="codehilite">
+<pre><span></span><code><span class="p">{</span>
+  <span class="s2">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;Incubate&quot;</span><span
+            class="p">,</span>
+  <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;...&quot;</span><span
+            class="p">,</span>
+  <span class="s2">&quot;materials&quot;</span><span class="p">:</span> <span class="p">[{</span><span class="s2">&quot;name&quot;</span><span
+            class="p">:</span> <span class="s2">&quot;RNA&quot;</span><span class="p">,</span> <span class="s2">&quot;role&quot;</span><span
+            class="p">:</span> <span class="s2">&quot;substrate&quot;</span><span class="p">,</span> <span class="s2">&quot;volume&quot;</span><span
+            class="p">:</span> <span class="s2">&quot;100 μL&quot;</span><span class="p">}],</span>
+  <span class="s2">&quot;conditions&quot;</span><span class="p">:</span> <span class="p">[{</span><span class="s2">&quot;type&quot;</span><span
+            class="p">:</span> <span class="s2">&quot;temperature&quot;</span><span class="p">,</span> <span class="s2">&quot;value&quot;</span><span
+            class="p">:</span> <span class="s2">&quot;37°C&quot;</span><span class="p">,</span> <span class="s2">&quot;unit&quot;</span><span
+            class="p">:</span> <span class="s2">&quot;°C&quot;</span><span class="p">}],</span>
+  <span class="s2">&quot;produces&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;purified RNA&quot;</span><span
+            class="p">],</span>
+  <span class="s2">&quot;evidence_span&quot;</span><span class="p">:</span> <span class="s2">&quot;...&quot;</span>
+<span class="p">}</span>
+</code></pre>
+        </div>
+    </li>
+</ul>
+
+<h4 id="4-condition-extractor-condition_extractorpy">4. Condition Extractor (<code>condition_extractor.py</code>)</h4>
+
+<ul>
+    <li><strong>역할</strong>: 온도, 시간, pH, 회전수(rpm) 등 물리적 조건 추출</li>
+    <li><strong>데이터</strong>: 각 조건을 (type, value, unit, source) 튜플로 표현</li>
+</ul>
+
+<h4 id="5-verifier-nodes-verifierpy-verifier_reactpy">5. Verifier Nodes (<code>verifier.py</code>, <code>verifier_react.py</code>)
+</h4>
+
+<ul>
+    <li><strong>검증 방식</strong>: Chain-of-Verification (CoV) + ReAct
+        <ul>
+            <li>검증 질문 생성</li>
+            <li>Methods 텍스트에서 증거 찾기</li>
+            <li>로컬/글로벌 판정 (supported, partially_supported, hallucinated, contradicted)</li>
+        </ul>
+    </li>
+    <li><strong>LLM</strong>: GPT-4o-mini</li>
+    <li><strong>출력</strong>: verification 필드 추가
+        <div class="codehilite">
+<pre><span></span><code><span class="p">{</span>
+  <span class="s2">&quot;global_verdict&quot;</span><span class="p">:</span> <span
+            class="s2">&quot;supported&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;reasoning_traces&quot;</span><span class="p">:</span> <span class="p">[</span><span class="o">...</span><span
+            class="p">],</span>
+  <span class="s2">&quot;revision_suggestion&quot;</span><span class="p">:</span> <span
+            class="s2">&quot;...&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;order_suggestion&quot;</span><span class="p">:</span> <span
+            class="s2">&quot;no_change&quot;</span>
+<span class="p">}</span>
+</code></pre>
+        </div>
+    </li>
+</ul>
+
+<h4 id="6-writer-writerpy">6. Writer (<code>writer.py</code>)</h4>
+
+<ul>
+    <li><strong>역할</strong>: ActionIR → 자연어 프로토콜 생성</li>
+    <li><strong>LLM</strong>: 계층적 구조 유지하면서 자연스러운 문장 생성</li>
+</ul>
+
+<h3 id="도구-레이어-srctools">도구 레이어 (<code>src/tools/</code>)</h3>
+
+<table>
+    <thead>
+    <tr>
+        <th>도구</th>
+        <th>목적</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><strong>rag_search.py</strong></td>
+        <td>Methods 텍스트에서 관련 증거 검색 (FAISS 벡터 검색)</td>
+    </tr>
+    <tr>
+        <td><strong>doc_search.py</strong></td>
+        <td>문서 기반 검색</td>
+    </tr>
+    <tr>
+        <td><strong>verifier_tools.py</strong></td>
+        <td>검증 중 보조 도구 (검색, 추출)</td>
+    </tr>
+    <tr>
+        <td><strong>calculate_tool.py</strong></td>
+        <td>농도, 부피 계산</td>
+    </tr>
+    <tr>
+        <td><strong>reorder_tool.py</strong></td>
+        <td>액션 순서 재정렬</td>
+    </tr>
+    </tbody>
+</table>
+
+<hr/>
+
+<h2 id="데이터-구조">📊 데이터 구조</h2>
+
+<h3 id="graphstate-langgraph-상태">GraphState (LangGraph 상태)</h3>
+
+<div class="codehilite">
+<pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">GraphState</span><span
+        class="p">(</span><span class="n">TypedDict</span><span class="p">,</span> <span class="n">total</span><span
+        class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="n">protocol_id</span><span class="p">:</span> <span class="nb">str</span>                    <span
+            class="c1"># &quot;Bio-protocol-2302&quot;</span>
+    <span class="n">bio</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span
+            class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span>                 <span
+            class="c1"># {title, protocol_info}</span>
+    <span class="n">article</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span
+            class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span>             <span
+            class="c1"># {title, pmcid, sections}</span>
+    <span class="n">methods_text</span><span class="p">:</span> <span class="nb">str</span>                   <span
+            class="c1"># 논문 Methods 섹션</span>
+    <span class="n">tasks</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span
+            class="n">Dict</span><span class="p">]</span>                   <span class="c1"># Task Planner 출력</span>
+    <span class="n">steps_raw</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span
+            class="n">StepIR</span><span class="p">]</span>             <span class="c1"># Step Planner 출력</span>
+    <span class="n">steps</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span
+            class="n">StepIR</span><span class="p">]</span>                 <span class="c1"># 정제된 steps</span>
+    <span class="n">actions</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span
+            class="n">ActionIR</span><span class="p">]</span>             <span class="c1"># Action Extractor 출력</span>
+    <span class="n">protocol_draft</span><span class="p">:</span> <span class="nb">str</span>                 <span
+            class="c1"># 최종 프로토콜 텍스트</span>
+    <span class="n">tool_logs</span><span class="p">:</span> <span class="n">List</span>                     <span
+            class="c1"># 도구 호출 로그</span>
+    <span class="n">verification_logs</span><span class="p">:</span> <span class="n">List</span>             <span
+            class="c1"># 검증 로그</span>
+</code></pre>
+</div>
+
+<h3 id="actionir-실험-액션-표현">ActionIR (실험 액션 표현)</h3>
+
+<div class="codehilite">
+<pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">ActionIR</span><span
+        class="p">(</span><span class="n">TypedDict</span><span class="p">,</span> <span class="n">total</span><span
+        class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="n">action_id</span><span class="p">:</span> <span class="nb">str</span>                      <span
+            class="c1"># &quot;Bio-protocol-2302::T3::S1::A1&quot;</span>
+    <span class="n">action</span><span class="p">:</span> <span class="nb">str</span>                         <span
+            class="c1"># &quot;Add&quot;, &quot;Incubate&quot;, &quot;Mix&quot;</span>
+    <span class="n">description</span><span class="p">:</span> <span class="nb">str</span>                    <span
+            class="c1"># 자연어 설명</span>
+    <span class="n">materials</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span
+            class="n">MaterialIR</span><span class="p">]</span>         <span class="c1"># 재료/시약</span>
+    <span class="n">conditions</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span
+            class="n">ConditionIR</span><span class="p">]</span>       <span class="c1"># 온도, 시간 등</span>
+    <span class="n">produces</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span
+            class="nb">str</span><span class="p">]</span>                 <span class="c1"># 결과물</span>
+    <span class="n">evidence_span</span><span class="p">:</span> <span class="nb">str</span>                  <span
+            class="c1"># Methods에서 출처 텍스트</span>
+    <span class="n">source</span><span class="p">:</span> <span class="nb">str</span>                         <span
+            class="c1"># &quot;llm_extracted&quot;</span>
+</code></pre>
+</div>
+
+<hr/>
+
+<h2 id="성능-평가-메트릭">📈 성능 평가 메트릭</h2>
+
+<h3 id="주요-평가-지표-ablation-study">주요 평가 지표 (ablation study)</h3>
+
+<table>
+    <thead>
+    <tr>
+        <th>메트릭</th>
+        <th>설명</th>
+        <th>범위</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><strong>Step Precision</strong></td>
+        <td>생성된 스텝 중 올바른 비율</td>
+        <td>0.0 ~ 1.0</td>
+    </tr>
+    <tr>
+        <td><strong>Step Recall</strong></td>
+        <td>올바르게 감지한 스텝 비율</td>
+        <td>0.0 ~ 1.0</td>
+    </tr>
+    <tr>
+        <td><strong>Step F1</strong></td>
+        <td>정확도와 재현율의 조화평균</td>
+        <td>0.0 ~ 1.0</td>
+    </tr>
+    <tr>
+        <td><strong>Order Score</strong></td>
+        <td>액션 순서 일관성</td>
+        <td>0.0 ~ 1.0</td>
+    </tr>
+    <tr>
+        <td><strong>Material IOU</strong></td>
+        <td>재료 매칭 (Soft IOU)</td>
+        <td>0.0 ~ 1.0</td>
+    </tr>
+    <tr>
+        <td><strong>Condition IOU</strong></td>
+        <td>조건 매칭 (Soft IOU)</td>
+        <td>0.0 ~ 1.0</td>
+    </tr>
+    <tr>
+        <td><strong>Grounding Hallucination Rate</strong></td>
+        <td>Methods에서 근거 없는 추출 비율</td>
+        <td>0.0 ~ 1.0</td>
+    </tr>
+    <tr>
+        <td><strong>Evidence Coverage</strong></td>
+        <td>Methods 텍스트 커버리지</td>
+        <td>0.0 ~ 1.0</td>
+    </tr>
+    </tbody>
+</table>
+
+<h3 id="최종-성능-결과-p1-p6-추론-시나리오">최종 성능 결과 (P1-P6 추론 시나리오)</h3>
+
+<table>
+    <thead>
+    <tr>
+        <th>프롬프트</th>
+        <th>n_pred</th>
+        <th>Step F1</th>
+        <th>Order Score</th>
+        <th>Mat IOU</th>
+        <th>Cond IOU</th>
+        <th>Hallucination</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><strong>P1</strong> (기본)</td>
+        <td>15.6</td>
+        <td>0.494</td>
+        <td>0.510</td>
+        <td>0.247</td>
+        <td>0.573</td>
+        <td>0.25</td>
+    </tr>
+    <tr>
+        <td><strong>P2</strong> (간단)</td>
+        <td>8.6</td>
+        <td>0.317</td>
+        <td>0.428</td>
+        <td>0.318</td>
+        <td>0.319</td>
+        <td>0.00</td>
+    </tr>
+    <tr>
+        <td><strong>P3</strong></td>
+        <td>12.3</td>
+        <td>0.435</td>
+        <td>0.578</td>
+        <td>0.319</td>
+        <td>0.667</td>
+        <td>0.10</td>
+    </tr>
+    <tr>
+        <td><strong>P4</strong></td>
+        <td>12.9</td>
+        <td>0.454</td>
+        <td>0.534</td>
+        <td>0.192</td>
+        <td>0.680</td>
+        <td>0.25</td>
+    </tr>
+    <tr>
+        <td><strong>P5</strong> (다중 회전)</td>
+        <td>33.5</td>
+        <td><strong>0.816</strong></td>
+        <td>0.531</td>
+        <td><strong>0.415</strong></td>
+        <td>0.531</td>
+        <td>0.00</td>
+    </tr>
+    <tr>
+        <td><strong>P6</strong> (최적)</td>
+        <td>29.3</td>
+        <td><strong>0.741</strong></td>
+        <td><strong>0.558</strong></td>
+        <td><strong>0.456</strong></td>
+        <td>0.532</td>
+        <td>0.00</td>
+    </tr>
+    </tbody>
+</table>
+
+<h3 id="핵심-발견사항">핵심 발견사항</h3>
+
+<ul>
+    <li><strong>P5, P6 (다중 회전 및 최적화)</strong>: Step F1 80% 이상 달성</li>
+    <li><strong>조건 추출 강점</strong>: Condition IOU 53~68% (재료보다 좋음)</li>
+    <li><strong>환각(Hallucination) 개선</strong>: 최적 프롬프트에서 0%</li>
+    <li><strong>트레이드오프</strong>: 생성된 액션 수 증가 vs 정확도 개선</li>
+</ul>
+
+<hr/>
+
+<h2 id="평가-파이프라인">🔄 평가 파이프라인</h2>
+
+<h3 id="1-ablation-study-eval_ablation_actions_v2py">1. Ablation Study (<code>eval_ablation_actions_v2.py</code>)</h3>
+
+<ul>
+    <li><strong>입력</strong>: Gold Action IR + 생성된 Action IR</li>
+    <li><strong>프로세스</strong>:
+        <ol>
+            <li>Step 매칭 (Sentence-Transformer 기반, threshold=0.7)</li>
+            <li>재료/조건 매칭 (Soft IOU)</li>
+            <li>Methods 근거 검증 (청크 기반 similarity)</li>
+            <li>액션 순서 검증</li>
+        </ol>
+    </li>
+</ul>
+
+<h3 id="2-hierarchical-protocol-비교-eval_hier_protocol_vs_generatedpy">2. Hierarchical Protocol 비교 (<code>eval_hier_protocol_vs_generated.py</code>)
+</h3>
+
+<ul>
+    <li><strong>목표</strong>: 생성된 자연어 프로토콜과 gold protocol 비교</li>
+    <li><strong>메트릭</strong>:
+        <ul>
+            <li>BLEU score</li>
+            <li>ROUGE score</li>
+            <li>Step-level F1 (임베딩 기반)</li>
+            <li>TF-IDF cosine similarity</li>
+        </ul>
+    </li>
+</ul>
+
+<h3 id="3-grounding-평가-eval_methods_grounding_protocolspy">3. Grounding 평가
+    (<code>eval_methods_grounding_protocols.py</code>)</h3>
+
+<ul>
+    <li><strong>목표</strong>: 생성된 내용이 Methods에서 근거를 가지는지 확인</li>
+    <li><strong>프로세스</strong>: Methods를 청크로 나누고 (1200자, 200자 오버랩) 유사도 검사</li>
+</ul>
+
+<hr/>
+
+<h2 id="llm-모델-선택">🧠 LLM 모델 선택</h2>
+
+<table>
+    <thead>
+    <tr>
+        <th>용도</th>
+        <th>모델</th>
+        <th>버전</th>
+        <th>특징</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>Task/Step Planning</td>
+        <td>GPT-4</td>
+        <td>gpt-4-1106-preview</td>
+        <td>높은 정확도, JSON mode 지원</td>
+    </tr>
+    <tr>
+        <td>Action/Condition 추출</td>
+        <td>GPT-4o-mini</td>
+        <td>gpt-4o-mini</td>
+        <td>빠른 속도, 비용 효율적</td>
+    </tr>
+    <tr>
+        <td>검증 (CoV+ReAct)</td>
+        <td>GPT-4o-mini</td>
+        <td>gpt-4o-mini</td>
+        <td>추론 체계성</td>
+    </tr>
+    <tr>
+        <td>프로토콜 생성 (Writer)</td>
+        <td>GPT-4o-mini</td>
+        <td>gpt-4o-mini</td>
+        <td>자연어 품질</td>
+    </tr>
+    </tbody>
+</table>
+
+<h3 id="주요-특징">주요 특징</h3>
+
+<ul>
+    <li><strong>JSON Mode</strong>: 구조화된 응답 강제</li>
+    <li><strong>Temperature=0.0</strong>: 결정적 출력 (실험 재현성)</li>
+    <li><strong>Response Format</strong>: JSON schema 검증</li>
+</ul>
+
+<hr/>
+
+<h2 id="프로젝트-구조">📂 프로젝트 구조</h2>
+
+<pre><code>BioProtocolAgent/
+├── main.py                      # 엔트리 포인트
+├── src/
+│   ├── types.py                 # GraphState, ActionIR, StepIR 정의
+│   ├── graph_builder.py         # LangGraph 구성
+│   ├── data_loader.py           # JSONL 데이터 로드
+│   ├── nodes/                   # 에이전트 노드들
+│   │   ├── task_planner.py      # Task 추출
+│   │   ├── step_planner.py      # Step 구조화
+│   │   ├── action_extractor.py  # Action 분해
+│   │   ├── condition_extractor.py # 조건 추출
+│   │   ├── verifier.py          # CoV 검증
+│   │   ├── verifier_react.py    # ReAct 검증
+│   │   ├── writer.py            # 자연어 생성
+│   │   └── order_structurer.py  # 순서 최적화
+│   ├── tools/                   # 도구 레이어
+│   │   ├── rag_search.py        # 벡터 검색
+│   │   ├── verifier_tools.py    # 검증 도구
+│   │   └── ...
+│   ├── eval/                    # 평가 유틸
+│   └── logs/                    # 에러 로깅
+├── scripts/                     # 실험 스크립트
+│   ├── eval_ablation_actions_v2.py    # Ablation 평가
+│   ├── eval_hier_protocol_vs_generated.py # 프로토콜 비교
+│   ├── eval_methods_grounding_protocols.py  # Grounding 검증
+│   ├── gen_protocols_from_actions_llm.py    # IR → 프로토콜
+│   └── ...
+├── data/
+│   ├── gold_pairs_testset_v2.jsonl    # 테스트셋
+│   ├── gold_actions_ir_10.jsonl       # Gold 액션
+│   ├── ablation/                       # 생성된 결과
+│   └── ...
+├── reports/                     # 평가 결과
+│   ├── protocol_eval/           # 프로토콜 평가
+│   ├── grounding_eval/          # Grounding 평가
+│   ├── llm_protocols/           # 생성된 프로토콜
+│   └── hallucination_report_*.csv
+└── notebooks/                   # 시각화 &amp; 실험
+</code></pre>
+
+<hr/>
+
+<h2 id="핵심-기술적-특징">💡 핵심 기술적 특징</h2>
+
+<h3 id="1-계층적-분해-hierarchical-decomposition">1. 계층적 분해 (Hierarchical Decomposition)</h3>
+
+<pre><code>Protocol
+  └── Task
+        └── Step
+              └── Action (원자적 단위)
+</code></pre>
+
+<p>각 레벨에서 다른 LLM 프롬프트로 정밀도 조절</p>
+
+<h3 id="2-chain-of-verification-cov">2. Chain-of-Verification (CoV)</h3>
+
+<ul>
+    <li>검증 질문 명시적 생성</li>
+    <li>단계별 추론 기록</li>
+    <li>로컬/글로벨 판정 분리</li>
+</ul>
+
+<h3 id="3-벡터-기반-매칭">3. 벡터 기반 매칭</h3>
+
+<ul>
+    <li>Sentence-Transformer (<code>all-MiniLM-L6-v2</code> or similar)</li>
+    <li>Soft IOU: 정확한 문자 매칭 대신 의미 기반 유사도</li>
+    <li>FAISS: 대규모 유사도 검색 가속화</li>
+</ul>
+
+<h3 id="4-grounding-검증">4. Grounding 검증</h3>
+
+<p>Methods 텍스트의 청크 단위로:</p>
+
+<pre><code>methods_chunk[i] --similarity--&gt; generated_content
+</code></pre>
+
+<ul>
+    <li>임계값 기반 필터링 (threshold=0.55)</li>
+    <li>근거 없는 환각 탐지</li>
+</ul>
+
+<h3 id="5-에러-처리-로깅">5. 에러 처리 &amp; 로깅</h3>
+
+<div class="codehilite">
+<pre><span></span><code><span class="c1"># JSON 파싱 실패 시 자동 로깅</span>
+<span class="n">log_path</span> <span class="o">=</span> <span class="s2">&quot;src/logs/step_structurer_json_error.log&quot;</span>
+</code></pre>
+</div>
+
+<hr/>
+
+<h2 id="면접-강조-포인트">🎯 면접 강조 포인트</h2>
+
+<h3 id="기술적-관점">기술적 관점</h3>
+
+<ol>
+    <li><p><strong>LangGraph 기반 멀티에이전트 오케스트레이션</strong></p>
+
+        <ul>
+            <li>Stateful workflow (GraphState)</li>
+            <li>조건부 라우팅 (if-else, dynamic routing)</li>
+            <li>상태 검포인트 (LangGraph Checkpoint)</li>
+        </ul>
+    </li>
+    <li><p><strong>LLM 프롬프트 엔지니어링</strong></p>
+
+        <ul>
+            <li>구조화된 출력 (JSON schema)</li>
+            <li>제목 기반 필터링 (hallucination 감소)</li>
+            <li>온도(temperature) 조절로 결정성/탐색성 제어</li>
+        </ul>
+    </li>
+    <li><p><strong>벡터 임베딩 &amp; RAG</strong></p>
+
+        <ul>
+            <li>Sentence-Transformers로 의미 기반 검색</li>
+            <li>FAISS로 확장성 보장</li>
+            <li>Soft matching으로 엄격한 규칙 회피</li>
+        </ul>
+    </li>
+    <li><p><strong>평가 메트릭 설계</strong></p>
+
+        <ul>
+            <li>F1, Precision, Recall (단계 추출)</li>
+            <li>IOU (재료/조건 매칭)</li>
+            <li>Order score (순서 일관성)</li>
+            <li>Grounding hallucination rate (신뢰성)</li>
+        </ul>
+    </li>
+</ol>
+
+<h3 id="비즈니스연구-관점">비즈니스/연구 관점</h3>
+
+<ol>
+    <li><strong>과학 논문 자동화</strong>: Methods → 재현 가능한 프로토콜</li>
+    <li><strong>실험 재현성</strong>: 근거 추적 (evidence_span)</li>
+    <li><strong>검증 기반 신뢰</strong>: CoV로 생성 내용 검증</li>
+    <li><strong>Ablation Study</strong>: P1~P6로 프롬프트 전략 비교</li>
+</ol>
+
+<h3 id="전반적-특징">전반적 특징</h3>
+
+<ul>
+    <li><strong>Python 3.12</strong>, 타입 안정성 (Pydantic)</li>
+    <li><strong>에러 처리</strong>: JSON 파싱 실패 시 로그 자동 기록</li>
+    <li><strong>확장성</strong>: 새로운 노드 추가 용이 (LangGraph 구조)</li>
+    <li><strong>재현성</strong>: Temperature=0.0, seed 관리</li>
+</ul>
+
+<hr/>
+
+<h2 id="실험-결과-요약">🔬 실험 결과 요약</h2>
+
+<h3 id="최고-성능-구성-p5-p6">최고 성능 구성 (P5, P6)</h3>
+
+<ul>
+    <li><strong>Step F1</strong>: 81.6% (P5), 74.1% (P6)</li>
+    <li><strong>Material IOU</strong>: 41.5% (P5), 45.6% (P6)</li>
+    <li><strong>Condition IOU</strong>: 53.1% (P5), 53.2% (P6)</li>
+    <li><strong>환각률</strong>: 0% (P5, P6)</li>
+</ul>
+
+<h3 id="실험-설정">실험 설정</h3>
+
+<ul>
+    <li><strong>테스트셋</strong>: 10개 Bio-protocol</li>
+    <li><strong>Baseline</strong>: P1 (기본 프롬프트)</li>
+    <li><strong>최적화</strong>: P5~P6 (다중 회전, CoV 강화)</li>
+</ul>
+
+<hr/>
+
+<h2 id="논문-관련-정보">📝 논문 관련 정보</h2>
+
+<ul>
+    <li><strong>상태</strong>: 초고 커밋 (<code>cabb52b: "Feat: 논문 초고 기준 커밋"</code>)</li>
+    <li><strong>핵심 기여</strong>: 멀티에이전트 프레임워크로 과학 프로토콜 자동 생성</li>
+    <li><strong>평가 방법</strong>: 다층적 메트릭 (구조, 재료, 조건, 근거)</li>
+</ul>
+
+<hr/>
+
+<h2 id="주요-의존성-요약">📚 주요 의존성 (요약)</h2>
+
+<pre><code># 에이전트 오케스트레이션
+langgraph==1.0.4
+langchain==1.1.0
+langchain-core==1.1.0
+
+# LLM API
+openai==2.6.0
+pydantic==2.12.3
+
+# 임베딩 &amp; 벡터 검색
+sentence-transformers==5.1.2
+faiss-cpu==1.12.0
+torch==2.9.0
+transformers==4.57.1
+
+# 평가
+scikit-learn
+scipy
+pandas
+numpy
+
+# 자연어 평가
+sacrebleu
+rouge-score
+
+# 유틸
+python-dotenv==0.9.9
+</code></pre>
+
+<hr/>
+
+<h2 id="환경-설정-실행">⚙️ 환경 설정 &amp; 실행</h2>
+
+<h3 id="설정">설정</h3>
+
+<div class="codehilite">
+<pre><span></span><code><span class="c1"># 가상환경 활성화</span>
+<span class="nb">source</span><span class="w"> </span>.venv/bin/activate
+
+<span class="c1"># 환경변수 설정</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;OPENAI_API_KEY=sk-...&quot;</span><span
+            class="w"> </span>&gt;<span class="w"> </span>.env
+
+<span class="c1"># 메인 실행</span>
+python<span class="w"> </span>main.py
+</code></pre>
+</div>
+
+<h3 id="평가-실행">평가 실행</h3>
+
+<div class="codehilite">
+<pre><span></span><code>python<span class="w"> </span>scripts/eval_ablation_actions_v2.py
+python<span class="w"> </span>scripts/eval_hier_protocol_vs_generated.py
+python<span class="w"> </span>scripts/eval_methods_grounding_protocols.py
+</code></pre>
+</div>
+
+<hr/>
+
+<h2 id="면접-qa-대비">🎓 면접 Q&amp;A 대비</h2>
+
+<p><strong>Q: 멀티에이전트 시스템을 어떻게 설계했나요?</strong><br/>
+    A: LangGraph의 StateGraph를 활용해 5개 노드를 순차/병렬로 연결했습니다. GraphState로 상태를 관리하고, 각 노드는 독립적 LLM 호출로 단일 책임을 가집니다.</p>
+
+<p><strong>Q: 환각(hallucination)을 어떻게 줄였나요?</strong><br/>
+    A: (1) 제목 기반 필터링으로 관련 Task만 추출, (2) Chain-of-Verification으로 근거 명시, (3) Methods 청크 매칭으로 Grounding 검증합니다.</p>
+
+<p><strong>Q: 성능을 어떻게 평가했나요?</strong><br/>
+    A: Step-level F1 (구조 정확도), Material/Condition IOU (속성 매칭), Grounding hallucination rate (신뢰성)을 측정했습니다. P5/P6에서 F1
+    80% 이상 달성했습니다.</p>
+
+<p><strong>Q: 스케일링 어려움이 있었나요?</strong><br/>
+    A: FAISS를 도입해 벡터 검색을 O(n) → O(log n)으로 가속화했고, LangGraph의 상태 검포인트로 재개 가능하게 설계했습니다.</p>
+
+<hr/>
+
+<p><em>리포트 생성일: 2026-07-03</em><br/>
+    <em>프로젝트: BioProtocolAgent (논문 초고 기준)</em></p>
+
+</body>
+</html>
+    

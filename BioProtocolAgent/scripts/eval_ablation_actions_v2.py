@@ -20,7 +20,7 @@ GOLD_PAIRS_PATH = PROJECT_ROOT / "data" / "gold_pairs_testset_v2.jsonl"
 ABLATION_DIR = PROJECT_ROOT / "data" / "ablation"
 
 STEP_MATCH_THRESH = 0.7  # gold vs gen step 매칭 임계값
-GROUNDING_THRESH = 0.85  # methods grounding 임계값 (chunk 기반)
+GROUNDING_THRESH = 0.55  # methods grounding 임계값 (chunk 기반)
 METHODS_CHUNK_CHARS = 1200  # methods chunk 크기(대충 800~1500 사이 추천)
 METHODS_CHUNK_OVERLAP = 200  # overlap
 

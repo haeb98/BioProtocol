@@ -1,0 +1,87 @@
+# 환경변수
+.env
+.env.local
+.env.*.local
+
+# 가상환경
+venv/
+.venv/
+env/
+ENV/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# 테스트 커버리지
+.coverage
+htmlcov/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+*.sublime-project
+*.sublime-workspace
+
+# 로그
+*.log
+src/logs/
+logs/
+
+# 임시 파일
+*.tmp
+*.temp
+.tmp/
+
+# 데이터 (선택사항 - 대용량 파일)
+# data/*.jsonl (주석 처리: 공개하려면 제거)
+# reports/*.csv (주석 처리: 공개하려면 제거)
+
+# 캐시
+.cache/
+*.cache
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# 과학 도구
+.ipynb_checkpoints/
+
+# 에디터
+.editorconfig
+
+# 기타
+*.bak
+*.swp
+dist/
+build/
+*.egg-info/
